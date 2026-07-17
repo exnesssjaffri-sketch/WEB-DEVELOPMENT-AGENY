@@ -3,10 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Website Development Agency (WDA) - Professional website development, UI/UX design, mobile apps, AI chatbot integration, and WhatsApp automation services.">
-    <meta name="keywords" content="web development, UI/UX design, mobile app development, AI chatbot, WhatsApp automation, website agency">
-    <meta name="author" content="WDA">
-    <title>WDA - Website Development Agency</title>
+    <meta name="description" content="Website Development Agency (WDA) - Pakistan's leading web development agency offering professional website design, UI/UX design, mobile app development, AI chatbot integration, and WhatsApp automation services. 150+ websites delivered, 100+ happy clients worldwide.">
+    <meta name="keywords" content="web development agency, website design, UI/UX design, mobile app development, AI chatbot, WhatsApp automation, website development Pakistan, professional web design, digital agency">
+    <meta name="author" content="WDA - Website Development Agency">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="WDA - Website Development Agency | Professional Web Design & Development">
+    <meta property="og:description" content="Pakistan's leading web development agency. We build modern websites, UI/UX designs, mobile apps, AI chatbots, and WhatsApp automation solutions.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wda.com">
+    <meta property="og:image" content="https://wda.com/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="WDA - Website Development Agency">
+    <meta name="twitter:description" content="Professional web development, UI/UX design, mobile apps, AI chatbots & WhatsApp automation.">
+    <title>WDA - Website Development Agency | Professional Web Design & Development Services</title>
+    <link rel="canonical" href="https://wda.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
@@ -15,87 +25,87 @@
 <body>
 
     <!-- Loading Screen -->
-    <div id="loading-screen">
+    <div id="loading-screen" role="status" aria-label="Loading">
         <div class="loader">
             <div class="loader-spinner"></div>
-            <div class="loader-text">WDA</div>
+            <div class="loader-text" aria-label="WDA Loading">WDA</div>
         </div>
     </div>
 
     <!-- Back to Top Button -->
-    <button id="back-to-top" aria-label="Back to top">
-        <i class="fas fa-arrow-up"></i>
+    <button id="back-to-top" aria-label="Back to top of page">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
     </button>
 
     <!-- Navigation -->
-    <nav id="navbar" class="navbar">
+    <nav id="navbar" class="navbar" role="navigation" aria-label="Main navigation">
         <div class="container nav-container">
-            <a href="index.html" class="nav-logo">WDA</a>
-            <div class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+            <a href="index.html" class="nav-logo" aria-label="WDA Home">WDA</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="index.html" class="nav-link active">Home</a></li>
-                <li><a href="about.html" class="nav-link">About Us</a></li>
-                <li><a href="services.html" class="nav-link">Services</a></li>
-                <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
-                <li><a href="blog.html" class="nav-link">Blog</a></li>
-                <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+            </button>
+            <ul class="nav-menu" id="navMenu" role="menubar">
+                <li role="none"><a href="index.html" class="nav-link active" role="menuitem">Home</a></li>
+                <li role="none"><a href="about.html" class="nav-link" role="menuitem">About Us</a></li>
+                <li role="none"><a href="services.html" class="nav-link" role="menuitem">Services</a></li>
+                <li role="none"><a href="portfolio.html" class="nav-link" role="menuitem">Portfolio</a></li>
+                <li role="none"><a href="blog.html" class="nav-link" role="menuitem">Blog</a></li>
+                <li role="none"><a href="contact.html" class="nav-link" role="menuitem">Contact Us</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-bg-shapes">
+    <section id="home" class="hero" aria-label="Hero banner">
+        <div class="hero-bg-shapes" aria-hidden="true">
             <div class="shape shape-1"></div>
             <div class="shape shape-2"></div>
             <div class="shape shape-3"></div>
         </div>
         <div class="container hero-content">
             <div class="hero-text" data-aos="fade-up" data-aos-duration="1000">
-                <h1 class="hero-title">Website Development Agency <span class="typing-text"></span></h1>
+                <h1 class="hero-title">Website Development Agency <span class="typing-text" aria-label="Typing animation: WDA - Building Excellence"></span></h1>
                 <p class="hero-subtitle">Building Modern Websites That Grow Your Business</p>
                 <p class="hero-description">At Website Development Agency (WDA), we design and develop high-quality websites that help businesses establish a strong online presence. From elegant business websites to powerful web applications, our team combines creativity, technology, and innovation to deliver exceptional digital experiences that drive growth and customer engagement.</p>
                 <div class="hero-buttons">
-                    <a href="contact.html" class="btn btn-primary ripple-btn">Get Started</a>
-                    <a href="portfolio.html" class="btn btn-secondary ripple-btn">View Portfolio</a>
+                    <a href="contact.html" class="btn btn-primary ripple-btn" aria-label="Get started with WDA">Get Started</a>
+                    <a href="portfolio.html" class="btn btn-secondary ripple-btn" aria-label="View our portfolio">View Portfolio</a>
                 </div>
             </div>
-            <div class="hero-visual" data-aos="fade-left" data-aos-duration="1000">
+            <div class="hero-visual" data-aos="fade-left" data-aos-duration="1000" aria-hidden="true">
                 <div class="hero-image-wrapper">
-                    <div class="hero-main-icon">
-                        <i class="fas fa-code"></i>
+                    <div class="hero-main-icon" role="img" aria-label="Web development icon">
+                        <i class="fas fa-code" aria-hidden="true"></i>
                     </div>
-                    <div class="floating-card card-1 glass">
-                        <i class="fas fa-paint-brush"></i>
+                    <div class="floating-card card-1 glass" role="img" aria-label="Modern UI design feature">
+                        <i class="fas fa-paint-brush" aria-hidden="true"></i>
                         <span>Modern UI</span>
                     </div>
-                    <div class="floating-card card-2 glass">
-                        <i class="fas fa-bolt"></i>
+                    <div class="floating-card card-2 glass" role="img" aria-label="Fast performance feature">
+                        <i class="fas fa-bolt" aria-hidden="true"></i>
                         <span>Fast Performance</span>
                     </div>
-                    <div class="floating-card card-3 glass">
-                        <i class="fas fa-search"></i>
+                    <div class="floating-card card-3 glass" role="img" aria-label="SEO ready feature">
+                        <i class="fas fa-search" aria-hidden="true"></i>
                         <span>SEO Ready</span>
                     </div>
-                    <div class="floating-card card-4 glass">
-                        <i class="fas fa-mobile-alt"></i>
+                    <div class="floating-card card-4 glass" role="img" aria-label="Mobile friendly feature">
+                        <i class="fas fa-mobile-alt" aria-hidden="true"></i>
                         <span>Mobile Friendly</span>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="hero-scroll-indicator">
+        <div class="hero-scroll-indicator" aria-hidden="true">
             <span>Scroll Down</span>
-            <i class="fas fa-chevron-down"></i>
+            <i class="fas fa-chevron-down" aria-hidden="true"></i>
         </div>
     </section>
 
     <!-- Why Choose Us Section -->
-    <section class="section why-choose" id="why-choose">
+    <section class="section why-choose" id="why-choose" aria-label="Why choose WDA">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
                 <h2 class="section-title">Why Businesses Choose WDA</h2>
@@ -103,29 +113,29 @@
             </div>
             <div class="features-grid">
                 <div class="feature-card glass" data-aos="fade-up" data-aos-delay="0">
-                    <div class="feature-icon">
-                        <i class="fas fa-pencil-ruler"></i>
+                    <div class="feature-icon" role="img" aria-label="Professional design icon">
+                        <i class="fas fa-pencil-ruler" aria-hidden="true"></i>
                     </div>
                     <h3>Professional Design</h3>
                     <p>Creative UI/UX designs that captivate audiences and reflect your brand identity with precision and elegance.</p>
                 </div>
                 <div class="feature-card glass" data-aos="fade-up" data-aos-delay="100">
-                    <div class="feature-icon">
-                        <i class="fas fa-mobile-screen"></i>
+                    <div class="feature-icon" role="img" aria-label="Responsive development icon">
+                        <i class="fas fa-mobile-screen" aria-hidden="true"></i>
                     </div>
                     <h3>Responsive Development</h3>
                     <p>Fully responsive websites that deliver seamless experiences across all devices and screen sizes.</p>
                 </div>
                 <div class="feature-card glass" data-aos="fade-up" data-aos-delay="200">
-                    <div class="feature-icon">
-                        <i class="fas fa-robot"></i>
+                    <div class="feature-icon" role="img" aria-label="AI solutions icon">
+                        <i class="fas fa-robot" aria-hidden="true"></i>
                     </div>
                     <h3>AI Solutions</h3>
                     <p>Integrate cutting-edge AI chatbots and automation to enhance customer engagement and streamline operations.</p>
                 </div>
                 <div class="feature-card glass" data-aos="fade-up" data-aos-delay="300">
-                    <div class="feature-icon">
-                        <i class="fas fa-headset"></i>
+                    <div class="feature-icon" role="img" aria-label="Dedicated support icon">
+                        <i class="fas fa-headset" aria-hidden="true"></i>
                     </div>
                     <h3>Dedicated Support</h3>
                     <p>Round-the-clock technical support and maintenance to ensure your website runs smoothly at all times.</p>
@@ -135,23 +145,23 @@
     </section>
 
     <!-- Statistics Section -->
-    <section class="section stats-section" id="stats">
+    <section class="section stats-section" id="stats" aria-label="Company statistics">
         <div class="container">
             <div class="stats-grid">
                 <div class="stat-item" data-aos="zoom-in" data-aos-delay="0">
-                    <div class="stat-number" data-target="150">0</div>
+                    <div class="stat-number" data-target="150" aria-label="150+ websites delivered">0</div>
                     <div class="stat-label">Websites Delivered</div>
                 </div>
                 <div class="stat-item" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="stat-number" data-target="100">0</div>
+                    <div class="stat-number" data-target="100" aria-label="100+ happy clients">0</div>
                     <div class="stat-label">Happy Clients</div>
                 </div>
                 <div class="stat-item" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="stat-number" data-target="5">0</div>
+                    <div class="stat-number" data-target="5" aria-label="5 countries served">0</div>
                     <div class="stat-label">Countries Served</div>
                 </div>
                 <div class="stat-item" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="stat-number" data-target="99">0</div>
+                    <div class="stat-number" data-target="99" aria-label="99% client satisfaction">0</div>
                     <div class="stat-label">Client Satisfaction</div>
                 </div>
             </div>
@@ -159,7 +169,7 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section class="section testimonials" id="testimonials">
+    <section class="section testimonials" id="testimonials" aria-label="Client testimonials">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
                 <h2 class="section-title">What Our Clients Say</h2>
@@ -167,16 +177,16 @@
             </div>
             <div class="testimonials-grid">
                 <div class="testimonial-card glass" data-aos="fade-up" data-aos-delay="0">
-                    <div class="testimonial-stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                    <div class="testimonial-stars" aria-label="5 star rating">
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
                     </div>
                     <p class="testimonial-text">"WDA transformed our online presence completely. Our new website has increased our customer engagement by 200%. The team's professionalism and attention to detail were outstanding."</p>
                     <div class="testimonial-author">
-                        <div class="author-avatar">SM</div>
+                        <div class="author-avatar" aria-hidden="true">SM</div>
                         <div class="author-info">
                             <h4>Sarah M.</h4>
                             <p>CEO, TechStart Solutions</p>
@@ -184,16 +194,16 @@
                     </div>
                 </div>
                 <div class="testimonial-card glass" data-aos="fade-up" data-aos-delay="150">
-                    <div class="testimonial-stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                    <div class="testimonial-stars" aria-label="5 star rating">
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
                     </div>
                     <p class="testimonial-text">"Working with WDA was an incredible experience. They understood our vision perfectly and delivered a website that exceeded our expectations. Highly recommended for any business."</p>
                     <div class="testimonial-author">
-                        <div class="author-avatar">AK</div>
+                        <div class="author-avatar" aria-hidden="true">AK</div>
                         <div class="author-info">
                             <h4>Ahmed K.</h4>
                             <p>Founder, GrowthMart</p>
@@ -201,16 +211,16 @@
                     </div>
                 </div>
                 <div class="testimonial-card glass" data-aos="fade-up" data-aos-delay="300">
-                    <div class="testimonial-stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                    <div class="testimonial-stars" aria-label="5 star rating">
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
                     </div>
                     <p class="testimonial-text">"The AI chatbot integration by WDA revolutionized our customer support. We now handle inquiries 24/7 with ease. Their technical expertise and support are truly world-class."</p>
                     <div class="testimonial-author">
-                        <div class="author-avatar">JR</div>
+                        <div class="author-avatar" aria-hidden="true">JR</div>
                         <div class="author-info">
                             <h4>Jennifer R.</h4>
                             <p>Director, MediCare Plus</p>
@@ -222,32 +232,32 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="section cta-section">
+    <section class="section cta-section" aria-label="Call to action">
         <div class="container">
             <div class="cta-content glass" data-aos="fade-up">
                 <h2 class="cta-title">Ready to Build Your Dream Website?</h2>
                 <p class="cta-text">Let's create something extraordinary together. Get in touch with us today and take the first step towards digital excellence.</p>
-                <a href="contact.html" class="btn btn-primary btn-large ripple-btn">Contact Us Today</a>
+                <a href="contact.html" class="btn btn-primary btn-large ripple-btn" aria-label="Contact us today">Contact Us Today</a>
             </div>
         </div>
     </section>
 
     <!-- Page Transition Overlay -->
-    <div id="page-transition" class="page-transition"></div>
+    <div id="page-transition" class="page-transition" aria-hidden="true"></div>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col footer-brand">
-                    <a href="index.html" class="footer-logo">WDA</a>
+                    <a href="index.html" class="footer-logo" aria-label="WDA Home">WDA</a>
                     <p class="footer-desc">Website Development Agency (WDA) delivers premium digital solutions including web development, UI/UX design, mobile apps, AI chatbots, and automation services.</p>
                     <div class="footer-social">
-                        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.instagram.com/stfu_hazzy" target="_blank" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link" aria-label="Follow us on Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                        <a href="#" class="social-link" aria-label="Follow us on Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        <a href="https://www.instagram.com/stfu_hazzy" target="_blank" class="social-link" aria-label="Follow us on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                        <a href="#" class="social-link" aria-label="Follow us on LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+                        <a href="#" class="social-link" aria-label="Follow us on YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
                     </div>
                 </div>
                 <div class="footer-col">
@@ -274,9 +284,9 @@
                 <div class="footer-col">
                     <h4>Contact Info</h4>
                     <ul class="footer-contact">
-                        <li><i class="fas fa-phone"></i> <a href="tel:03360180168">03360180168</a></li>
-                        <li><i class="fas fa-envelope"></i> <a href="mailto:exnesssjaffri@gmail.com">exnesssjaffri@gmail.com</a></li>
-                        <li><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/stfu_hazzy" target="_blank">@stfu_hazzy</a></li>
+                        <li><i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:03360180168" aria-label="Call us at 03360180168">03360180168</a></li>
+                        <li><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:exnesssjaffri@gmail.com" aria-label="Email us at exnesssjaffri@gmail.com">exnesssjaffri@gmail.com</a></li>
+                        <li><i class="fab fa-instagram" aria-hidden="true"></i> <a href="https://www.instagram.com/stfu_hazzy" target="_blank" aria-label="Follow us on Instagram @stfu_hazzy">@stfu_hazzy</a></li>
                     </ul>
                 </div>
             </div>

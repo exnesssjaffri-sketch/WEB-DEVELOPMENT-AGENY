@@ -3,10 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="WDA Blog - Insights on web development, UI/UX design, AI chatbots, WhatsApp automation, and digital business strategies.">
-    <meta name="keywords" content="web development blog, website design trends, AI chatbots, WhatsApp automation, digital business">
-    <meta name="author" content="WDA">
-    <title>Blog - WDA</title>
+    <meta name="description" content="WDA Blog - Insights on web development, UI/UX design trends, AI chatbot technology, WhatsApp automation, and digital business strategies. Expert articles for business growth.">
+    <meta name="keywords" content="web development blog, website design trends, AI chatbots, WhatsApp automation, digital business, web development insights, technology blog">
+    <meta name="author" content="WDA - Website Development Agency">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Blog - WDA | Web Development Insights & Digital Trends">
+    <meta property="og:description" content="Stay updated with WDA's blog covering web development tips, UI/UX design trends, AI chatbots, WhatsApp automation, and digital business strategies.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wda.com/blog.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Blog - WDA | Web Development Insights & Digital Trends">
+    <meta name="twitter:description" content="Stay updated with WDA's blog covering web development tips, UI/UX design trends, AI chatbots, and more.">
+    <title>Blog - WDA | Web Development Tips, AI & Digital Trends</title>
+    <link rel="canonical" href="https://wda.com/blog.html">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
@@ -15,68 +24,68 @@
 <body>
 
     <!-- Loading Screen -->
-    <div id="loading-screen">
+    <div id="loading-screen" role="status" aria-label="Loading">
         <div class="loader">
             <div class="loader-spinner"></div>
-            <div class="loader-text">WDA</div>
+            <div class="loader-text" aria-label="WDA Loading">WDA</div>
         </div>
     </div>
 
     <!-- Back to Top Button -->
-    <button id="back-to-top" aria-label="Back to top">
-        <i class="fas fa-arrow-up"></i>
+    <button id="back-to-top" aria-label="Back to top of page">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
     </button>
 
     <!-- Navigation -->
-    <nav id="navbar" class="navbar">
+    <nav id="navbar" class="navbar" role="navigation" aria-label="Main navigation">
         <div class="container nav-container">
-            <a href="index.html" class="nav-logo">WDA</a>
-            <div class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+            <a href="index.html" class="nav-logo" aria-label="WDA Home">WDA</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="about.html" class="nav-link">About Us</a></li>
-                <li><a href="services.html" class="nav-link">Services</a></li>
-                <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
-                <li><a href="blog.html" class="nav-link active">Blog</a></li>
-                <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+            </button>
+            <ul class="nav-menu" id="navMenu" role="menubar">
+                <li role="none"><a href="index.html" class="nav-link" role="menuitem">Home</a></li>
+                <li role="none"><a href="about.html" class="nav-link" role="menuitem">About Us</a></li>
+                <li role="none"><a href="services.html" class="nav-link" role="menuitem">Services</a></li>
+                <li role="none"><a href="portfolio.html" class="nav-link" role="menuitem">Portfolio</a></li>
+                <li role="none"><a href="blog.html" class="nav-link active" role="menuitem">Blog</a></li>
+                <li role="none"><a href="contact.html" class="nav-link" role="menuitem">Contact Us</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- Page Header -->
-    <section class="page-header">
+    <section class="page-header" aria-label="Page header">
         <div class="container">
-            <h1 data-aos="fade-up">Our Blog</h1>
+            <h1 data-aos="fade-up">Our Blog - Web Development & Digital Insights</h1>
             <p data-aos="fade-up" data-aos-delay="100">Insights, trends, and expert advice for your digital journey</p>
         </div>
     </section>
 
     <!-- Blog Grid -->
-    <section class="section blog-page">
+    <section class="section blog-page" aria-label="Blog articles">
         <div class="container">
             <div class="blog-grid">
                 <!-- Blog 1 -->
                 <article class="blog-card glass" data-aos="fade-up" data-aos-delay="0">
                     <div class="blog-image">
-                        <div class="blog-placeholder" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
-                            <i class="fas fa-globe"></i>
+                        <div class="blog-placeholder" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);" role="img" aria-label="Article: Why Every Business Needs a Professional Website">
+                            <i class="fas fa-globe" aria-hidden="true"></i>
                         </div>
                     </div>
                     <div class="blog-content">
                         <div class="blog-meta">
                             <span class="blog-category">Business</span>
-                            <span class="blog-date"><i class="far fa-calendar"></i> Jan 15, 2026</span>
-                            <span class="blog-read-time"><i class="far fa-clock"></i> 5 min read</span>
+                            <span class="blog-date"><i class="far fa-calendar" aria-hidden="true"></i> Jan 15, 2026</span>
+                            <span class="blog-read-time"><i class="far fa-clock" aria-hidden="true"></i> 5 min read</span>
                         </div>
                         <h3>Why Every Business Needs a Professional Website in 2026</h3>
                         <p>In today's digital-first world, having a professional website is no longer optional. Discover why online presence, credibility, SEO, and customer trust make a website essential for every business.</p>
                         <div class="blog-footer">
-                            <span class="blog-author"><i class="far fa-user"></i> WDA Team</span>
-                            <a href="#" class="btn btn-primary ripple-btn">Read More</a>
+                            <span class="blog-author"><i class="far fa-user" aria-hidden="true"></i> WDA Team</span>
+                            <a href="#" class="btn btn-primary ripple-btn" aria-label="Read more about why businesses need professional websites">Read More</a>
                         </div>
                     </div>
                 </article>
@@ -84,21 +93,21 @@
                 <!-- Blog 2 -->
                 <article class="blog-card glass" data-aos="fade-up" data-aos-delay="100">
                     <div class="blog-image">
-                        <div class="blog-placeholder" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
-                            <i class="fas fa-paint-brush"></i>
+                        <div class="blog-placeholder" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);" role="img" aria-label="Article: Top Website Design Trends for 2026">
+                            <i class="fas fa-paint-brush" aria-hidden="true"></i>
                         </div>
                     </div>
                     <div class="blog-content">
                         <div class="blog-meta">
                             <span class="blog-category">Design</span>
-                            <span class="blog-date"><i class="far fa-calendar"></i> Jan 10, 2026</span>
-                            <span class="blog-read-time"><i class="far fa-clock"></i> 6 min read</span>
+                            <span class="blog-date"><i class="far fa-calendar" aria-hidden="true"></i> Jan 10, 2026</span>
+                            <span class="blog-read-time"><i class="far fa-clock" aria-hidden="true"></i> 6 min read</span>
                         </div>
                         <h3>Top Website Design Trends to Watch in 2026</h3>
                         <p>Explore the latest website design trends including Glassmorphism, Dark Mode, AI-powered interfaces, stunning animations, and responsive layouts that define modern web design.</p>
                         <div class="blog-footer">
-                            <span class="blog-author"><i class="far fa-user"></i> WDA Team</span>
-                            <a href="#" class="btn btn-primary ripple-btn">Read More</a>
+                            <span class="blog-author"><i class="far fa-user" aria-hidden="true"></i> WDA Team</span>
+                            <a href="#" class="btn btn-primary ripple-btn" aria-label="Read more about website design trends for 2026">Read More</a>
                         </div>
                     </div>
                 </article>
@@ -106,21 +115,21 @@
                 <!-- Blog 3 -->
                 <article class="blog-card glass" data-aos="fade-up" data-aos-delay="200">
                     <div class="blog-image">
-                        <div class="blog-placeholder" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
-                            <i class="fas fa-mobile-alt"></i>
+                        <div class="blog-placeholder" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);" role="img" aria-label="Article: Why Mobile-Friendly Websites Matter">
+                            <i class="fas fa-mobile-alt" aria-hidden="true"></i>
                         </div>
                     </div>
                     <div class="blog-content">
                         <div class="blog-meta">
                             <span class="blog-category">Development</span>
-                            <span class="blog-date"><i class="far fa-calendar"></i> Jan 5, 2026</span>
-                            <span class="blog-read-time"><i class="far fa-clock"></i> 4 min read</span>
+                            <span class="blog-date"><i class="far fa-calendar" aria-hidden="true"></i> Jan 5, 2026</span>
+                            <span class="blog-read-time"><i class="far fa-clock" aria-hidden="true"></i> 4 min read</span>
                         </div>
                         <h3>Why Mobile-Friendly Websites Matter More Than Ever</h3>
                         <p>With Google's mobile-first indexing, having a mobile-friendly website is crucial. Learn how responsive design improves user experience and boosts your search rankings.</p>
                         <div class="blog-footer">
-                            <span class="blog-author"><i class="far fa-user"></i> WDA Team</span>
-                            <a href="#" class="btn btn-primary ripple-btn">Read More</a>
+                            <span class="blog-author"><i class="far fa-user" aria-hidden="true"></i> WDA Team</span>
+                            <a href="#" class="btn btn-primary ripple-btn" aria-label="Read more about mobile-friendly websites">Read More</a>
                         </div>
                     </div>
                 </article>
@@ -128,21 +137,21 @@
                 <!-- Blog 4 -->
                 <article class="blog-card glass" data-aos="fade-up" data-aos-delay="300">
                     <div class="blog-image">
-                        <div class="blog-placeholder" style="background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);">
-                            <i class="fas fa-robot"></i>
+                        <div class="blog-placeholder" style="background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);" role="img" aria-label="Article: How AI Chatbots Improve Customer Support">
+                            <i class="fas fa-robot" aria-hidden="true"></i>
                         </div>
                     </div>
                     <div class="blog-content">
                         <div class="blog-meta">
                             <span class="blog-category">AI & Tech</span>
-                            <span class="blog-date"><i class="far fa-calendar"></i> Dec 28, 2025</span>
-                            <span class="blog-read-time"><i class="far fa-clock"></i> 5 min read</span>
+                            <span class="blog-date"><i class="far fa-calendar" aria-hidden="true"></i> Dec 28, 2025</span>
+                            <span class="blog-read-time"><i class="far fa-clock" aria-hidden="true"></i> 5 min read</span>
                         </div>
                         <h3>How AI Chatbots Improve Customer Support</h3>
                         <p>Discover how AI-powered chatbots are transforming customer service with automation, 24/7 support availability, and intelligent lead generation capabilities.</p>
                         <div class="blog-footer">
-                            <span class="blog-author"><i class="far fa-user"></i> WDA Team</span>
-                            <a href="#" class="btn btn-primary ripple-btn">Read More</a>
+                            <span class="blog-author"><i class="far fa-user" aria-hidden="true"></i> WDA Team</span>
+                            <a href="#" class="btn btn-primary ripple-btn" aria-label="Read more about AI chatbots improving customer support">Read More</a>
                         </div>
                     </div>
                 </article>
@@ -150,21 +159,21 @@
                 <!-- Blog 5 -->
                 <article class="blog-card glass" data-aos="fade-up" data-aos-delay="400">
                     <div class="blog-image">
-                        <div class="blog-placeholder" style="background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);">
-                            <i class="fab fa-whatsapp"></i>
+                        <div class="blog-placeholder" style="background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);" role="img" aria-label="Article: Benefits of WhatsApp Business Automation">
+                            <i class="fab fa-whatsapp" aria-hidden="true"></i>
                         </div>
                     </div>
                     <div class="blog-content">
                         <div class="blog-meta">
                             <span class="blog-category">Automation</span>
-                            <span class="blog-date"><i class="far fa-calendar"></i> Dec 20, 2025</span>
-                            <span class="blog-read-time"><i class="far fa-clock"></i> 4 min read</span>
+                            <span class="blog-date"><i class="far fa-calendar" aria-hidden="true"></i> Dec 20, 2025</span>
+                            <span class="blog-read-time"><i class="far fa-clock" aria-hidden="true"></i> 4 min read</span>
                         </div>
                         <h3>Benefits of WhatsApp Business Automation</h3>
                         <p>Learn how automating your WhatsApp Business can enhance customer engagement, enable faster communication, and streamline your business operations effectively.</p>
                         <div class="blog-footer">
-                            <span class="blog-author"><i class="far fa-user"></i> WDA Team</span>
-                            <a href="#" class="btn btn-primary ripple-btn">Read More</a>
+                            <span class="blog-author"><i class="far fa-user" aria-hidden="true"></i> WDA Team</span>
+                            <a href="#" class="btn btn-primary ripple-btn" aria-label="Read more about WhatsApp Business automation benefits">Read More</a>
                         </div>
                     </div>
                 </article>
@@ -172,21 +181,21 @@
                 <!-- Blog 6 -->
                 <article class="blog-card glass" data-aos="fade-up" data-aos-delay="500">
                     <div class="blog-image">
-                        <div class="blog-placeholder" style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);">
-                            <i class="fas fa-handshake"></i>
+                        <div class="blog-placeholder" style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);" role="img" aria-label="Article: Choosing the Right Website Development Agency">
+                            <i class="fas fa-handshake" aria-hidden="true"></i>
                         </div>
                     </div>
                     <div class="blog-content">
                         <div class="blog-meta">
                             <span class="blog-category">Business</span>
-                            <span class="blog-date"><i class="far fa-calendar"></i> Dec 15, 2025</span>
-                            <span class="blog-read-time"><i class="far fa-clock"></i> 6 min read</span>
+                            <span class="blog-date"><i class="far fa-calendar" aria-hidden="true"></i> Dec 15, 2025</span>
+                            <span class="blog-read-time"><i class="far fa-clock" aria-hidden="true"></i> 6 min read</span>
                         </div>
                         <h3>Choosing the Right Website Development Agency</h3>
                         <p>Find out how to select the perfect web development partner. We cover quality, trust, communication, pricing, and the importance of long-term support for your business.</p>
                         <div class="blog-footer">
-                            <span class="blog-author"><i class="far fa-user"></i> WDA Team</span>
-                            <a href="#" class="btn btn-primary ripple-btn">Read More</a>
+                            <span class="blog-author"><i class="far fa-user" aria-hidden="true"></i> WDA Team</span>
+                            <a href="#" class="btn btn-primary ripple-btn" aria-label="Read more about choosing the right web development agency">Read More</a>
                         </div>
                     </div>
                 </article>
@@ -195,21 +204,21 @@
     </section>
 
     <!-- Page Transition Overlay -->
-    <div id="page-transition" class="page-transition"></div>
+    <div id="page-transition" class="page-transition" aria-hidden="true"></div>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col footer-brand">
-                    <a href="index.html" class="footer-logo">WDA</a>
+                    <a href="index.html" class="footer-logo" aria-label="WDA Home">WDA</a>
                     <p class="footer-desc">Website Development Agency (WDA) delivers premium digital solutions including web development, UI/UX design, mobile apps, AI chatbots, and automation services.</p>
                     <div class="footer-social">
-                        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.instagram.com/stfu_hazzy" target="_blank" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link" aria-label="Follow us on Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                        <a href="#" class="social-link" aria-label="Follow us on Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        <a href="https://www.instagram.com/stfu_hazzy" target="_blank" class="social-link" aria-label="Follow us on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                        <a href="#" class="social-link" aria-label="Follow us on LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+                        <a href="#" class="social-link" aria-label="Follow us on YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
                     </div>
                 </div>
                 <div class="footer-col">
@@ -236,9 +245,9 @@
                 <div class="footer-col">
                     <h4>Contact Info</h4>
                     <ul class="footer-contact">
-                        <li><i class="fas fa-phone"></i> <a href="tel:03360180168">03360180168</a></li>
-                        <li><i class="fas fa-envelope"></i> <a href="mailto:exnesssjaffri@gmail.com">exnesssjaffri@gmail.com</a></li>
-                        <li><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/stfu_hazzy" target="_blank">@stfu_hazzy</a></li>
+                        <li><i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:03360180168" aria-label="Call us at 03360180168">03360180168</a></li>
+                        <li><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:exnesssjaffri@gmail.com" aria-label="Email us at exnesssjaffri@gmail.com">exnesssjaffri@gmail.com</a></li>
+                        <li><i class="fab fa-instagram" aria-hidden="true"></i> <a href="https://www.instagram.com/stfu_hazzy" target="_blank" aria-label="Follow us on Instagram @stfu_hazzy">@stfu_hazzy</a></li>
                     </ul>
                 </div>
             </div>

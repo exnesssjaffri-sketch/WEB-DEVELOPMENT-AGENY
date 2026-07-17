@@ -3,10 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="WDA Services - Professional UI/UX design, website development, app development, AI chatbot integration, and WhatsApp bot automation services.">
-    <meta name="keywords" content="web development services, UI/UX design, app development, AI chatbot, WhatsApp bot">
-    <meta name="author" content="WDA">
-    <title>Services - WDA</title>
+    <meta name="description" content="WDA Services - Professional web development, UI/UX design, mobile app development, AI chatbot integration, and WhatsApp bot automation services. Pakistan's trusted digital solutions agency.">
+    <meta name="keywords" content="web development services, UI/UX design services, app development, AI chatbot integration, WhatsApp bot automation, digital services Pakistan, website design services">
+    <meta name="author" content="WDA - Website Development Agency">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Services - WDA | Web Development, UI/UX, AI & Automation Services">
+    <meta property="og:description" content="Explore WDA's comprehensive digital services: UI/UX design, website development, mobile apps, AI chatbot integration, and WhatsApp automation.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wda.com/services.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Services - WDA | Web Development, UI/UX, AI & Automation">
+    <meta name="twitter:description" content="Explore WDA's comprehensive digital services: UI/UX design, website development, mobile apps, AI chatbot integration, and WhatsApp automation.">
+    <title>Services - WDA | Web Development, UI/UX Design & AI Automation Services</title>
+    <link rel="canonical" href="https://wda.com/services.html">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
@@ -15,70 +24,70 @@
 <body>
 
     <!-- Loading Screen -->
-    <div id="loading-screen">
+    <div id="loading-screen" role="status" aria-label="Loading">
         <div class="loader">
             <div class="loader-spinner"></div>
-            <div class="loader-text">WDA</div>
+            <div class="loader-text" aria-label="WDA Loading">WDA</div>
         </div>
     </div>
 
     <!-- Back to Top Button -->
-    <button id="back-to-top" aria-label="Back to top">
-        <i class="fas fa-arrow-up"></i>
+    <button id="back-to-top" aria-label="Back to top of page">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
     </button>
 
     <!-- Navigation -->
-    <nav id="navbar" class="navbar">
+    <nav id="navbar" class="navbar" role="navigation" aria-label="Main navigation">
         <div class="container nav-container">
-            <a href="index.html" class="nav-logo">WDA</a>
-            <div class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+            <a href="index.html" class="nav-logo" aria-label="WDA Home">WDA</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="about.html" class="nav-link">About Us</a></li>
-                <li><a href="services.html" class="nav-link active">Services</a></li>
-                <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
-                <li><a href="blog.html" class="nav-link">Blog</a></li>
-                <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+            </button>
+            <ul class="nav-menu" id="navMenu" role="menubar">
+                <li role="none"><a href="index.html" class="nav-link" role="menuitem">Home</a></li>
+                <li role="none"><a href="about.html" class="nav-link" role="menuitem">About Us</a></li>
+                <li role="none"><a href="services.html" class="nav-link active" role="menuitem">Services</a></li>
+                <li role="none"><a href="portfolio.html" class="nav-link" role="menuitem">Portfolio</a></li>
+                <li role="none"><a href="blog.html" class="nav-link" role="menuitem">Blog</a></li>
+                <li role="none"><a href="contact.html" class="nav-link" role="menuitem">Contact Us</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- Page Header -->
-    <section class="page-header">
+    <section class="page-header" aria-label="Page header">
         <div class="container">
-            <h1 data-aos="fade-up">Our Services</h1>
-            <p data-aos="fade-up" data-aos-delay="100">Comprehensive digital solutions for your business</p>
+            <h1 data-aos="fade-up">Our Services - Web Development & Digital Solutions</h1>
+            <p data-aos="fade-up" data-aos-delay="100">Comprehensive digital solutions for your business growth</p>
         </div>
     </section>
 
     <!-- Services Grid -->
-    <section class="section services-page">
+    <section class="section services-page" aria-label="Our services">
         <div class="container">
             <div class="services-grid">
                 <!-- UI/UX Designing -->
                 <div class="service-card glass" data-aos="fade-up" data-aos-delay="0">
-                    <div class="service-card-icon">
-                        <i class="fas fa-paint-brush"></i>
+                    <div class="service-card-icon" role="img" aria-label="UI/UX design service icon">
+                        <i class="fas fa-paint-brush" aria-hidden="true"></i>
                     </div>
                     <h3>UI/UX Designing</h3>
                     <p>Create stunning user interfaces with intuitive experiences. Our design team crafts visually appealing layouts that engage users and elevate your brand identity with modern design principles.</p>
                     <ul class="service-features">
-                        <li><i class="fas fa-check"></i> User Research & Analysis</li>
-                        <li><i class="fas fa-check"></i> Wireframing & Prototyping</li>
-                        <li><i class="fas fa-check"></i> Visual Design & Branding</li>
-                        <li><i class="fas fa-check"></i> Usability Testing</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> User Research & Analysis</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Wireframing & Prototyping</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Visual Design & Branding</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Usability Testing</li>
                     </ul>
-                    <a href="contact.html" class="btn btn-primary ripple-btn">Learn More</a>
+                    <a href="contact.html" class="btn btn-primary ripple-btn" aria-label="Learn more about UI/UX design services">Learn More</a>
                 </div>
 
                 <!-- Website Development -->
                 <div class="service-card glass" data-aos="fade-up" data-aos-delay="100">
-                    <div class="service-card-icon">
-                        <i class="fas fa-code"></i>
+                    <div class="service-card-icon" role="img" aria-label="Website development service icon">
+                        <i class="fas fa-code" aria-hidden="true"></i>
                     </div>
                     <h3>Website Development</h3>
                     <p>Build powerful, responsive websites using cutting-edge technologies. From simple landing pages to complex web applications, we deliver exceptional digital experiences.</p>
@@ -88,13 +97,13 @@
                         <span class="tech-badge">JavaScript</span>
                         <span class="tech-badge">Node.js</span>
                     </div>
-                    <a href="contact.html" class="btn btn-primary ripple-btn">Learn More</a>
+                    <a href="contact.html" class="btn btn-primary ripple-btn" aria-label="Learn more about website development services">Learn More</a>
                 </div>
 
                 <!-- App Development -->
                 <div class="service-card glass" data-aos="fade-up" data-aos-delay="200">
-                    <div class="service-card-icon">
-                        <i class="fas fa-mobile-alt"></i>
+                    <div class="service-card-icon" role="img" aria-label="App development service icon">
+                        <i class="fas fa-mobile-alt" aria-hidden="true"></i>
                     </div>
                     <h3>App Development</h3>
                     <p>Develop cross-platform mobile applications that deliver native-like performance. We use modern frameworks to build apps that run seamlessly on both iOS and Android.</p>
@@ -105,71 +114,71 @@
                         <span class="tech-badge">Next.js</span>
                         <span class="tech-badge">React</span>
                     </div>
-                    <a href="contact.html" class="btn btn-primary ripple-btn">Learn More</a>
+                    <a href="contact.html" class="btn btn-primary ripple-btn" aria-label="Learn more about app development services">Learn More</a>
                 </div>
 
                 <!-- AI Chatbot Integration -->
                 <div class="service-card glass" data-aos="fade-up" data-aos-delay="300">
-                    <div class="service-card-icon">
-                        <i class="fas fa-robot"></i>
+                    <div class="service-card-icon" role="img" aria-label="AI chatbot integration service icon">
+                        <i class="fas fa-robot" aria-hidden="true"></i>
                     </div>
                     <h3>AI Chatbot Integration</h3>
                     <p>Integrate intelligent AI chatbots that provide 24/7 customer support, automate responses, and generate leads. Enhance user engagement with smart conversational experiences.</p>
                     <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Natural Language Processing</li>
-                        <li><i class="fas fa-check"></i> 24/7 Automated Support</li>
-                        <li><i class="fas fa-check"></i> Lead Generation</li>
-                        <li><i class="fas fa-check"></i> Custom Training</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Natural Language Processing</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> 24/7 Automated Support</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Lead Generation</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Custom Training</li>
                     </ul>
-                    <a href="contact.html" class="btn btn-primary ripple-btn">Learn More</a>
+                    <a href="contact.html" class="btn btn-primary ripple-btn" aria-label="Learn more about AI chatbot integration">Learn More</a>
                 </div>
 
                 <!-- WhatsApp Bot Integration -->
                 <div class="service-card glass" data-aos="fade-up" data-aos-delay="400">
-                    <div class="service-card-icon">
-                        <i class="fab fa-whatsapp"></i>
+                    <div class="service-card-icon" role="img" aria-label="WhatsApp bot integration service icon">
+                        <i class="fab fa-whatsapp" aria-hidden="true"></i>
                     </div>
                     <h3>WhatsApp Bot Integration</h3>
                     <p>Automate your WhatsApp communication with intelligent bots. Handle customer inquiries, send automated responses, and streamline business communication efficiently.</p>
                     <ul class="service-features">
-                        <li><i class="fas fa-check"></i> Automated Responses</li>
-                        <li><i class="fas fa-check"></i> Message Broadcasting</li>
-                        <li><i class="fas fa-check"></i> Order Management</li>
-                        <li><i class="fas fa-check"></i> Analytics Dashboard</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Automated Responses</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Message Broadcasting</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Order Management</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> Analytics Dashboard</li>
                     </ul>
-                    <a href="contact.html" class="btn btn-primary ripple-btn">Learn More</a>
+                    <a href="contact.html" class="btn btn-primary ripple-btn" aria-label="Learn more about WhatsApp bot automation">Learn More</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="section cta-section">
+    <section class="section cta-section" aria-label="Call to action">
         <div class="container">
             <div class="cta-content glass" data-aos="fade-up">
                 <h2 class="cta-title">Need a Custom Solution?</h2>
                 <p class="cta-text">Contact us today and let's discuss how we can help your business grow.</p>
-                <a href="contact.html" class="btn btn-primary btn-large ripple-btn">Contact Us</a>
+                <a href="contact.html" class="btn btn-primary btn-large ripple-btn" aria-label="Contact us for custom solutions">Contact Us</a>
             </div>
         </div>
     </section>
 
     <!-- Page Transition Overlay -->
-    <div id="page-transition" class="page-transition"></div>
+    <div id="page-transition" class="page-transition" aria-hidden="true"></div>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col footer-brand">
-                    <a href="index.html" class="footer-logo">WDA</a>
+                    <a href="index.html" class="footer-logo" aria-label="WDA Home">WDA</a>
                     <p class="footer-desc">Website Development Agency (WDA) delivers premium digital solutions including web development, UI/UX design, mobile apps, AI chatbots, and automation services.</p>
                     <div class="footer-social">
-                        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.instagram.com/stfu_hazzy" target="_blank" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link" aria-label="Follow us on Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                        <a href="#" class="social-link" aria-label="Follow us on Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        <a href="https://www.instagram.com/stfu_hazzy" target="_blank" class="social-link" aria-label="Follow us on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                        <a href="#" class="social-link" aria-label="Follow us on LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+                        <a href="#" class="social-link" aria-label="Follow us on YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
                     </div>
                 </div>
                 <div class="footer-col">
@@ -196,9 +205,9 @@
                 <div class="footer-col">
                     <h4>Contact Info</h4>
                     <ul class="footer-contact">
-                        <li><i class="fas fa-phone"></i> <a href="tel:03360180168">03360180168</a></li>
-                        <li><i class="fas fa-envelope"></i> <a href="mailto:exnesssjaffri@gmail.com">exnesssjaffri@gmail.com</a></li>
-                        <li><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/stfu_hazzy" target="_blank">@stfu_hazzy</a></li>
+                        <li><i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:03360180168" aria-label="Call us at 03360180168">03360180168</a></li>
+                        <li><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:exnesssjaffri@gmail.com" aria-label="Email us at exnesssjaffri@gmail.com">exnesssjaffri@gmail.com</a></li>
+                        <li><i class="fab fa-instagram" aria-hidden="true"></i> <a href="https://www.instagram.com/stfu_hazzy" target="_blank" aria-label="Follow us on Instagram @stfu_hazzy">@stfu_hazzy</a></li>
                     </ul>
                 </div>
             </div>

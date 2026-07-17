@@ -3,10 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="WDA Portfolio - Showcasing our best website development projects including eCommerce, restaurant, medical, and real estate platforms.">
-    <meta name="keywords" content="web development portfolio, website projects, eCommerce, restaurant website, medical website, real estate website">
-    <meta name="author" content="WDA">
-    <title>Portfolio - WDA</title>
+    <meta name="description" content="WDA Portfolio - Showcasing our best website development projects including eCommerce, restaurant, medical, and real estate platforms. See how we help businesses grow online.">
+    <meta name="keywords" content="web development portfolio, website projects, eCommerce website, restaurant website, medical website, real estate website, web design examples">
+    <meta name="author" content="WDA - Website Development Agency">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Portfolio - WDA | Our Web Development Projects">
+    <meta property="og:description" content="Browse WDA's portfolio of successful web development projects including eCommerce, restaurant, medical, and real estate platforms.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wda.com/portfolio.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Portfolio - WDA | Our Web Development Projects">
+    <meta name="twitter:description" content="Browse WDA's portfolio of successful web development projects.">
+    <title>Portfolio - WDA | Web Development Projects & Case Studies</title>
+    <link rel="canonical" href="https://wda.com/portfolio.html">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
@@ -15,58 +24,58 @@
 <body>
 
     <!-- Loading Screen -->
-    <div id="loading-screen">
+    <div id="loading-screen" role="status" aria-label="Loading">
         <div class="loader">
             <div class="loader-spinner"></div>
-            <div class="loader-text">WDA</div>
+            <div class="loader-text" aria-label="WDA Loading">WDA</div>
         </div>
     </div>
 
     <!-- Back to Top Button -->
-    <button id="back-to-top" aria-label="Back to top">
-        <i class="fas fa-arrow-up"></i>
+    <button id="back-to-top" aria-label="Back to top of page">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
     </button>
 
     <!-- Navigation -->
-    <nav id="navbar" class="navbar">
+    <nav id="navbar" class="navbar" role="navigation" aria-label="Main navigation">
         <div class="container nav-container">
-            <a href="index.html" class="nav-logo">WDA</a>
-            <div class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+            <a href="index.html" class="nav-logo" aria-label="WDA Home">WDA</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="about.html" class="nav-link">About Us</a></li>
-                <li><a href="services.html" class="nav-link">Services</a></li>
-                <li><a href="portfolio.html" class="nav-link active">Portfolio</a></li>
-                <li><a href="blog.html" class="nav-link">Blog</a></li>
-                <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+            </button>
+            <ul class="nav-menu" id="navMenu" role="menubar">
+                <li role="none"><a href="index.html" class="nav-link" role="menuitem">Home</a></li>
+                <li role="none"><a href="about.html" class="nav-link" role="menuitem">About Us</a></li>
+                <li role="none"><a href="services.html" class="nav-link" role="menuitem">Services</a></li>
+                <li role="none"><a href="portfolio.html" class="nav-link active" role="menuitem">Portfolio</a></li>
+                <li role="none"><a href="blog.html" class="nav-link" role="menuitem">Blog</a></li>
+                <li role="none"><a href="contact.html" class="nav-link" role="menuitem">Contact Us</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- Page Header -->
-    <section class="page-header">
+    <section class="page-header" aria-label="Page header">
         <div class="container">
-            <h1 data-aos="fade-up">Our Portfolio</h1>
-            <p data-aos="fade-up" data-aos-delay="100">Showcasing our best digital projects</p>
+            <h1 data-aos="fade-up">Our Portfolio - Web Development Projects</h1>
+            <p data-aos="fade-up" data-aos-delay="100">Showcasing our best digital projects and success stories</p>
         </div>
     </section>
 
     <!-- Portfolio Grid -->
-    <section class="section portfolio-page">
+    <section class="section portfolio-page" aria-label="Our portfolio projects">
         <div class="container">
             <div class="portfolio-grid">
                 <!-- Project 1 -->
                 <div class="portfolio-card glass" data-aos="fade-up" data-aos-delay="0">
                     <div class="portfolio-image">
-                        <div class="portfolio-placeholder" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
-                            <i class="fas fa-tshirt"></i>
+                        <div class="portfolio-placeholder" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);" role="img" aria-label="Modern Fashion Store eCommerce project">
+                            <i class="fas fa-tshirt" aria-hidden="true"></i>
                         </div>
                         <div class="portfolio-overlay">
-                            <a href="#" class="btn btn-primary ripple-btn">Visit Project</a>
+                            <a href="#" class="btn btn-primary ripple-btn" aria-label="Visit Modern Fashion Store project">Visit Project</a>
                         </div>
                     </div>
                     <div class="portfolio-info">
@@ -84,11 +93,11 @@
                 <!-- Project 2 -->
                 <div class="portfolio-card glass" data-aos="fade-up" data-aos-delay="100">
                     <div class="portfolio-image">
-                        <div class="portfolio-placeholder" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
-                            <i class="fas fa-utensils"></i>
+                        <div class="portfolio-placeholder" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);" role="img" aria-label="Restaurant Booking Platform project">
+                            <i class="fas fa-utensils" aria-hidden="true"></i>
                         </div>
                         <div class="portfolio-overlay">
-                            <a href="#" class="btn btn-primary ripple-btn">Visit Project</a>
+                            <a href="#" class="btn btn-primary ripple-btn" aria-label="Visit Restaurant Booking Platform project">Visit Project</a>
                         </div>
                     </div>
                     <div class="portfolio-info">
@@ -106,11 +115,11 @@
                 <!-- Project 3 -->
                 <div class="portfolio-card glass" data-aos="fade-up" data-aos-delay="200">
                     <div class="portfolio-image">
-                        <div class="portfolio-placeholder" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
-                            <i class="fas fa-hospital"></i>
+                        <div class="portfolio-placeholder" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);" role="img" aria-label="Medical Clinic Management project">
+                            <i class="fas fa-hospital" aria-hidden="true"></i>
                         </div>
                         <div class="portfolio-overlay">
-                            <a href="#" class="btn btn-primary ripple-btn">Visit Project</a>
+                            <a href="#" class="btn btn-primary ripple-btn" aria-label="Visit Medical Clinic Management project">Visit Project</a>
                         </div>
                     </div>
                     <div class="portfolio-info">
@@ -128,11 +137,11 @@
                 <!-- Project 4 -->
                 <div class="portfolio-card glass" data-aos="fade-up" data-aos-delay="300">
                     <div class="portfolio-image">
-                        <div class="portfolio-placeholder" style="background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);">
-                            <i class="fas fa-building"></i>
+                        <div class="portfolio-placeholder" style="background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);" role="img" aria-label="Real Estate Agency project">
+                            <i class="fas fa-building" aria-hidden="true"></i>
                         </div>
                         <div class="portfolio-overlay">
-                            <a href="#" class="btn btn-primary ripple-btn">Visit Project</a>
+                            <a href="#" class="btn btn-primary ripple-btn" aria-label="Visit Real Estate Agency project">Visit Project</a>
                         </div>
                     </div>
                     <div class="portfolio-info">
@@ -151,32 +160,32 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="section cta-section">
+    <section class="section cta-section" aria-label="Call to action">
         <div class="container">
             <div class="cta-content glass" data-aos="fade-up">
                 <h2 class="cta-title">Want a Project Like These?</h2>
                 <p class="cta-text">Let's build something amazing for your business. Get in touch with us today.</p>
-                <a href="contact.html" class="btn btn-primary btn-large ripple-btn">Start Your Project</a>
+                <a href="contact.html" class="btn btn-primary btn-large ripple-btn" aria-label="Start your project with WDA">Start Your Project</a>
             </div>
         </div>
     </section>
 
     <!-- Page Transition Overlay -->
-    <div id="page-transition" class="page-transition"></div>
+    <div id="page-transition" class="page-transition" aria-hidden="true"></div>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col footer-brand">
-                    <a href="index.html" class="footer-logo">WDA</a>
+                    <a href="index.html" class="footer-logo" aria-label="WDA Home">WDA</a>
                     <p class="footer-desc">Website Development Agency (WDA) delivers premium digital solutions including web development, UI/UX design, mobile apps, AI chatbots, and automation services.</p>
                     <div class="footer-social">
-                        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.instagram.com/stfu_hazzy" target="_blank" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link" aria-label="Follow us on Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                        <a href="#" class="social-link" aria-label="Follow us on Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        <a href="https://www.instagram.com/stfu_hazzy" target="_blank" class="social-link" aria-label="Follow us on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                        <a href="#" class="social-link" aria-label="Follow us on LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+                        <a href="#" class="social-link" aria-label="Follow us on YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
                     </div>
                 </div>
                 <div class="footer-col">
@@ -203,9 +212,9 @@
                 <div class="footer-col">
                     <h4>Contact Info</h4>
                     <ul class="footer-contact">
-                        <li><i class="fas fa-phone"></i> <a href="tel:03360180168">03360180168</a></li>
-                        <li><i class="fas fa-envelope"></i> <a href="mailto:exnesssjaffri@gmail.com">exnesssjaffri@gmail.com</a></li>
-                        <li><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/stfu_hazzy" target="_blank">@stfu_hazzy</a></li>
+                        <li><i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:03360180168" aria-label="Call us at 03360180168">03360180168</a></li>
+                        <li><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:exnesssjaffri@gmail.com" aria-label="Email us at exnesssjaffri@gmail.com">exnesssjaffri@gmail.com</a></li>
+                        <li><i class="fab fa-instagram" aria-hidden="true"></i> <a href="https://www.instagram.com/stfu_hazzy" target="_blank" aria-label="Follow us on Instagram @stfu_hazzy">@stfu_hazzy</a></li>
                     </ul>
                 </div>
             </div>

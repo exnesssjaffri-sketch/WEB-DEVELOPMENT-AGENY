@@ -3,10 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="About Website Development Agency (WDA) - Learn about our goal, mission, and why businesses choose us for web development services.">
-    <meta name="keywords" content="about WDA, web agency, website development company, about us">
-    <meta name="author" content="WDA">
-    <title>About Us - WDA</title>
+    <meta name="description" content="About Website Development Agency (WDA) - Pakistan's trusted web development company. Learn about our mission to deliver high-quality websites, UI/UX design, mobile apps, and AI solutions. 150+ projects delivered, 100+ happy clients.">
+    <meta name="keywords" content="about WDA, web development agency Pakistan, website design company, about us, web agency mission, professional web developers">
+    <meta name="author" content="WDA - Website Development Agency">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="About Us - WDA | Website Development Agency">
+    <meta property="og:description" content="Learn about WDA's mission, goal, and why businesses trust us for professional web development, UI/UX design, and digital solutions.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://wda.com/about.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="About Us - WDA | Website Development Agency">
+    <meta name="twitter:description" content="Learn about WDA's mission, goal, and why businesses trust us for professional web development.">
+    <title>About Us - WDA | Professional Website Development Agency</title>
+    <link rel="canonical" href="https://wda.com/about.html">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
@@ -15,52 +24,52 @@
 <body>
 
     <!-- Loading Screen -->
-    <div id="loading-screen">
+    <div id="loading-screen" role="status" aria-label="Loading">
         <div class="loader">
             <div class="loader-spinner"></div>
-            <div class="loader-text">WDA</div>
+            <div class="loader-text" aria-label="WDA Loading">WDA</div>
         </div>
     </div>
 
     <!-- Back to Top Button -->
-    <button id="back-to-top" aria-label="Back to top">
-        <i class="fas fa-arrow-up"></i>
+    <button id="back-to-top" aria-label="Back to top of page">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
     </button>
 
     <!-- Navigation -->
-    <nav id="navbar" class="navbar">
+    <nav id="navbar" class="navbar" role="navigation" aria-label="Main navigation">
         <div class="container nav-container">
-            <a href="index.html" class="nav-logo">WDA</a>
-            <div class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+            <a href="index.html" class="nav-logo" aria-label="WDA Home">WDA</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="about.html" class="nav-link active">About Us</a></li>
-                <li><a href="services.html" class="nav-link">Services</a></li>
-                <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
-                <li><a href="blog.html" class="nav-link">Blog</a></li>
-                <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+            </button>
+            <ul class="nav-menu" id="navMenu" role="menubar">
+                <li role="none"><a href="index.html" class="nav-link" role="menuitem">Home</a></li>
+                <li role="none"><a href="about.html" class="nav-link active" role="menuitem">About Us</a></li>
+                <li role="none"><a href="services.html" class="nav-link" role="menuitem">Services</a></li>
+                <li role="none"><a href="portfolio.html" class="nav-link" role="menuitem">Portfolio</a></li>
+                <li role="none"><a href="blog.html" class="nav-link" role="menuitem">Blog</a></li>
+                <li role="none"><a href="contact.html" class="nav-link" role="menuitem">Contact Us</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- Page Header -->
-    <section class="page-header">
+    <section class="page-header" aria-label="Page header">
         <div class="container">
-            <h1 data-aos="fade-up">About Us</h1>
-            <p data-aos="fade-up" data-aos-delay="100">Learn more about Website Development Agency (WDA)</p>
+            <h1 data-aos="fade-up">About Us - Website Development Agency</h1>
+            <p data-aos="fade-up" data-aos-delay="100">Learn more about WDA and our commitment to digital excellence</p>
         </div>
     </section>
 
     <!-- Our Goal Section -->
-    <section class="section about-section">
+    <section class="section about-section" aria-label="Our goal">
         <div class="container">
             <div class="about-card glass" data-aos="fade-up">
-                <div class="about-icon">
-                    <i class="fas fa-bullseye"></i>
+                <div class="about-icon" role="img" aria-label="Our goal icon - bullseye target">
+                    <i class="fas fa-bullseye" aria-hidden="true"></i>
                 </div>
                 <h2>Our Goal</h2>
                 <p>Our goal is to create websites that make every customer feel excited, confident, and proud of their online presence. We aim to deliver digital experiences that exceed expectations, helping businesses grow while ensuring every client enjoys the best possible service. We want our customers to be so satisfied with our work that they confidently recommend our services to their family, friends, and business partners.</p>
@@ -69,11 +78,11 @@
     </section>
 
     <!-- Our Mission Section -->
-    <section class="section about-section">
+    <section class="section about-section" aria-label="Our mission">
         <div class="container">
             <div class="about-card glass" data-aos="fade-up" data-aos-delay="100">
-                <div class="about-icon">
-                    <i class="fas fa-rocket"></i>
+                <div class="about-icon" role="img" aria-label="Our mission icon - rocket">
+                    <i class="fas fa-rocket" aria-hidden="true"></i>
                 </div>
                 <h2>Our Mission</h2>
                 <p>At Website Development Agency (WDA), we treat every customer like a member of our own family. Our mission is to earn trust through honesty, quality, and exceptional customer care while always valuing client feedback and opinions.</p>
@@ -83,11 +92,11 @@
     </section>
 
     <!-- Why Choose Us Section -->
-    <section class="section about-section">
+    <section class="section about-section" aria-label="Why choose us">
         <div class="container">
             <div class="about-card glass" data-aos="fade-up" data-aos-delay="200">
-                <div class="about-icon">
-                    <i class="fas fa-handshake"></i>
+                <div class="about-icon" role="img" aria-label="Why choose us icon - handshake">
+                    <i class="fas fa-handshake" aria-hidden="true"></i>
                 </div>
                 <h2>Why Choose Us</h2>
                 <p>We understand that successful business relationships are built on trust, consistency, and dependable service.</p>
@@ -98,23 +107,23 @@
     </section>
 
     <!-- Stats Section -->
-    <section class="section stats-section">
+    <section class="section stats-section" aria-label="Company statistics">
         <div class="container">
             <div class="stats-grid">
                 <div class="stat-item" data-aos="zoom-in" data-aos-delay="0">
-                    <div class="stat-number" data-target="150">0</div>
+                    <div class="stat-number" data-target="150" aria-label="150+ websites delivered">0</div>
                     <div class="stat-label">Websites Delivered</div>
                 </div>
                 <div class="stat-item" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="stat-number" data-target="100">0</div>
+                    <div class="stat-number" data-target="100" aria-label="100+ happy clients">0</div>
                     <div class="stat-label">Happy Clients</div>
                 </div>
                 <div class="stat-item" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="stat-number" data-target="5">0</div>
+                    <div class="stat-number" data-target="5" aria-label="5 countries served">0</div>
                     <div class="stat-label">Countries Served</div>
                 </div>
                 <div class="stat-item" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="stat-number" data-target="99">0</div>
+                    <div class="stat-number" data-target="99" aria-label="99% client satisfaction">0</div>
                     <div class="stat-label">Client Satisfaction</div>
                 </div>
             </div>
@@ -122,32 +131,32 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="section cta-section">
+    <section class="section cta-section" aria-label="Call to action">
         <div class="container">
             <div class="cta-content glass" data-aos="fade-up">
                 <h2 class="cta-title">Ready to Work With Us?</h2>
                 <p class="cta-text">Let's discuss your project and create something amazing together.</p>
-                <a href="contact.html" class="btn btn-primary btn-large ripple-btn">Get In Touch</a>
+                <a href="contact.html" class="btn btn-primary btn-large ripple-btn" aria-label="Get in touch with WDA">Get In Touch</a>
             </div>
         </div>
     </section>
 
     <!-- Page Transition Overlay -->
-    <div id="page-transition" class="page-transition"></div>
+    <div id="page-transition" class="page-transition" aria-hidden="true"></div>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col footer-brand">
-                    <a href="index.html" class="footer-logo">WDA</a>
+                    <a href="index.html" class="footer-logo" aria-label="WDA Home">WDA</a>
                     <p class="footer-desc">Website Development Agency (WDA) delivers premium digital solutions including web development, UI/UX design, mobile apps, AI chatbots, and automation services.</p>
                     <div class="footer-social">
-                        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.instagram.com/stfu_hazzy" target="_blank" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link" aria-label="Follow us on Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                        <a href="#" class="social-link" aria-label="Follow us on Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        <a href="https://www.instagram.com/stfu_hazzy" target="_blank" class="social-link" aria-label="Follow us on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                        <a href="#" class="social-link" aria-label="Follow us on LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+                        <a href="#" class="social-link" aria-label="Follow us on YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
                     </div>
                 </div>
                 <div class="footer-col">
@@ -174,9 +183,9 @@
                 <div class="footer-col">
                     <h4>Contact Info</h4>
                     <ul class="footer-contact">
-                        <li><i class="fas fa-phone"></i> <a href="tel:03360180168">03360180168</a></li>
-                        <li><i class="fas fa-envelope"></i> <a href="mailto:exnesssjaffri@gmail.com">exnesssjaffri@gmail.com</a></li>
-                        <li><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/stfu_hazzy" target="_blank">@stfu_hazzy</a></li>
+                        <li><i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:03360180168" aria-label="Call us at 03360180168">03360180168</a></li>
+                        <li><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:exnesssjaffri@gmail.com" aria-label="Email us at exnesssjaffri@gmail.com">exnesssjaffri@gmail.com</a></li>
+                        <li><i class="fab fa-instagram" aria-hidden="true"></i> <a href="https://www.instagram.com/stfu_hazzy" target="_blank" aria-label="Follow us on Instagram @stfu_hazzy">@stfu_hazzy</a></li>
                     </ul>
                 </div>
             </div>
