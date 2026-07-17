@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDA Portfolio - Showcasing our best website development projects including eCommerce, restaurant, medical, and real estate platforms.">
+    <meta name="keywords" content="web development portfolio, website projects, eCommerce, restaurant website, medical website, real estate website">
+    <meta name="author" content="WDA">
+    <title>Portfolio - WDA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+</head>
+<body>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loader">
+            <div class="loader-spinner"></div>
+            <div class="loader-text">WDA</div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-logo">WDA</a>
+            <div class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About Us</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="portfolio.html" class="nav-link active">Portfolio</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 data-aos="fade-up">Our Portfolio</h1>
+            <p data-aos="fade-up" data-aos-delay="100">Showcasing our best digital projects</p>
+        </div>
+    </section>
+
+    <!-- Portfolio Grid -->
+    <section class="section portfolio-page">
+        <div class="container">
+            <div class="portfolio-grid">
+                <!-- Project 1 -->
+                <div class="portfolio-card glass" data-aos="fade-up" data-aos-delay="0">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                            <i class="fas fa-tshirt"></i>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <a href="#" class="btn btn-primary ripple-btn">Visit Project</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Modern Fashion Store</h3>
+                        <p>A premium eCommerce website featuring secure checkout, responsive design, product filtering, and fast loading speed.</p>
+                        <div class="portfolio-tech">
+                            <span class="tech-badge">React</span>
+                            <span class="tech-badge">Node.js</span>
+                            <span class="tech-badge">MongoDB</span>
+                            <span class="tech-badge">Stripe</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="portfolio-card glass" data-aos="fade-up" data-aos-delay="100">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <a href="#" class="btn btn-primary ripple-btn">Visit Project</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Restaurant Booking Platform</h3>
+                        <p>A modern restaurant website with online reservations, menu management, customer reviews, and location integration.</p>
+                        <div class="portfolio-tech">
+                            <span class="tech-badge">Next.js</span>
+                            <span class="tech-badge">Tailwind</span>
+                            <span class="tech-badge">PostgreSQL</span>
+                            <span class="tech-badge">Google Maps</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="portfolio-card glass" data-aos="fade-up" data-aos-delay="200">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                            <i class="fas fa-hospital"></i>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <a href="#" class="btn btn-primary ripple-btn">Visit Project</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Medical Clinic Management</h3>
+                        <p>A healthcare website featuring online appointments, doctor profiles, patient information, and secure contact forms.</p>
+                        <div class="portfolio-tech">
+                            <span class="tech-badge">React</span>
+                            <span class="tech-badge">Firebase</span>
+                            <span class="tech-badge">Material UI</span>
+                            <span class="tech-badge">Twilio</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="portfolio-card glass" data-aos="fade-up" data-aos-delay="300">
+                    <div class="portfolio-image">
+                        <div class="portfolio-placeholder" style="background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <a href="#" class="btn btn-primary ripple-btn">Visit Project</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Real Estate Agency</h3>
+                        <p>A property listing platform with advanced search filters, interactive maps, inquiry forms, and mobile optimization.</p>
+                        <div class="portfolio-tech">
+                            <span class="tech-badge">Vue.js</span>
+                            <span class="tech-badge">Laravel</span>
+                            <span class="tech-badge">MySQL</span>
+                            <span class="tech-badge">Mapbox</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-content glass" data-aos="fade-up">
+                <h2 class="cta-title">Want a Project Like These?</h2>
+                <p class="cta-text">Let's build something amazing for your business. Get in touch with us today.</p>
+                <a href="contact.html" class="btn btn-primary btn-large ripple-btn">Start Your Project</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Page Transition Overlay -->
+    <div id="page-transition" class="page-transition"></div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-brand">
+                    <a href="index.html" class="footer-logo">WDA</a>
+                    <p class="footer-desc">Website Development Agency (WDA) delivers premium digital solutions including web development, UI/UX design, mobile apps, AI chatbots, and automation services.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/stfu_hazzy" target="_blank" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Our Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">UI/UX Designing</a></li>
+                        <li><a href="services.html">Website Development</a></li>
+                        <li><a href="services.html">App Development</a></li>
+                        <li><a href="services.html">AI Chatbot Integration</a></li>
+                        <li><a href="services.html">WhatsApp Bot Automation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-phone"></i> <a href="tel:03360180168">03360180168</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:exnesssjaffri@gmail.com">exnesssjaffri@gmail.com</a></li>
+                        <li><i class="fab fa-instagram"></i> <a href="https://www.instagram.com/stfu_hazzy" target="_blank">@stfu_hazzy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Website Development Agency (WDA). All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
