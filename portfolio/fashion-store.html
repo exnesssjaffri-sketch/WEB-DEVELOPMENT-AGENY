@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDA Portfolio - Modern Fashion Store eCommerce website case study. See how we built a premium online shopping experience with React and Next.js.">
+    <meta name="keywords" content="fashion ecommerce website, online store development, react ecommerce, next.js shopping cart, web development portfolio">
+    <meta name="author" content="WDA - Website Development Agency">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Modern Fashion Store - WDA Portfolio Case Study">
+    <meta property="og:description" content="Explore our full case study for a premium fashion eCommerce platform with secure checkout, product filtering, and responsive design.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Modern Fashion Store - WDA Portfolio Case Study">
+    <meta name="twitter:description" content="Explore our full case study for a premium fashion eCommerce platform.">
+    <title>Modern Fashion Store - WDA Portfolio Case Study</title>
+    <link rel="canonical" href="https://wda.com/portfolio/fashion-store">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/portfolio-detail.css">
+    <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+</head>
+<body>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen" role="status" aria-label="Loading">
+        <div class="loader">
+            <div class="loader-spinner"></div>
+            <div class="loader-text" aria-label="WDA Loading">WDA</div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" aria-label="Back to top of page">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="container nav-container">
+            <a href="../index.html" class="nav-logo" aria-label="WDA Home">WDA</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu" role="menubar">
+                <li role="none"><a href="../index.html" class="nav-link" role="menuitem">Home</a></li>
+                <li role="none"><a href="../about.html" class="nav-link" role="menuitem">About Us</a></li>
+                <li role="none"><a href="../services.html" class="nav-link" role="menuitem">Services</a></li>
+                <li role="none"><a href="../portfolio.html" class="nav-link active" role="menuitem">Portfolio</a></li>
+                <li role="none"><a href="../blog.html" class="nav-link" role="menuitem">Blog</a></li>
+                <li role="none"><a href="../contact.html" class="nav-link" role="menuitem">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <nav class="portfolio-breadcrumb" aria-label="Breadcrumb">
+        <div class="container">
+            <a href="../index.html">Home</a>
+            <i class="fas fa-chevron-right" aria-hidden="true"></i>
+            <a href="../portfolio.html">Portfolio</a>
+            <i class="fas fa-chevron-right" aria-hidden="true"></i>
+            <span>Modern Fashion Store</span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="portfolio-hero" aria-label="Project hero">
+        <div class="portfolio-hero-bg" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+            <div class="portfolio-hero-bg" style="background: linear-gradient(135deg, rgba(102,126,234,0.9), rgba(118,75,162,0.9));"></div>
+        </div>
+        <div class="portfolio-hero-content" data-aos="fade-up">
+            <span class="portfolio-category">eCommerce</span>
+            <h1>Modern Fashion Store</h1>
+            <p>A premium eCommerce platform designed for a high-end fashion brand, featuring secure checkout, intelligent product filtering, and a seamless mobile shopping experience.</p>
+            <div class="portfolio-hero-tech">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>React</span>
+                <span>Next.js</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Overview -->
+    <section class="portfolio-detail-section" data-aos="fade-up">
+        <div class="container">
+            <div class="overview-grid">
+                <div class="overview-content">
+                    <span class="section-label">Project Overview</span>
+                    <h2 class="section-heading">A Complete Fashion eCommerce Ecosystem</h2>
+                    <p class="section-text">We built a comprehensive online shopping platform for a luxury fashion brand that wanted to establish a strong digital presence. The project involved creating a full-featured eCommerce website from scratch, with a focus on user experience, performance, and conversion optimization.</p>
+                    <p class="section-text">The client needed a solution that could handle their growing inventory, provide a seamless shopping experience across all devices, and integrate with their existing payment and inventory systems.</p>
+                    <div class="overview-stats">
+                        <div class="overview-stat">
+                            <span class="stat-value" data-target="50">50+</span>
+                            <span class="stat-label">Products Listed</span>
+                        </div>
+                        <div class="overview-stat">
+                            <span class="stat-value" data-target="15">15+</span>
+                            <span class="stat-label">Categories</span>
+                        </div>
+                        <div class="overview-stat">
+                            <span class="stat-value" data-target="99">99%</span>
+                            <span class="stat-label">Uptime</span>
+                        </div>
+                        <div class="overview-stat">
+                            <span class="stat-value" data-target="3">3x</span>
+                            <span class="stat-label">Conversion Rate</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="overview-image glass">
+                    <div class="gallery-placeholder" style="background: linear-gradient(135deg, #667eea, #764ba2);min-height:400px;">
+                        <i class="fas fa-tshirt" style="font-size:5rem;color:rgba(255,255,255,0.7);"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Requirements -->
+    <section class="portfolio-detail-section" data-aos="fade-up">
+        <div class="container">
+            <span class="section-label">Client Requirements</span>
+            <h2 class="section-heading">What the Client Needed</h2>
+            <p class="section-text">The client approached us with a clear vision for their online store. They needed a modern, scalable eCommerce platform that could showcase their fashion collections and provide a premium shopping experience.</p>
+            <div class="requirements-list">
+                <div class="requirement-item glass">
+                    <i class="fas fa-shopping-cart"></i>
+                    <div>
+                        <h4>Full eCommerce Functionality</h4>
+                        <p>Complete shopping cart, secure checkout, order management, and payment gateway integration.</p>
+                    </div>
+                </div>
+                <div class="requirement-item glass">
+                    <i class="fas fa-mobile-alt"></i>
+                    <div>
+                        <h4>Mobile-First Design</h4>
+                        <p>Fully responsive layout that provides an optimal shopping experience on all devices and screen sizes.</p>
+                    </div>
+                </div>
+                <div class="requirement-item glass">
+                    <i class="fas fa-search"></i>
+                    <div>
+                        <h4>Advanced Product Search</h4>
+                        <p>Intelligent search with filters, categories, size guides, and color swatches for easy product discovery.</p>
+                    </div>
+                </div>
+                <div class="requirement-item glass">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <div>
+                        <h4>Fast Performance</h4>
+                        <p>Optimized loading speeds with lazy-loaded images, code splitting, and CDN integration for global customers.</p>
+                    </div>
+                </div>
+                <div class="requirement-item glass">
+                    <i class="fas fa-shield-alt"></i>
+                    <div>
+                        <h4>Secure Checkout</h4>
+                        <p>SSL encryption, PCI compliance, and multiple payment options including credit cards, PayPal, and digital wallets.</p>
+                    </div>
+                </div>
+                <div class="requirement-item glass">
+                    <i class="fas fa-chart-line"></i>
+                    <div>
+                        <h4>Admin Dashboard</h4>
+                        <p>Comprehensive admin panel for inventory management, order processing, analytics, and customer management.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution -->
+    <section class="portfolio-detail-section" data-aos="fade-up">
+        <div class="container">
+            <span class="section-label">Our Solution</span>
+            <h2 class="section-heading">How We Solved It</h2>
+            <p class="section-text">We developed a custom eCommerce platform using React and Next.js for the frontend, providing server-side rendering for optimal SEO and performance. The backend was built with a microservices architecture to ensure scalability.</p>
+            <p class="section-text">Our solution included a headless CMS for easy content management, integrated Stripe and PayPal payment gateways, and implemented a robust inventory management system with real-time stock updates.</p>
+        </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="portfolio-detail-section" data-aos="fade-up">
+        <div class="container">
+            <span class="section-label">Key Features</span>
+            <h2 class="section-heading">Features That Make a Difference</h2>
+            <div class="features-grid-detail">
+                <div class="feature-detail-card glass">
+                    <i class="fas fa-lock"></i>
+                    <h4>Secure Checkout</h4>
+                    <p>Encrypted payment processing with support for multiple payment methods and one-click checkout.</p>
+                </div>
+                <div class="feature-detail-card glass">
+                    <i class="fas fa-sliders-h"></i>
+                    <h4>Advanced Filters</h4>
+                    <p>Filter by size, color, price range, brand, and category with instant results and no page reload.</p>
+                </div>
+                <div class="feature-detail-card glass">
+                    <i class="fas fa-star"></i>
+                    <h4>Product Reviews</h4>
+                    <p>Customer review system with ratings, photos, and verified purchase badges to build trust.</p>
+                </div>
+                <div class="feature-detail-card glass">
+                    <i class="fas fa-tags"></i>
+                    <h4>Coupons & Promotions</h4>
+                    <p>Dynamic coupon system with percentage discounts, free shipping, and buy-one-get-one offers.</p>
+                </div>
+                <div class="feature-detail-card glass">
+                    <i class="fas fa-credit-card"></i>
+                    <h4>Payment Gateway</h4>
+                    <p>Integrated Stripe, PayPal, and local payment methods with automatic currency conversion.</p>
+                </div>
+                <div class="feature-detail-card glass">
+                    <i class="fas fa-boxes"></i>
+                    <h4>Inventory System</h4>
+                    <p>Real-time inventory tracking with low stock alerts, automatic restocking notifications, and warehouse management.</p>
+                </div>
+                <div class="feature-detail-card glass">
+                    <i class="fas fa-heart"></i>
+                    <h4>Wishlist</h4>
+                    <p>Save favorite items to wishlist with share functionality and price drop notifications.</p>
+                </div>
+                <div class="feature-detail-card glass">
+                    <i class="fas fa-user"></i>
+                    <h4>User Dashboard</h4>
+                    <p>Personal accounts with order history, tracking, saved addresses, and preference management.</p>
+                </div>
+                <div class="feature-detail-card glass">
+                    <i class="fas fa-truck"></i>
+                    <h4>Order Tracking</h4>
+                    <p>Real-time order tracking with status updates, estimated delivery dates, and shipment notifications.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Gallery -->
+    <section class="portfolio-detail-section" data-aos="fade-up">
+        <div class="container">
+            <span class="section-label">Screenshots Gallery</span>
+            <h2 class="section-heading">Visual Tour of the Platform</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item glass">
+                    <div class="gallery-placeholder" style="background: linear-gradient(135deg, #667eea, #764ba2);">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <div class="gallery-overlay">Home Page</div>
+                </div>
+                <div class="gallery-item glass">
+                    <div class="gallery-placeholder" style="background: linear-gradient(135deg, #f093fb, #f5576c);">
+                        <i class="fas fa-th-list"></i>
+                    </div>
+                    <div class="gallery-overlay">Product Listing</div>
+                </div>
+                <div class="gallery-item glass">
+                    <div class="gallery-placeholder" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                    <div class="gallery-overlay">Product Details</div>
+                </div>
+                <div class="gallery-item glass">
+                    <div class="gallery-placeholder" style="background: linear-gradient(135deg, #a18cd1, #fbc2eb);">
+                        <i class="fas fa-shopping-bag"></i>
+                    </div>
+                    <div class="gallery-overlay">Shopping Cart</div>
+                </div>
+                <div class="gallery-item glass">
+                    <div class="gallery-placeholder" style="background: linear-gradient(135deg, #ffecd2, #fcb69f);">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <div class="gallery-overlay">Checkout Process</div>
+                </div>
+                <div class="gallery-item glass">
+                    <div class="gallery-placeholder" style="background: linear-gradient(135deg, #a1c4fd, #c2e9fb);">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="gallery-overlay">User Dashboard</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Website Pages Preview -->
+    <section class="portfolio-detail-section" data-aos="fade-up">
+        <div class="container">
+            <span class="section-label">Website Pages</span>
+            <h2 class="section-heading">Pages We Built</h2>
+            <div class="pages-preview">
+                <div class="page-preview-card glass">
+                    <div class="page-preview-image">
+                        <div class="gallery-placeholder" style="background: linear-gradient(135deg, #667eea, #764ba2);font-size:2rem;">
+                            <i class="fas fa-home"></i>
+                        </div>
+                    </div>
+                    <h4>Home Page</h4>
+                </div>
+                <div class="page-preview-card glass">
+                    <div class="page-preview-image">
+                        <div class="gallery-placeholder" style="background: linear-gradient(135deg, #f093fb, #f5576c);font-size:2rem;">
+                            <i class="fas fa-th"></i>
+                        </div>
+                    </div>
+                    <h4>Product Listing</h4>
+                </div>
+                <div class="page-preview-card glass">
+                    <div class="page-preview-image">
+                        <div class="gallery-placeholder" style="background: linear-gradient(135deg, #4facfe, #00f2fe);font-size:2rem;">
+                            <i class="fas fa-info"></i>
+                        </div>
+                    </div>
+                    <h4>Product Details</h4>
+                </div>
+                <div class="page-preview-card glass">
+                    <div class="page-preview-image">
+                        <div class="gallery-placeholder" style="background: linear-gradient(135deg, #a18cd1, #fbc2eb);font-size:2rem;">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                    </div>
+                    <h4>Shopping Cart</h4>
+                </div>
+                <div class="page-preview-card glass">
+                    <div class="page-preview-image">
+                        <div class="gallery-placeholder" style="background: linear-gradient(135deg, #ffecd2, #fcb69f);font-size:2rem;">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                    </div>
+                    <h4>Checkout</h4>
+                </div>
+                <div class="page-preview-card glass">
+                    <div class="page-preview-image">
+                        <div class="gallery-placeholder" style="background: linear-gradient(135deg, #a1c4fd, #c2e9fb);font-size:2rem;">
+                            <i class="fas fa-user-cog"></i>
+                        </div>
+                    </div>
+                    <h4>User Dashboard</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Development Process -->
+    <section class="portfolio-detail-section" data-aos="fade-up">
+        <div class="container">
+            <span class="section-label">Development Process</span>
+            <h2 class="section-heading">How We Built It</h2>
+            <div class="process-timeline">
+                <div class="process-step" data-aos="fade-up">
+                    <h4>01. Discovery & Planning</h4>
+                    <p>We conducted thorough research on the fashion eCommerce market, analyzed competitor websites, and defined user personas. This phase included requirement gathering, technical architecture planning, and creating detailed wireframes.</p>
+                </div>
+                <div class="process-step" data-aos="fade-up" data-aos-delay="100">
+                    <h4>02. UI/UX Design</h4>
+                    <p>Our design team created a sophisticated visual identity with a clean, minimalist aesthetic that puts products front and center. We designed over 30 unique screens with a focus on conversion optimization and mobile usability.</p>
+                </div>
+                <div class="process-step" data-aos="fade-up" data-aos-delay="200">
+                    <h4>03. Frontend Development</h4>
+                    <p>Using React and Next.js, we built a component-based architecture with server-side rendering for optimal SEO. The frontend features dynamic routing, lazy loading, and smooth page transitions.</p>
+                </div>
+                <div class="process-step" data-aos="fade-up" data-aos-delay="300">
+                    <h4>04. Backend Integration</h4>
+                    <p>We integrated a headless CMS for product management, implemented RESTful APIs, set up the payment gateway integrations, and built the inventory management system with real-time sync.</p>
+                </div>
+                <div class="process-step" data-aos="fade-up" data-aos-delay="400">
+                    <h4>05. Testing & QA</h4>
+                    <p>Comprehensive testing across all browsers and devices, performance optimization, security audits, and user acceptance testing with real users to ensure a flawless experience.</p>
+                </div>
+                <div class="process-step" data-aos="fade-up" data-aos-delay="500">
+                    <h4>06. Deployment & Launch</h4>
+                    <p>We deployed the platform on a scalable cloud infrastructure, set up monitoring and analytics, and provided the client with comprehensive training on managing their new online store.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Used -->
+    <section class="portfolio-detail-section" data-aos="fade-up">
+        <div class="container">
+            <span class="section-label">Technologies Used</span>
+            <h2 class="section-heading">Tech Stack</h2>
+            <div class="tech-detail-grid">
+                <div class="tech-detail-card glass">
+                    <i class="fab fa-html5"></i>
+                    <h4>HTML5</h4>
+                </div>
+                <div class="tech-detail-card glass">
+                    <i class="fab fa-css3-alt"></i>
+                    <h4>CSS3</h4>
+                </div>
+                <div class="tech-detail-card glass">
+                    <i class="fab fa-js"></i>
+                    <h4>JavaScript</h4>
+                </div>
+                <div class="tech-detail-card glass">
+                    <i class="fab fa-react"></i>
+                    <h4>React</h4>
+                </div>
+                <div class="tech-detail-card glass">
+                    <i class="fas fa-arrow-right"></i>
+                    <h4>Next.js</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Responsive Design -->
+    <section class="portfolio-detail-section" data-aos="fade-up">
+        <div class="container">
+            <span class="section-label">Responsive Design</span>
+            <h2 class="section-heading">Optimized for Every Device</h2>
+            <p class="section-text">The fashion store delivers a consistent, enjoyable shopping experience whether customers are browsing on a desktop, tablet, or mobile phone.</p>
+            <div class="responsive-showcase">
+                <div class="mockup-device desktop" data-aos="fade-up">
+                    <div class="device-frame">
+                        <div class="device-screen">
+                            <i class="fas fa-desktop" style="font-size:2rem;"></i>
+                            <span style="margin-left:10px;">Desktop View</span>
+                        </div>
+                    </div>
+                    <span class="device-label">Desktop</span>
+                </div>
+                <div class="mockup-device tablet" data-aos="fade-up" data-aos-delay="100">
+                    <div class="device-frame">
+                        <div class="device-screen">
+                            <i class="fas fa-tablet-alt" style="font-size:2rem;"></i>
+                            <span style="margin-left:10px;">Tablet View</span>
+                        </div>
+                    </div>
+                    <span class="device-label">Tablet</span>
+                </div>
+                <div class="mockup-device mobile" data-aos="fade-up" data-aos-delay="200">
+                    <div class="device-frame">
+                        <div class="device-screen">
+                            <i class="fas fa-mobile-alt" style="font-size:2rem;"></i>
+                            <span style="margin-left:10px;">Mobile View</span>
+                        </div>
+                    </div>
+                    <span class="device-label">Mobile</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Color Palette & Typography -->
+    <section class="portfolio-detail-section" data-aos="fade-up">
+        <div class="container">
+            <span class="section-label">Design System</span>
+            <h2 class="section-heading">Color Palette & Typography</h2>
+            <div class="overview-grid">
+                <div>
+                    <h3 style="font-size:1.3rem;font-weight:700;margin-bottom:15px;">Color Palette</h3>
+                    <div class="color-palette">
+                        <div class="color-swatch">
+                            <div class="color-circle" style="background:#667eea;"></div>
+                            <span class="color-label">Primary Blue</span>
+                        </div>
+                        <div class="color-swatch">
+                            <div class="color-circle" style="background:#764ba2;"></div>
+                            <span class="color-label">Accent Purple</span>
+                        </div>
+                        <div class="color-swatch">
+                            <div class="color-circle" style="background:#ffffff;border-color:#ddd;"></div>
+                            <span class="color-label">White</span>
+                        </div>
+                        <div class="color-swatch">
+                            <div class="color-circle" style="background:#333333;"></div>
+                            <span class="color-label">Dark Text</span>
+                        </div>
+                        <div class="color-swatch">
+                            <div class="color-circle" style="background:#f8f9fa;border-color:#ddd;"></div>
+                            <span class="color-label">Light BG</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 style="font-size:1.3rem;font-weight:700;margin-bottom:15px;">Typography</h3>
+                    <div class="typography-sample">
+                        <div class="heading-sample">Playfair Display</div>
+                        <p style="font-size:0.9rem;opacity:0.7;margin-bottom:15px;">Used for headings - Elegant & Modern</p>
+                        <div class="body-sample" style="font-family:'Inter',sans-serif;">Inter Regular - Used for body text. This is a sample paragraph showing how the text appears on the website. Clean, readable, and professional.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Challenges -->
+    <section class="portfolio-detail-section" data-aos="fade-up">
+        <div class="container">
+            <span class="section-label">Challenges Faced</span>
+            <h2 class="section-heading">Overcoming Obstacles</h2>
+            <div class="challenges-grid">
+                <div class="challenge-card glass">
+                    <h4><i class="fas fa-exclamation-triangle"></i> Challenge</h4>
+                    <p>Integrating multiple payment gateways while maintaining PCI compliance and a seamless user experience across different regions.</p>
+                </div>
+                <div class="challenge-card solved glass">
+                    <h4><i class="fas fa-check-circle"></i> Solution</h4>
+                    <p>Implemented a unified payment interface with tokenization, using Stripe Connect for global payments and local gateways for specific markets.</p>
+                </div>
+                <div class="challenge-card glass">
+                    <h4><i class="fas fa-exclamation-triangle"></i> Challenge</h4>
+                    <p>Handling high-resolution product images without compromising page load speed and overall site performance.</p>
+                </div>
+                <div class="challenge-card solved glass">
+                    <h4><i class="fas fa-check-circle"></i> Solution</h4>
+                    <p>Implemented progressive image loading with WebP format, lazy loading, a CDN for global delivery, and responsive image breakpoints.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Performance -->
+    <section class="portfolio-detail-section" data-aos="fade-up">
+        <div class="container">
+            <span class="section-label">Performance & Optimization</span>
+            <h2 class="section-heading">Built for Speed</h2>
+            <div class="performance-metrics">
+                <div class="metric-card glass">
+                    <i class="fas fa-rocket metric-icon"></i>
+                    <span class="metric-value">95</span>
+                    <span class="metric-label">PageSpeed Score</span>
+                </div>
+                <div class="metric-card glass">
+                    <i class="fas fa-clock metric-icon"></i>
+                    <span class="metric-value">1.2s</span>
+                    <span class="metric-label">Avg. Load Time</span>
+                </div>
+                <div class="metric-card glass">
+                    <i class="fas fa-search metric-icon"></i>
+                    <span class="metric-value">100</span>
+                    <span class="metric-label">SEO Score</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial -->
+    <section class="portfolio-detail-section" data-aos="fade-up">
+        <div class="container">
+            <span class="section-label">Client Testimonial</span>
+            <h2 class="section-heading">What Our Client Says</h2>
+            <div class="testimonial-detail glass">
+                <div class="testimonial-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">"WDA transformed our online presence completely. Our new fashion store not only looks stunning but also performs incredibly well. Since launch, our online sales have tripled, and customer feedback has been overwhelmingly positive. The team's attention to detail and understanding of the fashion industry was remarkable."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">SK</div>
+                    <div class="author-info">
+                        <h4>Sarah Khan</h4>
+                        <p>CEO, FashionVault</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final Result / CTA -->
+    <section class="portfolio-detail-section" data-aos="fade-up">
+        <div class="container" style="text-align:center;">
+            <span class="section-label">Final Result</span>
+            <h2 class="section-heading">A Fashion Platform That Delivers</h2>
+            <p class="section-text" style="max-width:700px;margin:0 auto 30px;">The Modern Fashion Store is now live and generating impressive results. The client has seen a significant increase in online sales, improved customer engagement, and a modern digital presence that truly reflects their brand identity.</p>
+            <div class="portfolio-cta">
+                <a href="#" class="btn btn-primary btn-large ripple-btn" aria-label="Visit Live Demo">Visit Live Demo <i class="fas fa-external-link-alt" style="margin-left:8px;"></i></a>
+                <a href="../portfolio.html" class="btn btn-secondary btn-large ripple-btn" aria-label="Back to Portfolio">Back to Portfolio</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta-section" aria-label="Start your project">
+        <div class="container">
+            <div class="cta-content glass" data-aos="fade-up">
+                <h2 class="cta-title">Want a Project Like This?</h2>
+                <p class="cta-text">Let's build something amazing for your business. Get in touch with us today.</p>
+                <a href="../contact.html" class="btn btn-primary btn-large ripple-btn" aria-label="Start Your Project">Start Your Project</a>
+                <a href="../contact.html" class="btn btn-secondary btn-large ripple-btn" style="margin-left:15px;" aria-label="Request a Quote">Request a Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Page Transition Overlay -->
+    <div id="page-transition" class="page-transition" aria-hidden="true"></div>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-brand">
+                    <a href="../index.html" class="footer-logo" aria-label="WDA Home">WDA</a>
+                    <p class="footer-desc">Website Development Agency (WDA) delivers premium digital solutions including web development, UI/UX design, mobile apps, AI chatbots, and automation services.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link" aria-label="Follow us on Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                        <a href="#" class="social-link" aria-label="Follow us on Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        <a href="https://www.instagram.com/stfu_hazzy" target="_blank" class="social-link" aria-label="Follow us on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                        <a href="#" class="social-link" aria-label="Follow us on LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+                        <a href="#" class="social-link" aria-label="Follow us on YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../about.html">About Us</a></li>
+                        <li><a href="../services.html">Services</a></li>
+                        <li><a href="../portfolio.html">Portfolio</a></li>
+                        <li><a href="../blog.html">Blog</a></li>
+                        <li><a href="../contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Our Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="../services.html">UI/UX Designing</a></li>
+                        <li><a href="../services.html">Website Development</a></li>
+                        <li><a href="../services.html">App Development</a></li>
+                        <li><a href="../services.html">AI Chatbot Integration</a></li>
+                        <li><a href="../services.html">WhatsApp Bot Automation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:03360180168" aria-label="Call us at 03360180168">03360180168</a></li>
+                        <li><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:exnesssjaffri@gmail.com" aria-label="Email us at exnesssjaffri@gmail.com">exnesssjaffri@gmail.com</a></li>
+                        <li><i class="fab fa-instagram" aria-hidden="true"></i> <a href="https://www.instagram.com/stfu_hazzy" target="_blank" aria-label="Follow us on Instagram @stfu_hazzy">@stfu_hazzy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Website Development Agency (WDA). All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../js/portfolio-detail.js"></script>
+</body>
+</html>

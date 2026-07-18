@@ -918,9 +918,24 @@ img {
     gap: 30px;
 }
 
+.portfolio-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: var(--transition);
+}
+
+.portfolio-card-link:hover {
+    transform: translateY(-5px);
+}
+
+.portfolio-card-link .portfolio-card {
+    cursor: pointer;
+}
+
 .portfolio-card {
     overflow: hidden;
-    cursor: default;
+    cursor: pointer;
 }
 
 .portfolio-image {

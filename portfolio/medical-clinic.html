@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDA Portfolio - Medical Clinic Management case study. See how we built a professional healthcare website with appointment booking and patient management.">
+    <meta name="keywords" content="healthcare website, medical clinic, appointment booking, patient management, react healthcare, web development portfolio">
+    <meta name="author" content="WDA - Website Development Agency">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Medical Clinic Management - WDA Portfolio Case Study">
+    <meta property="og:description" content="Explore our full case study for a professional medical clinic management platform with online appointments, doctor profiles, and patient records.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>Medical Clinic Management - WDA Portfolio Case Study</title>
+    <link rel="canonical" href="https://wda.com/portfolio/medical-clinic">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/portfolio-detail.css">
+    <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+</head>
+<body>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen" role="status" aria-label="Loading">
+        <div class="loader">
+            <div class="loader-spinner"></div>
+            <div class="loader-text" aria-label="WDA Loading">WDA</div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" aria-label="Back to top of page">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="container nav-container">
+            <a href="../index.html" class="nav-logo" aria-label="WDA Home">WDA</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu" role="menubar">
+                <li role="none"><a href="../index.html" class="nav-link" role="menuitem">Home</a></li>
+                <li role="none"><a href="../about.html" class="nav-link" role="menuitem">About Us</a></li>
+                <li role="none"><a href="../services.html" class="nav-link" role="menuitem">Services</a></li>
+                <li role="none"><a href="../portfolio.html" class="nav-link active" role="menuitem">Portfolio</a></li>
+                <li role="none"><a href="../blog.html" class="nav-link" role="menuitem">Blog</a></li>
+                <li role="none"><a href="../contact.html" class="nav-link" role="menuitem">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <nav class="portfolio-breadcrumb" aria-label="Breadcrumb">
+        <div class="container">
+            <a href="../index.html">Home</a>
+            <i class="fas fa-chevron-right" aria-hidden="true"></i>
+            <a href="../portfolio.html">Portfolio</a>
+            <i class="fas fa-chevron-right" aria-hidden="true"></i>
+            <span>Medical Clinic Management</span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="portfolio-hero" aria-label="Project hero">
+        <div class="portfolio-hero-bg" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+            <div class="portfolio-hero-bg" style="background: linear-gradient(135deg, rgba(79,172,254,0.9), rgba(0,242,254,0.9));"></div>
+        </div>
+        <div class="portfolio-hero-content" data-aos="fade-up">
+            <span class="portfolio-category">Healthcare</span>
+            <h1>Medical Clinic Management</h1>
+            <p>A comprehensive healthcare platform featuring online appointment booking, doctor profiles, patient management, and secure medical records system for a modern clinic.</p>
+            <div class="portfolio-hero-tech">
+                <span>React</span>
+                <span>Next.js</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Overview -->
+    <section class="portfolio-detail-section" data-aos="fade-up">
+        <div class="container">
+            <div class="overview-grid">
+                <div class="overview-content">
+                    <span class="section-label">Project Overview</span>
+                    <h2 class="section-heading">Modern Healthcare Management</h2>
+                    <p class="section-text">We developed a full-featured healthcare management platform for a multi-specialty clinic that wanted to digitize their operations and provide a seamless experience for both patients and medical staff.</p>
+                    <p class="section-text">The platform streamlines appointment scheduling, manages patient records securely, and facilitates better communication between doctors and patients.</p>
+                    <div class="overview-stats">
+                        <div class="overview-stat">
+                            <span class="stat-value" data-target="1000">1K+</span>
+                            <span class="stat-label">Patients Served</span>
+                        </div>
+                        <div class="overview-stat">
+                            <span class="stat-value" data-target="20">20+</span>
+                            <span class="stat-label">Specialists</span>
+                        </div>
+                        <div class="overview-stat">
+                            <span class="stat-value" data-target="99">99%</span>
+                            <span class="stat-label">Data Security</span>
+                        </div>
+                        <div class="overview-stat">
+                            <span class="stat-value" data-target="40">40%</span>
+                            <span class="stat-label">Efficiency Gain</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="overview-image glass">
+                    <div class="gallery-placeholder" style="background: linear-gradient(135deg, #4facfe, #00f2fe);min-height:400px;">
+                        <i class="fas fa-hospital" style="font-size:5rem;color:rgba(255,255,255,0.7);"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Requirements -->
+    <section class="portfolio-detail-section" data-aos="fade-up">
+        <div class="container">
+            <span class="section-label">Client Requirements</span>
+            <h2 class="section-heading">What the Client Needed</h2>
+            <p class="section-text">The clinic needed a digital transformation solution that would improve patient experience, reduce administrative workload, and maintain the highest standards of data security and privacy.</p>
+            <div class="requirements-list">
+                <div class="requirement-item glass">
+                    <i class="fas fa-calendar-plus"></i>
+                    <div>
+                        <h4>Online Appointment Booking</h4>
+                        <p>Easy-to-use booking system with specialist selection, time slot availability, and automated reminders via SMS and email.</p>
+                    </div>
+                </div>
+                <div class="requirement-item glass">
+                    <i class="fas fa-user-md"></i>
+                    <div>
+                        <h4>Doctor Profiles</h4>
+                        <p>Detailed profiles for each specialist including qualifications, experience, areas of expertise, and patient reviews.</p>
+                    </div>
+                </div>
+                <div class="requirement-item glass">
+                    <i class="fas fa-notes-medical"></i>
+                    <div>
+                        <h4>Medical Records</h4>
+                        <p>Secure digital storage and management of patient records, prescriptions, lab reports, and medical history.</p>
+                    </div>
+                </div>
+                <div class="requirement-item glass">
+                    <i class="fas fa-user-lock"></i>
+                    <div>
+                        <h4>Secure Patient Login</h4>
+                        <p>HIPAA-compliant authentication system allowing patients to access their records, book appointments, and communicate with doctors.</p>
+                    </div>
+                </div>
+                <div class="requirement-item glass">
+                    <i class="fas fa-bell"></i>
+                    <div>
+                        <h4>Notifications System</h4>
+                        <p>Automated notifications for appointment confirmations, reminders, lab results availability, and prescription refills.</p>
+                    </div>
+                </div>
+                <div class="requirement-item glass">
+                    <i class="fas fa-question-circle"></i>
+                    <div>
+                        <h4>FAQ & Information</h4>
+                        <p>Comprehensive FAQ section covering clinic policies, insurance information, procedures, and health resources.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution -->
+    <section class="portfolio-detail-section" data-aos="fade-up">
+        <div class="container">
+            <span class="section-label">Our Solution</span>
+            <h2 class="section-heading">How We Solved It</h2>
+            <p class="section-text">We built a robust healthcare platform using React and Next.js, ensuring fast loading times and excellent SEO for patient acquisition. The platform features end-to-end encryption for all patient data, role-based access control, and a user-friendly interface designed for users of all ages.</p>
+            <p class="section-text">Our solution includes a patient portal for self-service, a doctor dashboard for managing schedules and records, and an admin panel for clinic management. All data is stored securely with regular backups and disaster recovery protocols.</p>
+        </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="portfolio-detail-section" data-aos="fade-up">
+        <div class="container">
+            <span class="section-label">Key Features</span>
+            <h2 class="section-heading">Features That Matter</h2>
+            <div class="features-grid-detail">
+                <div class="feature-detail-card glass">
+                    <i class="fas fa-calendar-check"></i>
+                    <h4>Appointment Scheduling</h4>
+                    <p>Smart scheduling system with real-time slot availability, doctor preferences, and instant confirmation.</p>
+                </div>
+                <div class="feature-detail-card glass">
+                    <i class="fas fa-user-md"></i>
+                    <h4>Doctor Profiles</h4>
+                    <p>Comprehensive profiles with credentials, specialties, experience, languages spoken, and patient ratings.</p>
+                </div>
+                <div class="feature-detail-card glass">
+                    <i class="fas fa-folder"></i>
+                    <h4>Patient Records</h4>
+                    <p>Digital medical records with secure access, version history, and easy sharing with authorized providers.</p>
+                </div>
+                <div class="feature-detail-card glass">
+                    <i class="fas fa-shield-alt"></i>
+                    <h4>Secure Login</h4>
+                    <p>Multi-factor authentication, encrypted sessions, and HIPAA-compliant data handling for maximum security.</p>
+                </div>
+                <div class="feature-detail-card glass">
+                    <i class="fas fa-bell"></i>
+                    <h4>Smart Notifications</h4>
+                    <p>Automated reminders, confirmations, and updates via SMS, email, and in-app notifications.</p>
+                </div>
+                <div class="feature-detail-card glass">
+                    <i class="fas fa-chart-pie"></i>
+                    <h4>Analytics Dashboard</h4>
+                    <p>Comprehensive analytics showing patient demographics, appointment trends, and operational metrics.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Gallery -->
+    <section class="portfolio-detail-section" data-aos="fade-up">
+        <div class="container">
+            <span class="section-label">Screenshots Gallery</span>
+            <h2 class="section-heading">Platform Preview</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item glass">
+                    <div class="gallery-placeholder" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <div class="gallery-overlay">Home Page</div>
+                </div>
+                <div class="gallery-item glass">
+                    <div class="gallery-placeholder" style="background: linear-gradient(135deg, #667eea, #764ba2);">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <div class="gallery-overlay">Doctors Directory</div>
+                </div>
+                <div class="gallery-item glass">
+                    <div class="gallery-placeholder" style="background: linear-gradient(135deg, #f093fb, #f5576c);">
+                        <i class="fas fa-calendar-plus"></i>
+                    </div>
+                    <div class="gallery-overlay">Appointment Booking</div>
+                </div>
+                <div class="gallery-item glass">
+                    <div class="gallery-placeholder" style="background: linear-gradient(135deg, #a18cd1, #fbc2eb);">
+                        <i class="fas fa-notes-medical"></i>
+                    </div>
+                    <div class="gallery-overlay">Medical Records</div>
+                </div>
+                <div class="gallery-item glass">
+                    <div class="gallery-placeholder" style="background: linear-gradient(135deg, #ffecd2, #fcb69f);">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <div class="gallery-overlay">FAQ Page</div>
+                </div>
+                <div class="gallery-item glass">
+                    <div class="gallery-placeholder" style="background: linear-gradient(135deg, #a1c4fd, #c2e9fb);">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div class="gallery-overlay">Contact Page</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Website Pages Preview -->
+    <section class="portfolio-detail-section" data-aos="fade-up">
+        <div class="container">
+            <span class="section-label">Website Pages</span>
+            <h2 class="section-heading">Pages We Built</h2>
+            <div class="pages-preview">
+                <div class="page-preview-card glass">
+                    <div class="page-preview-image">
+                        <div class="gallery-placeholder" style="background: linear-gradient(135deg, #4facfe, #00f2fe);font-size:2rem;">
+                            <i class="fas fa-home"></i>
+                        </div>
+                    </div>
+                    <h4>Home</h4>
+                </div>
+                <div class="page-preview-card glass">
+                    <div class="page-preview-image">
+                        <div class="gallery-placeholder" style="background: linear-gradient(135deg, #667eea, #764ba2);font-size:2rem;">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                    </div>
+                    <h4>Doctors</h4>
+                </div>
+                <div class="page-preview-card glass">
+                    <div class="page-preview-image">
+                        <div class="gallery-placeholder" style="background: linear-gradient(135deg, #f093fb, #f5576c);font-size:2rem;">
+                            <i class="fas fa-calendar"></i>
+                        </div>
+                    </div>
+                    <h4>Appointment Booking</h4>
+                </div>
+                <div class="page-preview-card glass">
+                    <div class="page-preview-image">
+                        <div class="gallery-placeholder" style="background: linear-gradient(135deg, #a18cd1, #fbc2eb);font-size:2rem;">
+                            <i class="fas fa-concierge-bell"></i>
+                        </div>
+                    </div>
+                    <h4>Services</h4>
+                </div>
+                <div class="page-preview-card glass">
+                    <div class="page-preview-image">
+                        <div class="gallery-placeholder" style="background: linear-gradient(135deg, #ffecd2, #fcb69f);font-size:2rem;">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                    </div>
+                    <h4>Patient Dashboard</h4>
+                </div>
+                <div class="page-preview-card glass">
+                    <div class="page-preview-image">
+                        <div class="gallery-placeholder" style="background: linear-gradient(135deg, #a1c4fd, #c2e9fb);font-size:2rem;">
+                            <i class="fas fa-question"></i>
+                        </div>
+                    </div>
+                    <h4>FAQ</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Development Process -->
+    <section class="portfolio-detail-section" data-aos="fade-up">
+        <div class="container">
+            <span class="section-label">Development Process</span>
+            <h2 class="section-heading">How We Built It</h2>
+            <div class="process-timeline">
+                <div class="process-step" data-aos="fade-up">
+                    <h4>01. Discovery & Compliance Planning</h4>
+                    <p>We conducted thorough research on healthcare regulations including HIPAA compliance requirements, analyzed the clinic's workflow, and identified areas for digital improvement.</p>
+                </div>
+                <div class="process-step" data-aos="fade-up" data-aos-delay="100">
+                    <h4>02. UI/UX Design</h4>
+                    <p>Designed a clean, calming interface that reduces patient anxiety and makes navigation intuitive. Focused on accessibility with large fonts, high contrast, and easy-to-tap targets.</p>
+                </div>
+                <div class="process-step" data-aos="fade-up" data-aos-delay="200">
+                    <h4>03. Frontend Development</h4>
+                    <p>Built with React and Next.js for optimal performance. Implemented lazy loading for medical images, progressive web app capabilities, and offline access to critical information.</p>
+                </div>
+                <div class="process-step" data-aos="fade-up" data-aos-delay="300">
+                    <h4>04. Backend & Security</h4>
+                    <p>Developed a secure backend with end-to-end encryption, role-based access control, audit logging, and compliance with healthcare data protection standards.</p>
+                </div>
+                <div class="process-step" data-aos="fade-up" data-aos-delay="400">
+                    <h4>05. Testing & Security Audit</h4>
+                    <p>Conducted rigorous testing including penetration testing, vulnerability assessments, and user acceptance testing with both staff and patients.</p>
+                </div>
+                <div class="process-step" data-aos="fade-up" data-aos-delay="500">
+                    <h4>06. Deployment & Training</h4>
+                    <p>Deployed the platform with a phased rollout, trained medical and administrative staff, and provided comprehensive documentation and support.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Used -->
+    <section class="portfolio-detail-section" data-aos="fade-up">
+        <div class="container">
+            <span class="section-label">Technologies Used</span>
+            <h2 class="section-heading">Tech Stack</h2>
+            <div class="tech-detail-grid">
+                <div class="tech-detail-card glass">
+                    <i class="fab fa-react"></i>
+                    <h4>React</h4>
+                </div>
+                <div class="tech-detail-card glass">
+                    <i class="fas fa-arrow-right"></i>
+                    <h4>Next.js</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Responsive Design -->
+    <section class="portfolio-detail-section" data-aos="fade-up">
+        <div class="container">
+            <span class="section-label">Responsive Design</span>
+            <h2 class="section-heading">Accessible Everywhere</h2>
+            <p class="section-text">Patients can access the platform from any device - whether booking appointments on their phone, checking records on a tablet, or consulting with doctors on desktop.</p>
+            <div class="responsive-showcase">
+                <div class="mockup-device desktop" data-aos="fade-up">
+                    <div class="device-frame">
+                        <div class="device-screen">
+                            <i class="fas fa-desktop" style="font-size:2rem;"></i>
+                            <span style="margin-left:10px;">Desktop View</span>
+                        </div>
+                    </div>
+                    <span class="device-label">Desktop</span>
+                </div>
+                <div class="mockup-device tablet" data-aos="fade-up" data-aos-delay="100">
+                    <div class="device-frame">
+                        <div class="device-screen">
+                            <i class="fas fa-tablet-alt" style="font-size:2rem;"></i>
+                            <span style="margin-left:10px;">Tablet View</span>
+                        </div>
+                    </div>
+                    <span class="device-label">Tablet</span>
+                </div>
+                <div class="mockup-device mobile" data-aos="fade-up" data-aos-delay="200">
+                    <div class="device-frame">
+                        <div class="device-screen">
+                            <i class="fas fa-mobile-alt" style="font-size:2rem;"></i>
+                            <span style="margin-left:10px;">Mobile View</span>
+                        </div>
+                    </div>
+                    <span class="device-label">Mobile</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Color Palette & Typography -->
+    <section class="portfolio-detail-section" data-aos="fade-up">
+        <div class="container">
+            <span class="section-label">Design System</span>
+            <h2 class="section-heading">Color Palette & Typography</h2>
+            <div class="overview-grid">
+                <div>
+                    <h3 style="font-size:1.3rem;font-weight:700;margin-bottom:15px;">Color Palette</h3>
+                    <div class="color-palette">
+                        <div class="color-swatch">
+                            <div class="color-circle" style="background:#4facfe;"></div>
+                            <span class="color-label">Medical Blue</span>
+                        </div>
+                        <div class="color-swatch">
+                            <div class="color-circle" style="background:#00f2fe;"></div>
+                            <span class="color-label">Cyan Accent</span>
+                        </div>
+                        <div class="color-swatch">
+                            <div class="color-circle" style="background:#ffffff;border-color:#ddd;"></div>
+                            <span class="color-label">White</span>
+                        </div>
+                        <div class="color-swatch">
+                            <div class="color-circle" style="background:#1a365d;"></div>
+                            <span class="color-label">Dark Blue</span>
+                        </div>
+                        <div class="color-swatch">
+                            <div class="color-circle" style="background:#ebf8ff;border-color:#ddd;"></div>
+                            <span class="color-label">Light Blue</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 style="font-size:1.3rem;font-weight:700;margin-bottom:15px;">Typography</h3>
+                    <div class="typography-sample">
+                        <div class="heading-sample" style="font-family:'Merriweather',serif;">Merriweather</div>
+                        <p style="font-size:0.9rem;opacity:0.7;margin-bottom:15px;">Used for headings - Professional & Trustworthy</p>
+                        <div class="body-sample" style="font-family:'Inter',sans-serif;">Inter Regular - Used for body text. Clean, legible, and accessible. Optimized for readability in medical contexts.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Challenges -->
+    <section class="portfolio-detail-section" data-aos="fade-up">
+        <div class="container">
+            <span class="section-label">Challenges Faced</span>
+            <h2 class="section-heading">Overcoming Obstacles</h2>
+            <div class="challenges-grid">
+                <div class="challenge-card glass">
+                    <h4><i class="fas fa-exclamation-triangle"></i> Challenge</h4>
+                    <p>Ensuring HIPAA and local healthcare data protection regulations compliance while maintaining a user-friendly experience.</p>
+                </div>
+                <div class="challenge-card solved glass">
+                    <h4><i class="fas fa-check-circle"></i> Solution</h4>
+                    <p>Implemented AES-256 encryption for data at rest and TLS 1.3 for data in transit. Created granular permission controls and comprehensive audit trails.</p>
+                </div>
+                <div class="challenge-card glass">
+                    <h4><i class="fas fa-exclamation-triangle"></i> Challenge</h4>
+                    <p>Integrating with existing EHR (Electronic Health Records) systems while maintaining data integrity and minimizing disruption.</p>
+                </div>
+                <div class="challenge-card solved glass">
+                    <h4><i class="fas fa-check-circle"></i> Solution</h4>
+                    <p>Developed a flexible API middleware that maps data between systems with conflict resolution, data validation, and synchronization scheduling.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Performance -->
+    <section class="portfolio-detail-section" data-aos="fade-up">
+        <div class="container">
+            <span class="section-label">Performance & Optimization</span>
+            <h2 class="section-heading">Reliable & Fast</h2>
+            <div class="performance-metrics">
+                <div class="metric-card glass">
+                    <i class="fas fa-rocket metric-icon"></i>
+                    <span class="metric-value">94</span>
+                    <span class="metric-label">PageSpeed Score</span>
+                </div>
+                <div class="metric-card glass">
+                    <i class="fas fa-clock metric-icon"></i>
+                    <span class="metric-value">1.3s</span>
+                    <span class="metric-label">Avg. Load Time</span>
+                </div>
+                <div class="metric-card glass">
+                    <i class="fas fa-shield-alt metric-icon"></i>
+                    <span class="metric-value">99.9%</span>
+                    <span class="metric-label">Uptime SLA</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial -->
+    <section class="portfolio-detail-section" data-aos="fade-up">
+        <div class="container">
+            <span class="section-label">Client Testimonial</span>
+            <h2 class="section-heading">What Our Client Says</h2>
+            <div class="testimonial-detail glass">
+                <div class="testimonial-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">"WDA delivered a healthcare platform that truly understands the needs of both medical professionals and patients. The appointment booking system has reduced our administrative workload by 40%, and our patients love the convenience of managing their healthcare online."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">DK</div>
+                    <div class="author-info">
+                        <h4>Dr. Kamran Hassan</h4>
+                        <p>Medical Director, CityCare Clinic</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final Result -->
+    <section class="portfolio-detail-section" data-aos="fade-up">
+        <div class="container" style="text-align:center;">
+            <span class="section-label">Final Result</span>
+            <h2 class="section-heading">Healthcare Simplified</h2>
+            <p class="section-text" style="max-width:700px;margin:0 auto 30px;">The Medical Clinic Management platform has transformed how the clinic operates. Patient satisfaction has increased significantly, staff productivity has improved, and the clinic now serves more patients efficiently while maintaining exceptional care quality.</p>
+            <div class="portfolio-cta">
+                <a href="#" class="btn btn-primary btn-large ripple-btn" aria-label="Visit Live Demo">Visit Live Demo <i class="fas fa-external-link-alt" style="margin-left:8px;"></i></a>
+                <a href="../portfolio.html" class="btn btn-secondary btn-large ripple-btn" aria-label="Back to Portfolio">Back to Portfolio</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta-section" aria-label="Start your project">
+        <div class="container">
+            <div class="cta-content glass" data-aos="fade-up">
+                <h2 class="cta-title">Want a Project Like This?</h2>
+                <p class="cta-text">Let's build something amazing for your business. Get in touch with us today.</p>
+                <a href="../contact.html" class="btn btn-primary btn-large ripple-btn" aria-label="Start Your Project">Start Your Project</a>
+                <a href="../contact.html" class="btn btn-secondary btn-large ripple-btn" style="margin-left:15px;" aria-label="Request a Quote">Request a Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Page Transition Overlay -->
+    <div id="page-transition" class="page-transition" aria-hidden="true"></div>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-brand">
+                    <a href="../index.html" class="footer-logo" aria-label="WDA Home">WDA</a>
+                    <p class="footer-desc">Website Development Agency (WDA) delivers premium digital solutions including web development, UI/UX design, mobile apps, AI chatbots, and automation services.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link" aria-label="Follow us on Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                        <a href="#" class="social-link" aria-label="Follow us on Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        <a href="https://www.instagram.com/stfu_hazzy" target="_blank" class="social-link" aria-label="Follow us on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                        <a href="#" class="social-link" aria-label="Follow us on LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+                        <a href="#" class="social-link" aria-label="Follow us on YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../about.html">About Us</a></li>
+                        <li><a href="../services.html">Services</a></li>
+                        <li><a href="../portfolio.html">Portfolio</a></li>
+                        <li><a href="../blog.html">Blog</a></li>
+                        <li><a href="../contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Our Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="../services.html">UI/UX Designing</a></li>
+                        <li><a href="../services.html">Website Development</a></li>
+                        <li><a href="../services.html">App Development</a></li>
+                        <li><a href="../services.html">AI Chatbot Integration</a></li>
+                        <li><a href="../services.html">WhatsApp Bot Automation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:03360180168" aria-label="Call us at 03360180168">03360180168</a></li>
+                        <li><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:exnesssjaffri@gmail.com" aria-label="Email us at exnesssjaffri@gmail.com">exnesssjaffri@gmail.com</a></li>
+                        <li><i class="fab fa-instagram" aria-hidden="true"></i> <a href="https://www.instagram.com/stfu_hazzy" target="_blank" aria-label="Follow us on Instagram @stfu_hazzy">@stfu_hazzy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Website Development Agency (WDA). All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../js/portfolio-detail.js"></script>
+</body>
+</html>

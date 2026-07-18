@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDA Portfolio - Restaurant Booking Platform case study. See how we built a premium restaurant website with online reservations and table booking.">
+    <meta name="keywords" content="restaurant website, online reservation system, table booking, react restaurant, next.js booking, web development portfolio">
+    <meta name="author" content="WDA - Website Development Agency">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Restaurant Booking Platform - WDA Portfolio Case Study">
+    <meta property="og:description" content="Explore our full case study for a premium restaurant booking platform with online reservations, menu management, and live table availability.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>Restaurant Booking Platform - WDA Portfolio Case Study</title>
+    <link rel="canonical" href="https://wda.com/portfolio/restaurant-booking">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/portfolio-detail.css">
+    <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+</head>
+<body>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen" role="status" aria-label="Loading">
+        <div class="loader">
+            <div class="loader-spinner"></div>
+            <div class="loader-text" aria-label="WDA Loading">WDA</div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" aria-label="Back to top of page">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="container nav-container">
+            <a href="../index.html" class="nav-logo" aria-label="WDA Home">WDA</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu" role="menubar">
+                <li role="none"><a href="../index.html" class="nav-link" role="menuitem">Home</a></li>
+                <li role="none"><a href="../about.html" class="nav-link" role="menuitem">About Us</a></li>
+                <li role="none"><a href="../services.html" class="nav-link" role="menuitem">Services</a></li>
+                <li role="none"><a href="../portfolio.html" class="nav-link active" role="menuitem">Portfolio</a></li>
+                <li role="none"><a href="../blog.html" class="nav-link" role="menuitem">Blog</a></li>
+                <li role="none"><a href="../contact.html" class="nav-link" role="menuitem">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <nav class="portfolio-breadcrumb" aria-label="Breadcrumb">
+        <div class="container">
+            <a href="../index.html">Home</a>
+            <i class="fas fa-chevron-right" aria-hidden="true"></i>
+            <a href="../portfolio.html">Portfolio</a>
+            <i class="fas fa-chevron-right" aria-hidden="true"></i>
+            <span>Restaurant Booking Platform</span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="portfolio-hero" aria-label="Project hero">
+        <div class="portfolio-hero-bg" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+            <div class="portfolio-hero-bg" style="background: linear-gradient(135deg, rgba(240,147,251,0.9), rgba(245,87,108,0.9));"></div>
+        </div>
+        <div class="portfolio-hero-content" data-aos="fade-up">
+            <span class="portfolio-category">Restaurant & Hospitality</span>
+            <h1>Restaurant Booking Platform</h1>
+            <p>A premium restaurant website featuring online reservations, interactive menu management, live table availability, and a seamless dining experience for customers.</p>
+            <div class="portfolio-hero-tech">
+                <span>React</span>
+                <span>Next.js</span>
+                <span>Tailwind CSS</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Overview -->
+    <section class="portfolio-detail-section" data-aos="fade-up">
+        <div class="container">
+            <div class="overview-grid">
+                <div class="overview-content">
+                    <span class="section-label">Project Overview</span>
+                    <h2 class="section-heading">A Digital Dining Experience</h2>
+                    <p class="section-text">We built a comprehensive restaurant booking platform for a high-end restaurant chain that wanted to streamline their reservation process and create an engaging online presence that reflects their brand's elegance.</p>
+                    <p class="section-text">The platform handles everything from showcasing their exquisite menu to managing hundreds of daily reservations with real-time table availability updates.</p>
+                    <div class="overview-stats">
+                        <div class="overview-stat">
+                            <span class="stat-value" data-target="500">500+</span>
+                            <span class="stat-label">Daily Reservations</span>
+                        </div>
+                        <div class="overview-stat">
+                            <span class="stat-value" data-target="98">98%</span>
+                            <span class="stat-label">Satisfaction Rate</span>
+                        </div>
+                        <div class="overview-stat">
+                            <span class="stat-value" data-target="50">50+</span>
+                            <span class="stat-label">Menu Items</span>
+                        </div>
+                        <div class="overview-stat">
+                            <span class="stat-value" data-target="5">5</span>
+                            <span class="stat-label">Locations</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="overview-image glass">
+                    <div class="gallery-placeholder" style="background: linear-gradient(135deg, #f093fb, #f5576c);min-height:400px;">
+                        <i class="fas fa-utensils" style="font-size:5rem;color:rgba(255,255,255,0.7);"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Requirements -->
+    <section class="portfolio-detail-section" data-aos="fade-up">
+        <div class="container">
+            <span class="section-label">Client Requirements</span>
+            <h2 class="section-heading">What the Client Needed</h2>
+            <p class="section-text">The client needed a modern digital solution that would enhance their customers' dining experience from the moment they discover the restaurant online to the moment they leave.</p>
+            <div class="requirements-list">
+                <div class="requirement-item glass">
+                    <i class="fas fa-calendar-check"></i>
+                    <div>
+                        <h4>Online Reservation System</h4>
+                        <p>Seamless booking system with date/time selection, party size management, and instant confirmation via email and SMS.</p>
+                    </div>
+                </div>
+                <div class="requirement-item glass">
+                    <i class="fas fa-chair"></i>
+                    <div>
+                        <h4>Live Table Availability</h4>
+                        <p>Real-time table management showing available time slots, table layouts, and special seating preferences.</p>
+                    </div>
+                </div>
+                <div class="requirement-item glass">
+                    <i class="fas fa-images"></i>
+                    <div>
+                        <h4>Food Gallery</h4>
+                        <p>Beautiful image gallery showcasing their signature dishes, restaurant interior, and special events.</p>
+                    </div>
+                </div>
+                <div class="requirement-item glass">
+                    <i class="fas fa-star"></i>
+                    <div>
+                        <h4>Customer Reviews</h4>
+                        <p>Integrated review system with ratings, user photos, and verified diner badges to build trust.</p>
+                    </div>
+                </div>
+                <div class="requirement-item glass">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>Google Maps Integration</h4>
+                        <p>Interactive maps showing all restaurant locations with directions, distance calculator, and nearby landmarks.</p>
+                    </div>
+                </div>
+                <div class="requirement-item glass">
+                    <i class="fas fa-chart-bar"></i>
+                    <div>
+                        <h4>Admin Dashboard</h4>
+                        <p>Comprehensive dashboard for managing reservations, menu updates, staff scheduling, and analytics.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution -->
+    <section class="portfolio-detail-section" data-aos="fade-up">
+        <div class="container">
+            <span class="section-label">Our Solution</span>
+            <h2 class="section-heading">How We Solved It</h2>
+            <p class="section-text">We built a full-stack restaurant platform using Next.js for server-side rendering and optimal performance. The reservation system uses real-time database updates to show live table availability, with automated email confirmations and reminders.</p>
+            <p class="section-text">The menu management system allows the restaurant to update dishes, prices, and categories in real-time. We integrated Google Maps API for location services and implemented a secure admin dashboard with role-based access control.</p>
+        </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="portfolio-detail-section" data-aos="fade-up">
+        <div class="container">
+            <span class="section-label">Key Features</span>
+            <h2 class="section-heading">Features That Stand Out</h2>
+            <div class="features-grid-detail">
+                <div class="feature-detail-card glass">
+                    <i class="fas fa-calendar-alt"></i>
+                    <h4>Online Booking</h4>
+                    <p>Intuitive reservation system with date picker, time slots, and special occasion options.</p>
+                </div>
+                <div class="feature-detail-card glass">
+                    <i class="fas fa-th-large"></i>
+                    <h4>Live Table Availability</h4>
+                    <p>Real-time table status showing available seating with preferred location selection.</p>
+                </div>
+                <div class="feature-detail-card glass">
+                    <i class="fas fa-camera"></i>
+                    <h4>Food Gallery</h4>
+                    <p>Stunning photo gallery with categories, lightbox view, and social sharing integration.</p>
+                </div>
+                <div class="feature-detail-card glass">
+                    <i class="fas fa-tasks"></i>
+                    <h4>Reservation Management</h4>
+                    <p>Complete booking management with modifications, cancellations, and waitlist functionality.</p>
+                </div>
+                <div class="feature-detail-card glass">
+                    <i class="fas fa-envelope"></i>
+                    <h4>Email Confirmation</h4>
+                    <p>Automated email confirmations, reminders, and follow-up messages for special offers.</p>
+                </div>
+                <div class="feature-detail-card glass">
+                    <i class="fas fa-users-cog"></i>
+                    <h4>Admin Dashboard</h4>
+                    <p>Centralized control panel for managing reservations, menu, staff, and reporting analytics.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Gallery -->
+    <section class="portfolio-detail-section" data-aos="fade-up">
+        <div class="container">
+            <span class="section-label">Screenshots Gallery</span>
+            <h2 class="section-heading">Visual Tour</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item glass">
+                    <div class="gallery-placeholder" style="background: linear-gradient(135deg, #f093fb, #f5576c);">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <div class="gallery-overlay">Landing Page</div>
+                </div>
+                <div class="gallery-item glass">
+                    <div class="gallery-placeholder" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <div class="gallery-overlay">Menu Page</div>
+                </div>
+                <div class="gallery-item glass">
+                    <div class="gallery-placeholder" style="background: linear-gradient(135deg, #a18cd1, #fbc2eb);">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <div class="gallery-overlay">Reservation Form</div>
+                </div>
+                <div class="gallery-item glass">
+                    <div class="gallery-placeholder" style="background: linear-gradient(135deg, #ffecd2, #fcb69f);">
+                        <i class="fas fa-images"></i>
+                    </div>
+                    <div class="gallery-overlay">Gallery</div>
+                </div>
+                <div class="gallery-item glass">
+                    <div class="gallery-placeholder" style="background: linear-gradient(135deg, #a1c4fd, #c2e9fb);">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="gallery-overlay">Reviews</div>
+                </div>
+                <div class="gallery-item glass">
+                    <div class="gallery-placeholder" style="background: linear-gradient(135deg, #f093fb, #f5576c);">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <div class="gallery-overlay">Admin Dashboard</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Website Pages Preview -->
+    <section class="portfolio-detail-section" data-aos="fade-up">
+        <div class="container">
+            <span class="section-label">Website Pages</span>
+            <h2 class="section-heading">Pages We Built</h2>
+            <div class="pages-preview">
+                <div class="page-preview-card glass">
+                    <div class="page-preview-image">
+                        <div class="gallery-placeholder" style="background: linear-gradient(135deg, #f093fb, #f5576c);font-size:2rem;">
+                            <i class="fas fa-home"></i>
+                        </div>
+                    </div>
+                    <h4>Landing Page</h4>
+                </div>
+                <div class="page-preview-card glass">
+                    <div class="page-preview-image">
+                        <div class="gallery-placeholder" style="background: linear-gradient(135deg, #4facfe, #00f2fe);font-size:2rem;">
+                            <i class="fas fa-book"></i>
+                        </div>
+                    </div>
+                    <h4>Menu Page</h4>
+                </div>
+                <div class="page-preview-card glass">
+                    <div class="page-preview-image">
+                        <div class="gallery-placeholder" style="background: linear-gradient(135deg, #a18cd1, #fbc2eb);font-size:2rem;">
+                            <i class="fas fa-calendar"></i>
+                        </div>
+                    </div>
+                    <h4>Online Reservation</h4>
+                </div>
+                <div class="page-preview-card glass">
+                    <div class="page-preview-image">
+                        <div class="gallery-placeholder" style="background: linear-gradient(135deg, #ffecd2, #fcb69f);font-size:2rem;">
+                            <i class="fas fa-images"></i>
+                        </div>
+                    </div>
+                    <h4>Gallery</h4>
+                </div>
+                <div class="page-preview-card glass">
+                    <div class="page-preview-image">
+                        <div class="gallery-placeholder" style="background: linear-gradient(135deg, #a1c4fd, #c2e9fb);font-size:2rem;">
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <h4>Customer Reviews</h4>
+                </div>
+                <div class="page-preview-card glass">
+                    <div class="page-preview-image">
+                        <div class="gallery-placeholder" style="background: linear-gradient(135deg, #f093fb, #f5576c);font-size:2rem;">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                    </div>
+                    <h4>Admin Dashboard</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Development Process -->
+    <section class="portfolio-detail-section" data-aos="fade-up">
+        <div class="container">
+            <span class="section-label">Development Process</span>
+            <h2 class="section-heading">How We Built It</h2>
+            <div class="process-timeline">
+                <div class="process-step" data-aos="fade-up">
+                    <h4>01. Research & Planning</h4>
+                    <p>We analyzed the restaurant's brand identity, studied customer behavior patterns, and defined user flows for both diners and staff. Created comprehensive wireframes for all key screens.</p>
+                </div>
+                <div class="process-step" data-aos="fade-up" data-aos-delay="100">
+                    <h4>02. UI/UX Design</h4>
+                    <p>Designed a warm, inviting interface that mirrors the restaurant's ambiance. Focused on creating an intuitive booking flow that minimizes friction and maximizes conversions.</p>
+                </div>
+                <div class="process-step" data-aos="fade-up" data-aos-delay="200">
+                    <h4>03. Frontend Development</h4>
+                    <p>Built with Next.js and Tailwind CSS for a responsive, performant experience. Implemented dynamic menu loading, smooth page transitions, and interactive gallery components.</p>
+                </div>
+                <div class="process-step" data-aos="fade-up" data-aos-delay="300">
+                    <h4>04. Booking System Integration</h4>
+                    <p>Developed the core reservation engine with real-time availability checking, automated confirmation emails, and integration with the restaurant's existing POS system.</p>
+                </div>
+                <div class="process-step" data-aos="fade-up" data-aos-delay="400">
+                    <h4>05. Testing & Optimization</h4>
+                    <p>Conducted extensive testing across devices and browsers. Optimized the booking flow based on user testing feedback and implemented performance improvements.</p>
+                </div>
+                <div class="process-step" data-aos="fade-up" data-aos-delay="500">
+                    <h4>06. Launch & Training</h4>
+                    <p>Deployed the platform with zero downtime migration of existing reservations. Provided staff training on the admin dashboard and ongoing support.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Used -->
+    <section class="portfolio-detail-section" data-aos="fade-up">
+        <div class="container">
+            <span class="section-label">Technologies Used</span>
+            <h2 class="section-heading">Tech Stack</h2>
+            <div class="tech-detail-grid">
+                <div class="tech-detail-card glass">
+                    <i class="fab fa-react"></i>
+                    <h4>React</h4>
+                </div>
+                <div class="tech-detail-card glass">
+                    <i class="fas fa-arrow-right"></i>
+                    <h4>Next.js</h4>
+                </div>
+                <div class="tech-detail-card glass">
+                    <i class="fas fa-paint-brush"></i>
+                    <h4>Tailwind CSS</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Responsive Design -->
+    <section class="portfolio-detail-section" data-aos="fade-up">
+        <div class="container">
+            <span class="section-label">Responsive Design</span>
+            <h2 class="section-heading">Seamless Across Devices</h2>
+            <p class="section-text">Whether customers are browsing the menu on mobile or booking a table on desktop, the experience is consistently smooth and visually appealing.</p>
+            <div class="responsive-showcase">
+                <div class="mockup-device desktop" data-aos="fade-up">
+                    <div class="device-frame">
+                        <div class="device-screen">
+                            <i class="fas fa-desktop" style="font-size:2rem;"></i>
+                            <span style="margin-left:10px;">Desktop View</span>
+                        </div>
+                    </div>
+                    <span class="device-label">Desktop</span>
+                </div>
+                <div class="mockup-device tablet" data-aos="fade-up" data-aos-delay="100">
+                    <div class="device-frame">
+                        <div class="device-screen">
+                            <i class="fas fa-tablet-alt" style="font-size:2rem;"></i>
+                            <span style="margin-left:10px;">Tablet View</span>
+                        </div>
+                    </div>
+                    <span class="device-label">Tablet</span>
+                </div>
+                <div class="mockup-device mobile" data-aos="fade-up" data-aos-delay="200">
+                    <div class="device-frame">
+                        <div class="device-screen">
+                            <i class="fas fa-mobile-alt" style="font-size:2rem;"></i>
+                            <span style="margin-left:10px;">Mobile View</span>
+                        </div>
+                    </div>
+                    <span class="device-label">Mobile</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Color Palette & Typography -->
+    <section class="portfolio-detail-section" data-aos="fade-up">
+        <div class="container">
+            <span class="section-label">Design System</span>
+            <h2 class="section-heading">Color Palette & Typography</h2>
+            <div class="overview-grid">
+                <div>
+                    <h3 style="font-size:1.3rem;font-weight:700;margin-bottom:15px;">Color Palette</h3>
+                    <div class="color-palette">
+                        <div class="color-swatch">
+                            <div class="color-circle" style="background:#f093fb;"></div>
+                            <span class="color-label">Pink Accent</span>
+                        </div>
+                        <div class="color-swatch">
+                            <div class="color-circle" style="background:#f5576c;"></div>
+                            <span class="color-label">Coral Red</span>
+                        </div>
+                        <div class="color-swatch">
+                            <div class="color-circle" style="background:#ffffff;border-color:#ddd;"></div>
+                            <span class="color-label">White</span>
+                        </div>
+                        <div class="color-swatch">
+                            <div class="color-circle" style="background:#2d2d2d;"></div>
+                            <span class="color-label">Dark</span>
+                        </div>
+                        <div class="color-swatch">
+                            <div class="color-circle" style="background:#fff5f5;border-color:#ddd;"></div>
+                            <span class="color-label">Light Pink</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 style="font-size:1.3rem;font-weight:700;margin-bottom:15px;">Typography</h3>
+                    <div class="typography-sample">
+                        <div class="heading-sample" style="font-family:'Playfair Display',serif;">Playfair Display</div>
+                        <p style="font-size:0.9rem;opacity:0.7;margin-bottom:15px;">Used for headings - Elegant & Classic</p>
+                        <div class="body-sample">Inter Regular - Used for body text. Clean and highly readable across all devices. Perfect for menus and descriptions.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Challenges -->
+    <section class="portfolio-detail-section" data-aos="fade-up">
+        <div class="container">
+            <span class="section-label">Challenges Faced</span>
+            <h2 class="section-heading">Overcoming Obstacles</h2>
+            <div class="challenges-grid">
+                <div class="challenge-card glass">
+                    <h4><i class="fas fa-exclamation-triangle"></i> Challenge</h4>
+                    <p>Implementing real-time table availability that updates instantly across multiple users without conflicts or double bookings.</p>
+                </div>
+                <div class="challenge-card solved glass">
+                    <h4><i class="fas fa-check-circle"></i> Solution</h4>
+                    <p>Used WebSocket connections for real-time updates with optimistic locking to prevent booking conflicts. Implemented a smart waitlist system.</p>
+                </div>
+                <div class="challenge-card glass">
+                    <h4><i class="fas fa-exclamation-triangle"></i> Challenge</h4>
+                    <p>Integrating the online reservation system with the client's existing POS system and managing data synchronization.</p>
+                </div>
+                <div class="challenge-card solved glass">
+                    <h4><i class="fas fa-check-circle"></i> Solution</h4>
+                    <p>Built a custom API middleware layer that handles bidirectional sync between the website and POS system with conflict resolution.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Performance -->
+    <section class="portfolio-detail-section" data-aos="fade-up">
+        <div class="container">
+            <span class="section-label">Performance & Optimization</span>
+            <h2 class="section-heading">Optimized for Speed</h2>
+            <div class="performance-metrics">
+                <div class="metric-card glass">
+                    <i class="fas fa-rocket metric-icon"></i>
+                    <span class="metric-value">92</span>
+                    <span class="metric-label">PageSpeed Score</span>
+                </div>
+                <div class="metric-card glass">
+                    <i class="fas fa-clock metric-icon"></i>
+                    <span class="metric-value">1.5s</span>
+                    <span class="metric-label">Avg. Load Time</span>
+                </div>
+                <div class="metric-card glass">
+                    <i class="fas fa-search metric-icon"></i>
+                    <span class="metric-value">98</span>
+                    <span class="metric-label">SEO Score</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial -->
+    <section class="portfolio-detail-section" data-aos="fade-up">
+        <div class="container">
+            <span class="section-label">Client Testimonial</span>
+            <h2 class="section-heading">What Our Client Says</h2>
+            <div class="testimonial-detail glass">
+                <div class="testimonial-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">"The online reservation system has completely transformed how we manage bookings. Our staff spends less time on phone calls and more time focusing on our guests. The real-time table management is a game-changer for our operations."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">AR</div>
+                    <div class="author-info">
+                        <h4>Ahmed Raza</h4>
+                        <p>Owner, Gourmet Dining</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final Result -->
+    <section class="portfolio-detail-section" data-aos="fade-up">
+        <div class="container" style="text-align:center;">
+            <span class="section-label">Final Result</span>
+            <h2 class="section-heading">A Dining Platform That Delights</h2>
+            <p class="section-text" style="max-width:700px;margin:0 auto 30px;">The restaurant booking platform has significantly improved the customer experience and operational efficiency. The client has seen a 40% increase in online reservations and reduced no-shows by 60%.</p>
+            <div class="portfolio-cta">
+                <a href="#" class="btn btn-primary btn-large ripple-btn" aria-label="Visit Live Demo">Visit Live Demo <i class="fas fa-external-link-alt" style="margin-left:8px;"></i></a>
+                <a href="../portfolio.html" class="btn btn-secondary btn-large ripple-btn" aria-label="Back to Portfolio">Back to Portfolio</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta-section" aria-label="Start your project">
+        <div class="container">
+            <div class="cta-content glass" data-aos="fade-up">
+                <h2 class="cta-title">Want a Project Like This?</h2>
+                <p class="cta-text">Let's build something amazing for your business. Get in touch with us today.</p>
+                <a href="../contact.html" class="btn btn-primary btn-large ripple-btn" aria-label="Start Your Project">Start Your Project</a>
+                <a href="../contact.html" class="btn btn-secondary btn-large ripple-btn" style="margin-left:15px;" aria-label="Request a Quote">Request a Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Page Transition Overlay -->
+    <div id="page-transition" class="page-transition" aria-hidden="true"></div>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-brand">
+                    <a href="../index.html" class="footer-logo" aria-label="WDA Home">WDA</a>
+                    <p class="footer-desc">Website Development Agency (WDA) delivers premium digital solutions including web development, UI/UX design, mobile apps, AI chatbots, and automation services.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link" aria-label="Follow us on Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                        <a href="#" class="social-link" aria-label="Follow us on Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        <a href="https://www.instagram.com/stfu_hazzy" target="_blank" class="social-link" aria-label="Follow us on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                        <a href="#" class="social-link" aria-label="Follow us on LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+                        <a href="#" class="social-link" aria-label="Follow us on YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../about.html">About Us</a></li>
+                        <li><a href="../services.html">Services</a></li>
+                        <li><a href="../portfolio.html">Portfolio</a></li>
+                        <li><a href="../blog.html">Blog</a></li>
+                        <li><a href="../contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Our Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="../services.html">UI/UX Designing</a></li>
+                        <li><a href="../services.html">Website Development</a></li>
+                        <li><a href="../services.html">App Development</a></li>
+                        <li><a href="../services.html">AI Chatbot Integration</a></li>
+                        <li><a href="../services.html">WhatsApp Bot Automation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:03360180168" aria-label="Call us at 03360180168">03360180168</a></li>
+                        <li><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:exnesssjaffri@gmail.com" aria-label="Email us at exnesssjaffri@gmail.com">exnesssjaffri@gmail.com</a></li>
+                        <li><i class="fab fa-instagram" aria-hidden="true"></i> <a href="https://www.instagram.com/stfu_hazzy" target="_blank" aria-label="Follow us on Instagram @stfu_hazzy">@stfu_hazzy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Website Development Agency (WDA). All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../js/portfolio-detail.js"></script>
+</body>
+</html>
