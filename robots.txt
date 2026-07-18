@@ -1,15 +1,162 @@
-# robots.txt for WDA - Website Development Agency
+# ============================================
+# ROBOTS.TXT - Website Development Agency (WDA)
 # https://wda.com
+# Last updated: 2026-07-18
+# Follows Google SEO Best Practices
+# ============================================
 
-# Allow all search engines full access
+# Allow all search engines to crawl public content
 User-agent: *
 Allow: /
 
-# Disallow duplicate/irrelevant pages
-Disallow: /google16b6b2af5711ebcd.html
+# ============================================
+# DISALLOWED: Admin & Dashboard
+# ============================================
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /login/
+Disallow: /register/
 
-# Sitemap location
+# ============================================
+# DISALLOWED: System & API
+# ============================================
+Disallow: /api/
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /node_modules/
+Disallow: /vendor/
+Disallow: /storage/
+Disallow: /cache/
+Disallow: /logs/
+
+# ============================================
+# DISALLOWED: Drafts & Preview
+# ============================================
+Disallow: /drafts/
+Disallow: /preview/
+Disallow: /draft/
+
+# ============================================
+# DISALLOWED: Duplicate & Unnecessary URLs
+# ============================================
+Disallow: /*?
+Disallow: /*&
+Disallow: /*.php$
+Disallow: /*.env$
+Disallow: /*.json$
+Disallow: /*.lock$
+Disallow: /*.bak$
+Disallow: /*.swp$
+Disallow: /*~
+Disallow: /google*.html
+Disallow: /404.html
+Disallow: /500.html
+
+# ============================================
+# DISALLOWED: Search & Dynamic Content
+# ============================================
+Disallow: /search/
+Disallow: /tag/
+Disallow: /category/
+Disallow: /archive/
+Disallow: /page/
+Disallow: /feed/
+Disallow: /rss/
+Disallow: /comments/
+Disallow: /trackback/
+
+# ============================================
+# CRAWL RATE & BOT SPECIFIC RULES
+# ============================================
+
+# Google-specific rules
+User-agent: Googlebot
+Allow: /
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /login/
+Disallow: /api/
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /drafts/
+Disallow: /preview/
+
+# Bing-specific rules
+User-agent: Bingbot
+Allow: /
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /login/
+Disallow: /api/
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /drafts/
+Disallow: /preview/
+
+# Yahoo-specific rules
+User-agent: Slurp
+Allow: /
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /login/
+Disallow: /api/
+
+# DuckDuckGo-specific rules
+User-agent: DuckDuckBot
+Allow: /
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /login/
+Disallow: /api/
+
+# Brave-specific rules
+User-agent: Bravebot
+Allow: /
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /login/
+Disallow: /api/
+
+# Baidu-specific rules
+User-agent: Baiduspider
+Allow: /
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /login/
+Disallow: /api/
+
+# Yandex-specific rules
+User-agent: YandexBot
+Allow: /
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /login/
+Disallow: /api/
+
+# Generic bot rules (covers all remaining bots)
+User-agent: *
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /login/
+Disallow: /api/
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /drafts/
+Disallow: /preview/
+Disallow: /node_modules/
+Disallow: /vendor/
+Disallow: /storage/
+Disallow: /cache/
+Disallow: /logs/
+Disallow: /*?
+Disallow: /google*.html
+
+# ============================================
+# SITEMAP LOCATION
+# ============================================
 Sitemap: https://wda.com/sitemap.xml
 
-# Crawl delay for polite crawling
+# ============================================
+# CRAWL DELAY (Polite crawling)
+# ============================================
 Crawl-delay: 10

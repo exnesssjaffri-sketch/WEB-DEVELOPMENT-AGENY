@@ -1,99 +1,150 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+    <!-- ============================================
+         SITEMAP.XML - Website Development Agency (WDA)
+         Auto-generated: 2026-07-18
+         Protocol: XML Sitemap Protocol v0.9
+         ============================================ -->
+
+    <!-- HOME PAGE - Priority: 1.0 -->
     <url>
         <loc>https://wda.com/</loc>
         <lastmod>2026-07-18</lastmod>
-        <changefreq>monthly</changefreq>
+        <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
+
+    <!-- ABOUT US - Priority: 0.8 -->
     <url>
         <loc>https://wda.com/about.html</loc>
         <lastmod>2026-07-18</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
+
+    <!-- SERVICES - Priority: 0.9 -->
     <url>
         <loc>https://wda.com/services.html</loc>
         <lastmod>2026-07-18</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.9</priority>
     </url>
+
+    <!-- PORTFOLIO LISTING - Priority: 0.9 -->
     <url>
         <loc>https://wda.com/portfolio.html</loc>
         <lastmod>2026-07-18</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
+
+    <!-- PRICING - Priority: 0.7 -->
+    <url>
+        <loc>https://wda.com/pricing.html</loc>
+        <lastmod>2026-07-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- BLOG LISTING - Priority: 0.8 -->
+    <url>
+        <loc>https://wda.com/blog.html</loc>
+        <lastmod>2026-07-18</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- CONTACT - Priority: 0.7 -->
+    <url>
+        <loc>https://wda.com/contact.html</loc>
+        <lastmod>2026-07-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- PRIVACY POLICY - Priority: 0.3 -->
+    <url>
+        <loc>https://wda.com/privacy-policy.html</loc>
+        <lastmod>2026-07-18</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+
+    <!-- TERMS & CONDITIONS - Priority: 0.3 -->
+    <url>
+        <loc>https://wda.com/terms-conditions.html</loc>
+        <lastmod>2026-07-18</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+
+    <!-- ============================================
+         PORTFOLIO ITEMS - Priority: 0.7
+         ============================================ -->
     <url>
         <loc>https://wda.com/portfolio/fashion-store.html</loc>
         <lastmod>2026-07-18</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
+        <priority>0.7</priority>
     </url>
     <url>
         <loc>https://wda.com/portfolio/medical-clinic.html</loc>
         <lastmod>2026-07-18</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
+        <priority>0.7</priority>
     </url>
     <url>
         <loc>https://wda.com/portfolio/real-estate.html</loc>
         <lastmod>2026-07-18</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
+        <priority>0.7</priority>
     </url>
     <url>
         <loc>https://wda.com/portfolio/restaurant-booking.html</loc>
         <lastmod>2026-07-18</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
+        <priority>0.7</priority>
     </url>
-    <url>
-        <loc>https://wda.com/blog.html</loc>
-        <lastmod>2026-07-18</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
-    </url>
+
+    <!-- ============================================
+         BLOG POSTS - Priority: 0.7
+         ============================================ -->
     <url>
         <loc>https://wda.com/blog/ai-chatbots-customer-support.html</loc>
         <lastmod>2026-07-18</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
+        <priority>0.7</priority>
     </url>
     <url>
         <loc>https://wda.com/blog/choosing-website-development-agency.html</loc>
         <lastmod>2026-07-18</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
+        <priority>0.7</priority>
     </url>
     <url>
         <loc>https://wda.com/blog/mobile-friendly-websites.html</loc>
         <lastmod>2026-07-18</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
+        <priority>0.7</priority>
     </url>
     <url>
         <loc>https://wda.com/blog/professional-website-2026.html</loc>
         <lastmod>2026-07-18</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
+        <priority>0.7</priority>
     </url>
     <url>
         <loc>https://wda.com/blog/website-design-trends-2026.html</loc>
         <lastmod>2026-07-18</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
+        <priority>0.7</priority>
     </url>
     <url>
         <loc>https://wda.com/blog/whatsapp-business-automation.html</loc>
         <lastmod>2026-07-18</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://wda.com/contact.html</loc>
-        <lastmod>2026-07-18</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.7</priority>
     </url>
 </urlset>

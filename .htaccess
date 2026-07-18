@@ -1,0 +1,224 @@
+# ============================================
+# .HTACCESS - Website Development Agency (WDA)
+# Apache Server Configuration
+# ============================================
+
+# Enable Rewrite Engine
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+</IfModule>
+
+# ============================================
+# SEO: CANONICAL URLs (Force www or non-www)
+# ============================================
+# Uncomment ONE of the following based on your preference:
+
+# Option 1: Force non-www (recommended)
+# <IfModule mod_rewrite.c>
+#     RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+#     RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+# </IfModule>
+
+# Option 2: Force www
+# <IfModule mod_rewrite.c>
+#     RewriteCond %{HTTP_HOST} !^www\. [NC]
+#     RewriteRule ^(.*)$ https://www.%{HTTP_HOST}/$1 [R=301,L]
+# </IfModule>
+
+# ============================================
+# SEO: FORCE HTTPS
+# ============================================
+<IfModule mod_rewrite.c>
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+</IfModule>
+
+# ============================================
+# SEO: TRAILING SLASH MANAGEMENT
+# ============================================
+<IfModule mod_rewrite.c>
+    # Remove trailing slash for non-directory URLs
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} (.+)/$
+    RewriteRule ^ %1 [R=301,L]
+</IfModule>
+
+# ============================================
+# SEO: REMOVE INDEX.HTML FROM URLS
+# ============================================
+<IfModule mod_rewrite.c>
+    # Redirect /index.html to /
+    RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.html\ HTTP/
+    RewriteRule ^index\.html$ / [R=301,L]
+</IfModule>
+
+# ============================================
+# SEO: SITEMAP ACCESSIBILITY
+# ============================================
+<IfModule mod_rewrite.c>
+    # Ensure sitemap.xml is accessible
+    RewriteRule ^sitemap\.xml$ sitemap.xml [L]
+    
+    # Ensure robots.txt is accessible
+    RewriteRule ^robots\.txt$ robots.txt [L]
+</IfModule>
+
+# ============================================
+# CACHING: STATIC ASSETS (1 year)
+# ============================================
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault "access plus 1 month"
+    
+    # HTML - 1 week
+    ExpiresByType text/html "access plus 1 week"
+    
+    # CSS & JavaScript - 1 year
+    ExpiresByType text/css "access plus 1 year"
+    ExpiresByType application/javascript "access plus 1 year"
+    ExpiresByType application/x-javascript "access plus 1 year"
+    
+    # Images - 1 year
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType image/x-icon "access plus 1 year"
+    
+    # Fonts - 1 year
+    ExpiresByType application/font-woff "access plus 1 year"
+    ExpiresByType application/font-woff2 "access plus 1 year"
+    ExpiresByType application/vnd.ms-fontobject "access plus 1 year"
+    ExpiresByType font/ttf "access plus 1 year"
+    ExpiresByType font/otf "access plus 1 year"
+    
+    # Video - 1 year
+    ExpiresByType video/mp4 "access plus 1 year"
+    ExpiresByType video/webm "access plus 1 year"
+    
+    # XML & RSS - 1 hour
+    ExpiresByType application/xml "access plus 1 hour"
+    ExpiresByType application/rss+xml "access plus 1 hour"
+</IfModule>
+
+# ============================================
+# CACHING: CACHE CONTROL HEADERS
+# ============================================
+<IfModule mod_headers.c>
+    # HTML - 1 week
+    <FilesMatch "\.(html|htm)$">
+        Header set Cache-Control "public, max-age=604800, must-revalidate"
+    </FilesMatch>
+    
+    # CSS & JS - 1 year
+    <FilesMatch "\.(css|js)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+    
+    # Images - 1 year
+    <FilesMatch "\.(jpg|jpeg|png|gif|webp|svg|ico)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+    
+    # Fonts - 1 year
+    <FilesMatch "\.(woff|woff2|ttf|otf|eot)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+    
+    # Sitemap & Robots - 1 day
+    <FilesMatch "^(sitemap\.xml|robots\.txt)$">
+        Header set Cache-Control "public, max-age=86400"
+    </FilesMatch>
+    
+    # Remove ETags for static content
+    <FilesMatch "\.(css|js|jpg|jpeg|png|gif|webp|svg|ico|woff|woff2|ttf|otf|eot)$">
+        Header unset ETag
+        FileETag None
+    </FilesMatch>
+</IfModule>
+
+# ============================================
+# COMPRESSION: GZIP
+# ============================================
+<IfModule mod_deflate.c>
+    # Enable compression
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css
+    AddOutputFilterByType DEFLATE application/javascript application/x-javascript
+    AddOutputFilterByType DEFLATE application/json application/xml
+    AddOutputFilterByType DEFLATE image/svg+xml
+    AddOutputFilterByType DEFLATE font/ttf font/otf
+    
+    # Remove browser bugs
+    BrowserMatch ^Mozilla/4 gzip-only-text/html
+    BrowserMatch ^Mozilla/4\.0[678] no-gzip
+    BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+    Header append Vary User-Agent
+</IfModule>
+
+# ============================================
+# SECURITY HEADERS
+# ============================================
+<IfModule mod_headers.c>
+    # XSS Protection
+    Header set X-XSS-Protection "1; mode=block"
+    
+    # Content Type Options
+    Header set X-Content-Type-Options "nosniff"
+    
+    # Frame Options (prevents clickjacking)
+    Header set X-Frame-Options "SAMEORIGIN"
+    
+    # Referrer Policy
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+    
+    # Permissions Policy
+    Header set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+</IfModule>
+
+# ============================================
+# ERROR PAGES
+# ============================================
+ErrorDocument 404 /404.html
+ErrorDocument 500 /500.html
+ErrorDocument 403 /403.html
+
+# ============================================
+# FILE ACCESS RESTRICTIONS
+# ============================================
+
+# Protect sensitive files
+<FilesMatch "\.(env|config|json|lock|bak|swp|sql|md|log)$">
+    Require all denied
+</FilesMatch>
+
+# Protect .htaccess itself
+<Files ".htaccess">
+    Require all denied
+</Files>
+
+# Protect .git directory
+<IfModule mod_rewrite.c>
+    RewriteRule ^\.git - [F,L]
+</IfModule>
+
+# ============================================
+# DIRECTORY LISTING
+# ============================================
+Options -Indexes
+
+# ============================================
+# CHARACTER SET
+# ============================================
+AddDefaultCharset UTF-8
+AddCharset UTF-8 .html .css .js .xml .json .txt
+
+# ============================================
+# MIME TYPES
+# ============================================
+AddType application/javascript .js
+AddType text/css .css
+AddType image/webp .webp
+AddType font/woff .woff
+AddType font/woff2 .woff2
