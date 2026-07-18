@@ -1,0 +1,15 @@
+# robots.txt for WDA - Website Development Agency
+# https://wda.com
+
+# Allow all search engines full access
+User-agent: *
+Allow: /
+
+# Disallow duplicate/irrelevant pages
+Disallow: /google16b6b2af5711ebcd.html
+
+# Sitemap location
+Sitemap: https://wda.com/sitemap.xml
+
+# Crawl delay for polite crawling
+Crawl-delay: 10
