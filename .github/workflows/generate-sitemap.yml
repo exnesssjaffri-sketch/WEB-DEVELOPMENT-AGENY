@@ -1,11 +1,10 @@
 # ============================================
-# GitHub Actions - Auto-Generate Sitemap & Robots
+# GitHub Actions - Auto-Generate Sitemap & Deploy to GitHub Pages
 # Website Development Agency (WDA)
 # ============================================
-name: Generate Sitemap & Robots.txt
+name: Generate Sitemap & Deploy
 
 on:
-  # Trigger on push to main branch
   push:
     branches: [main, master]
     paths:
@@ -13,228 +12,111 @@ on:
       - 'blog/*.html'
       - 'portfolio/*.html'
       - 'scripts/generate-sitemap.py'
-      - 'robots.txt'
+    paths-ignore:
       - 'sitemap.xml'
+      - 'robots.txt'
 
-  # Trigger on pull request to main branch
-  pull_request:
-    branches: [main, master]
-    paths:
-      - '*.html'
-      - 'blog/*.html'
-      - 'portfolio/*.html'
-
-  # Allow manual trigger
   workflow_dispatch:
     inputs:
       domain:
         description: 'Production domain URL'
         required: false
-        default: 'https://wda.com'
+        default: 'https://exnesssjaffri-sketch.github.io/WEB-DEVELOPMENT-AGENY'
         type: string
 
-  # Run weekly on Sunday at midnight
   schedule:
     - cron: '0 0 * * 0'
 
-# Permissions
 permissions:
   contents: write
-  pull-requests: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
 
 jobs:
-  generate-sitemap:
-    name: Generate Sitemap & Robots.txt
+  generate-and-deploy:
+    name: Generate Sitemap & Deploy
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout repository
       - name: Checkout Repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      # Step 2: Setup Python
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-          cache: 'pip'
 
-      # Step 3: Install dependencies (if any)
       - name: Install Dependencies
-        run: |
-          python -m pip install --upgrade pip
-          # No external dependencies needed for the generator
+        run: python -m pip install --upgrade pip
 
-      # Step 4: Generate sitemap.xml
       - name: Generate Sitemap
         id: generate
         run: |
-          DOMAIN="${{ github.event.inputs.domain || 'https://wda.com' }}"
+          DOMAIN="${{ github.event.inputs.domain || 'https://exnesssjaffri-sketch.github.io/WEB-DEVELOPMENT-AGENY' }}"
           echo "Generating sitemap for domain: $DOMAIN"
           python scripts/generate-sitemap.py --domain "$DOMAIN" --output sitemap.xml
           echo "domain=$DOMAIN" >> $GITHUB_OUTPUT
 
-      # Step 5: Validate sitemap.xml
       - name: Validate Sitemap XML
-        run: |
-          echo "Validating sitemap.xml..."
-          python -c "
-import xml.etree.ElementTree as ET
-import sys
+        run: python scripts/validate-sitemap.py
 
-try:
-    tree = ET.parse('sitemap.xml')
-    root = tree.getroot()
-    ns = {'sm': 'http://www.sitemaps.org/schemas/sitemap/0.9'}
-    urls = root.findall('.//sm:url', ns)
-    
-    print(f'✅ Sitemap parsed successfully')
-    print(f'📊 Total URLs: {len(urls)}')
-    
-    # Validate each URL
-    errors = []
-    for i, url in enumerate(urls, 1):
-        loc = url.find('sm:loc', ns)
-        lastmod = url.find('sm:lastmod', ns)
-        changefreq = url.find('sm:changefreq', ns)
-        priority = url.find('sm:priority', ns)
-        
-        if loc is None or not loc.text:
-            errors.append(f'URL {i}: Missing or empty <loc>')
-        if lastmod is None or not lastmod.text:
-            errors.append(f'URL {i}: Missing or empty <lastmod>')
-        if changefreq is None or not changefreq.text:
-            errors.append(f'URL {i}: Missing or empty <changefreq>')
-        if priority is None or not priority.text:
-            errors.append(f'URL {i}: Missing or empty <priority>')
-        
-        # Check for duplicate URLs
-        loc_text = loc.text if loc is not None else ''
-        for j, other_url in enumerate(urls[:i-1], 1):
-            other_loc = other_url.find('sm:loc', ns)
-            if other_loc is not None and other_loc.text == loc_text:
-                errors.append(f'Duplicate URL found: {loc_text}')
-    
-    if errors:
-        print(f'❌ Validation errors found:')
-        for error in errors:
-            print(f'   - {error}')
-        sys.exit(1)
-    else:
-        print(f'✅ All URLs validated successfully')
-        print(f'✅ No duplicate URLs found')
-        
-except Exception as e:
-    print(f'❌ Validation failed: {e}')
-    sys.exit(1)
-"
-
-      # Step 6: Validate robots.txt
       - name: Validate Robots.txt
         run: |
           echo "Validating robots.txt..."
           if [ ! -f robots.txt ]; then
-            echo "❌ robots.txt not found!"
+            echo "robots.txt not found!"
             exit 1
           fi
-          
-          # Check for required directives
-          if grep -q "User-agent:" robots.txt; then
-            echo "✅ User-agent directive found"
-          else
-            echo "❌ User-agent directive missing"
-            exit 1
-          fi
-          
-          if grep -q "Sitemap:" robots.txt; then
-            echo "✅ Sitemap directive found"
-          else
-            echo "❌ Sitemap directive missing"
-            exit 1
-          fi
-          
-          if grep -q "Disallow:" robots.txt; then
-            echo "✅ Disallow directives found"
-          else
-            echo "⚠️ No Disallow directives found"
-          fi
-          
-          echo "✅ robots.txt validation passed"
+          grep -q "User-agent:" robots.txt && echo "User-agent OK" || { echo "User-agent missing"; exit 1; }
+          grep -q "Sitemap:" robots.txt && echo "Sitemap directive OK" || { echo "Sitemap missing"; exit 1; }
+          grep -q "Disallow:" robots.txt && echo "Disallow directives OK" || echo "No Disallow found"
+          echo "robots.txt validation passed"
 
-      # Step 7: Check for changes
       - name: Check for Changes
         id: changes
         run: |
-          git add -A
+          git add sitemap.xml robots.txt
           if git diff --cached --quiet; then
-            echo "No changes to commit"
             echo "has_changes=false" >> $GITHUB_OUTPUT
           else
-            echo "Changes detected"
             echo "has_changes=true" >> $GITHUB_OUTPUT
           fi
 
-      # Step 8: Commit and push changes
       - name: Commit Changes
         if: steps.changes.outputs.has_changes == 'true'
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git commit -m "chore: auto-generate sitemap and robots.txt [skip ci]"
-          git push
+          git push origin HEAD:${GITHUB_REF_NAME}
 
-      # Step 9: Submit to Google Search Console (optional)
-      - name: Submit Sitemap to Google Search Console
-        if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
-        env:
-          GOOGLE_SEARCH_CONSOLE_CREDENTIALS: ${{ secrets.GOOGLE_SEARCH_CONSOLE_CREDENTIALS }}
-        run: |
-          if [ -n "$GOOGLE_SEARCH_CONSOLE_CREDENTIALS" ]; then
-            echo "🔍 Google Search Console credentials found"
-            echo "📤 Submitting sitemap..."
-            
-            # Decode credentials
-            echo "$GOOGLE_SEARCH_CONSOLE_CREDENTIALS" > /tmp/gsc-credentials.json
-            
-            # Submit sitemap via Google Indexing API
-            DOMAIN="${{ steps.generate.outputs.domain }}"
-            SITEMAP_URL="${DOMAIN}/sitemap.xml"
-            
-            echo "   Sitemap URL: $SITEMAP_URL"
-            echo "✅ Sitemap submitted to Google Search Console"
-          else
-            echo "ℹ️ Google Search Console credentials not configured"
-            echo "   To enable automatic submission:"
-            echo "   1. Go to GitHub repository Settings > Secrets and variables > Actions"
-            echo "   2. Add secret: GOOGLE_SEARCH_CONSOLE_CREDENTIALS"
-            echo "   3. Value: Your Google Search Console service account JSON"
-          fi
+      - name: Setup GitHub Pages
+        uses: actions/configure-pages@v4
 
-      # Step 9: Summary
+      - name: Upload Pages Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
       - name: Generate Summary
         run: |
-          echo "## 📋 Sitemap Generation Summary" >> $GITHUB_STEP_SUMMARY
+          echo "## Sitemap Generation Summary" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "| File | Status |" >> $GITHUB_STEP_SUMMARY
           echo "|------|--------|" >> $GITHUB_STEP_SUMMARY
-          echo "| sitemap.xml | ✅ Generated |" >> $GITHUB_STEP_SUMMARY
-          echo "| robots.txt | ✅ Validated |" >> $GITHUB_STEP_SUMMARY
+          echo "| sitemap.xml | Generated |" >> $GITHUB_STEP_SUMMARY
+          echo "| robots.txt | Validated |" >> $GITHUB_STEP_SUMMARY
+          echo "| GitHub Pages | Deployed |" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "### 📊 Sitemap Statistics" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          python -c "
-import xml.etree.ElementTree as ET
-tree = ET.parse('sitemap.xml')
-root = tree.getroot()
-ns = {'sm': 'http://www.sitemaps.org/schemas/sitemap/0.9'}
-urls = root.findall('.//sm:url', ns)
-print(f'- **Total URLs**: {len(urls)}')
-for url in urls:
-    loc = url.find('sm:loc', ns)
-    priority = url.find('sm:priority', ns)
-    if loc is not None and priority is not None:
-        print(f'  - Priority {priority.text}: {loc.text}')
-" >> $GITHUB_STEP_SUMMARY
+          echo "Deployed URL: https://exnesssjaffri-sketch.github.io/WEB-DEVELOPMENT-AGENY/" >> $GITHUB_STEP_SUMMARY

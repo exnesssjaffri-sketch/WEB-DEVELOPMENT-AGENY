@@ -9,7 +9,7 @@ REM ============================================
 setlocal enabledelayedexpansion
 
 REM Set domain (default or from argument)
-set "DOMAIN=https://wda.com"
+set "DOMAIN=https://exnesssjaffri-sketch.github.io/WEB-DEVELOPMENT-AGENY"
 if not "%1"=="" set "DOMAIN=%1"
 
 echo =============================================

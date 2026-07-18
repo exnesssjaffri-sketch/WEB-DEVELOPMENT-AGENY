@@ -154,7 +154,7 @@ Disallow: /google*.html
 # ============================================
 # SITEMAP LOCATION
 # ============================================
-Sitemap: https://wda.com/sitemap.xml
+Sitemap: https://exnesssjaffri-sketch.github.io/WEB-DEVELOPMENT-AGENY/sitemap.xml
 
 # ============================================
 # CRAWL DELAY (Polite crawling)

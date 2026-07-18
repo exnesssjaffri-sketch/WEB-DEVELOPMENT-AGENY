@@ -7,7 +7,7 @@
  Usage:
    python scripts/generate-sitemap.py [--domain DOMAIN] [--output OUTPUT]
    
-   --domain   : Production domain (default: https://wda.com)
+   --domain   : Production domain (default: https://exnesssjaffri-sketch.github.io/WEB-DEVELOPMENT-AGENY)
    --output   : Output file path (default: sitemap.xml)
    
  Example:
@@ -28,7 +28,7 @@ from pathlib import Path
 # ============================================
 
 # Default domain (can be overridden via --domain flag)
-DEFAULT_DOMAIN = "https://wda.com"
+DEFAULT_DOMAIN = "https://exnesssjaffri-sketch.github.io/WEB-DEVELOPMENT-AGENY"
 
 # Pages to exclude from sitemap
 EXCLUDED_PAGES = {
@@ -38,6 +38,14 @@ EXCLUDED_PAGES = {
     "error.html",
     "maintenance.html",
     "coming-soon.html",
+}
+
+# Config files to exclude
+EXCLUDED_FILES = {
+    ".htaccess",
+    "web.config",
+    "robots.txt",
+    "sitemap.xml",
 }
 
 # Directories to exclude from scanning
@@ -64,10 +72,12 @@ EXCLUDED_DIRS = {
     "img",
     "fonts",
     "icons",
+    "css",
+    "js",
 }
 
-# File extensions to include
-INCLUDE_EXTENSIONS = {".html", ".htm", ".php", ".asp", ".aspx", ".jsp"}
+# File extensions to include (only static HTML for this project)
+INCLUDE_EXTENSIONS = {".html", ".htm"}
 
 # Priority mapping based on URL patterns
 PRIORITY_MAP = [
@@ -156,6 +166,10 @@ def should_include(file_path, base_dir):
                 return False
         elif filename == pattern:
             return False
+
+    # Check if file is a config file
+    if filename in EXCLUDED_FILES:
+        return False
 
     return True
 
