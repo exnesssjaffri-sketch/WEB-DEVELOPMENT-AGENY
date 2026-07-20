@@ -1,5 +1,5 @@
-/* ============================================
-   WEBSITE DEVELOPMENT AGENCY (WDA) - STYLES
+﻿/* ============================================
+   Website Bazar (WB) - STYLES
    ============================================ */
 
 /* ----- CSS Variables ----- */
@@ -304,6 +304,15 @@ img {
     color: var(--primary-text);
     letter-spacing: 2px;
     position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-logo-img {
+    height: 40px;
+    width: auto;
+    border-radius: 8px;
 }
 
 .nav-logo::after {
@@ -1313,8 +1322,16 @@ img {
     font-weight: 800;
     color: var(--primary-text);
     letter-spacing: 2px;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    gap: 10px;
     margin-bottom: 20px;
+}
+
+.footer-logo-img {
+    height: 40px;
+    width: auto;
+    border-radius: 8px;
 }
 
 .footer-desc {

@@ -1,6 +1,6 @@
-# ============================================
+﻿# ============================================
 # GitHub Actions - Auto-Generate Sitemap & Deploy to GitHub Pages
-# Website Development Agency (WDA)
+# Website Bazar (WB)
 # ============================================
 name: Generate Sitemap & Deploy
 

@@ -1,5 +1,5 @@
-/* ============================================
-   WEBSITE DEVELOPMENT AGENCY (WDA) - MAIN JS
+﻿/* ============================================
+   Website Bazar (WB) - MAIN JS
    ============================================ */
 
 'use strict';
@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (typingElement) {
         const phrases = [
-            '(WDA)',
+            '(WB)',
             'Building Excellence',
             'Digital Innovation',
             'Your Success Partner'
@@ -525,6 +525,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    console.log('%c WDA - Website Development Agency ', 'background: #353574; color: #fff; font-size: 1.2rem; padding: 10px 20px; border-radius: 8px; font-weight: bold;');
-    console.log('%c Built with ❤️ by WDA Team ', 'background: #BBD6F4; color: #353574; font-size: 0.9rem; padding: 8px 16px; border-radius: 8px;');
+    console.log('%c WB - Website Bazar ', 'background: #353574; color: #fff; font-size: 1.2rem; padding: 10px 20px; border-radius: 8px; font-weight: bold;');
+    console.log('%c Built with ❤️ by WB Team ', 'background: #BBD6F4; color: #353574; font-size: 0.9rem; padding: 8px 16px; border-radius: 8px;');
 });

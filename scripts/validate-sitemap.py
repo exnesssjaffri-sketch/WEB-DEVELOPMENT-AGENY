@@ -1,7 +1,7 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """
 =============================================================================
- SITEMAP VALIDATOR - Website Development Agency (WDA)
+ SITEMAP VALIDATOR - Website Bazar (WB)
  Validates sitemap.xml for proper structure, no duplicates, and valid URLs.
  
  Usage:

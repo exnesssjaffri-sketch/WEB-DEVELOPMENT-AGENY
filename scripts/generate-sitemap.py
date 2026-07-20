@@ -1,7 +1,7 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """
 =============================================================================
- SITEMAP GENERATOR - Website Development Agency (WDA)
+ SITEMAP GENERATOR - Website Bazar (WB)
  Automatically generates sitemap.xml by scanning the project directory.
  
  Usage:
@@ -273,7 +273,7 @@ def generate_sitemap(base_dir, domain, output_path):
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Generate sitemap.xml for WDA website"
+        description="Generate sitemap.xml for WB website"
     )
     parser.add_argument(
         "--domain",

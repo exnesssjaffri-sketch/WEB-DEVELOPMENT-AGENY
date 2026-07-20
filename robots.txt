@@ -1,5 +1,5 @@
-# ============================================
-# ROBOTS.TXT - Website Development Agency (WDA)
+﻿# ============================================
+# ROBOTS.TXT - Website Bazar (WB)
 # https://wda.com
 # Last updated: 2026-07-18
 # Follows Google SEO Best Practices
