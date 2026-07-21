@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaffeiz – Best Pakistani Restaurant | Authentic Cuisine & Global Delivery</title>
+    <!-- Meta Descriptions & SEO -->
+    <meta name="description" content="Jaffeiz Restaurant – Authentic Pakistani cuisine since 2010. Order Biryani, Karahi, Korma, Pizza, Burgers & more. Worldwide delivery & table booking available.">
+    <meta name="keywords" content="Pakistani restaurant, Jaffeiz, authentic Pakistani cuisine, Biryani, Karahi, Korma, Pakistani food delivery, best restaurant near me, Pakistani food online, Haider Jaffri, Karachi restaurant">
+    <meta name="author" content="Jaffeiz Restaurant">
+    <meta name="robots" content="index, follow">
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Jaffeiz – Best Pakistani Restaurant | Authentic Cuisine & Global Delivery">
+    <meta property="og:description" content="Jaffeiz Restaurant – Authentic Pakistani cuisine since 2010. Order Biryani, Karahi, Korma, Pizza, Burgers & more. Worldwide delivery & table booking available.">
+    <meta property="og:url" content="https://jaffeiz.com/">
+    <meta property="og:site_name" content="Jaffeiz Restaurant">
+    <meta property="og:locale" content="en_US">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Jaffeiz – Best Pakistani Restaurant | Authentic Cuisine & Global Delivery">
+    <meta name="twitter:description" content="Jaffeiz Restaurant – Authentic Pakistani cuisine since 2010. Order Biryani, Karahi, Korma, Pizza, Burgers & more. Worldwide delivery & table booking available.">
+    <!-- Link to external CSS -->
+    <link rel="canonical" href="https://jaffeiz.com/">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts for elegant typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Raleway:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ============================================================ -->
+    <!-- 1. LOADING SCREEN                                             -->
+    <!-- ============================================================ -->
+    <div id="loading-screen">
+        <div class="loader-content">
+            <div class="loader-logo">Jaffeiz</div>
+            <div class="loader-spinner"></div>
+            <p class="loader-text">Serving up excellence...</p>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- 2. PARTICLE BACKGROUND (Canvas)                               -->
+    <!-- ============================================================ -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- ============================================================ -->
+    <!-- 3. STICKY NAVIGATION                                          -->
+    <!-- ============================================================ -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">Jaffeiz</a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#menu" class="nav-link">Menu</a></li>
+                <li><a href="#booking" class="nav-link">Booking</a></li>
+                <li><a href="#delivery" class="nav-link">Delivery</a></li>
+                <li><a href="#reviews" class="nav-link">Reviews</a></li>
+                <li><a href="#about" class="nav-link">About Us</a></li>
+                <li><button id="auth-btn" class="btn btn-small btn-primary" style="padding: 8px 20px; font-size: 0.8rem;">Sign In</button></li>
+            </ul>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ============================================================ -->
+    <!-- 4. FIFA WORLD CUP PROMO BANNER                                -->
+    <!-- ============================================================ -->
+    <div id="promo-banner">
+        <div class="promo-content">
+            <span class="promo-icon">⚽</span>
+            <p class="promo-text">
+                🔥 <strong>FIFA World Cup Special!</strong> Use code <span class="promo-code">"FIFA2026"</span> for <strong>20% OFF</strong> on all orders! 🏆
+            </p>
+            <span class="promo-icon">🏆</span>
+        </div>
+        <button class="promo-close" id="promo-close">&times;</button>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- 5. HERO SECTION                                               -->
+    <!-- ============================================================ -->
+    <section id="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 id="hero-heading"></h1>
+            <p class="hero-subtitle fade-in">Authentic Pakistani Cuisine • Global Delivery</p>
+            <div class="hero-cta fade-in">
+                <a href="#menu" class="btn btn-primary">Explore Our Menu</a>
+                <a href="#booking" class="btn btn-secondary">Book a Table</a>
+            </div>
+        </div>
+        <!-- Decorative soccer ball animations -->
+        <div class="floating-ball ball-1">⚽</div>
+        <div class="floating-ball ball-2">🏆</div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 6. CATEGORIZED MENU SECTION                                   -->
+    <!-- ============================================================ -->
+    <section id="menu" class="section">
+        <div class="container">
+            <h2 class="section-title slide-up">Our Exquisite Menu</h2>
+            <p class="section-subtitle slide-up">Over 100 affordable meals crafted with passion</p>
+
+            <!-- Filter Buttons -->
+            <div class="filter-buttons fade-in">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="pakistani">Pakistani Meals</button>
+                <button class="filter-btn" data-filter="pizza">🍕 Pizza</button>
+                <button class="filter-btn" data-filter="burger">🍔 Burgers</button>
+                <button class="filter-btn" data-filter="ice-cream">🍦 Ice Creams</button>
+                <button class="filter-btn" data-filter="drinks">🥤 Drinks</button>
+            </div>
+
+            <!-- Menu Grid -->
+            <div class="menu-grid" id="menu-grid">
+                <!-- Menu items will be injected by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 7. GLOBAL DELIVERY & COUPON SYSTEM (Cart)                     -->
+    <!-- ============================================================ -->
+    <section id="delivery" class="section bg-dark">
+        <div class="container">
+            <h2 class="section-title slide-up">Worldwide Delivery</h2>
+            <p class="section-subtitle slide-up">Savor Jaffeiz anywhere on the planet</p>
+
+            <div class="delivery-wrapper fade-in">
+                <!-- Cart Overview -->
+                <div class="cart-section">
+                    <h3 class="cart-title">🛒 Your Cart</h3>
+                    <div id="cart-items">
+                        <p class="cart-empty">Your cart is empty. Start adding delicious meals!</p>
+                    </div>
+                    <div class="cart-total" id="cart-total">
+                        <span>Total:</span>
+                        <span id="total-price">Rs. 0</span>
+                    </div>
+
+                    <!-- Coupon System -->
+                    <div class="coupon-section">
+                        <h4>Have a coupon?</h4>
+                        <div class="coupon-input-group">
+                            <input type="text" id="coupon-input" placeholder="Enter coupon code" />
+                            <button id="apply-coupon" class="btn btn-small">Apply</button>
+                        </div>
+                        <p id="coupon-message" class="coupon-message"></p>
+                    </div>
+
+                    <button id="checkout-btn" class="btn btn-primary" disabled>Proceed to Checkout</button>
+                </div>
+
+                <!-- Delivery Info -->
+                <div class="delivery-info">
+                    <div class="delivery-card">
+                        <div class="delivery-icon">🌍</div>
+                        <h4>Global Shipping</h4>
+                        <p>Delivering to over 100 countries worldwide. Your favorite Pakistani flavors, now at your doorstep.</p>
+                    </div>
+                    <div class="delivery-card">
+                        <div class="delivery-icon">⚡</div>
+                        <h4>Express Delivery</h4>
+                        <p>Get your order within 30-45 minutes in major cities. Hot & fresh, guaranteed.</p>
+                    </div>
+                    <div class="delivery-card">
+                        <div class="delivery-icon">💳</div>
+                        <h4>Secure Payment</h4>
+                        <p>All transactions are encrypted and secure. Multiple payment options accepted.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ============================================================ -->
+            <!-- 4-STEP CHECKOUT PROCESS (hidden until checkout clicked)       -->
+            <!-- ============================================================ -->
+            <div id="checkout-modal" class="checkout-modal" style="display: none;">
+                <div class="checkout-modal-content">
+                    <div class="checkout-modal-header">
+                        <h2>🛍️ Secure Checkout</h2>
+                        <button class="checkout-modal-close" id="checkout-modal-close">&times;</button>
+                    </div>
+
+                    <!-- Progress Bar -->
+                    <div class="checkout-progress" id="checkout-progress">
+                        <div class="progress-step active" data-step="1">
+                            <span class="progress-number">1</span>
+                            <span class="progress-label">Phone</span>
+                        </div>
+                        <div class="progress-line"></div>
+                        <div class="progress-step" data-step="2">
+                            <span class="progress-number">2</span>
+                            <span class="progress-label">Email</span>
+                        </div>
+                        <div class="progress-line"></div>
+                        <div class="progress-step" data-step="3">
+                            <span class="progress-number">3</span>
+                            <span class="progress-label">Payment</span>
+                        </div>
+                        <div class="progress-line"></div>
+                        <div class="progress-step" data-step="4">
+                            <span class="progress-number">4</span>
+                            <span class="progress-label">Confirm</span>
+                        </div>
+                    </div>
+
+                    <div id="checkout-steps-container">
+                        <!-- ========== STEP 1: PHONE VERIFICATION ========== -->
+                        <div class="checkout-step active" data-step="1">
+                            <div class="step-header">
+                                <span class="step-number">1</span>
+                                <h3>📱 Verify Your Phone Number</h3>
+                            </div>
+                            <p class="step-description">
+                                We'll send a quick one-time code to your phone. This helps us keep your order secure,
+                                prevent spam bookings, and send you real-time delivery updates so you know exactly
+                                when your food is on its way.
+                            </p>
+                            <div class="form-group">
+                                <label for="checkout-phone">Phone Number</label>
+                                <input type="tel" id="checkout-phone" placeholder="e.g. 03XX-XXXXXXX  or  +1 (555) 000-0000" required />
+                            </div>
+                            <button type="button" class="btn btn-primary" id="step1-send-otp-btn">📨 Send Verification Code</button>
+
+                            <!-- Inline OTP verification -->
+                            <div class="otp-verify-section" id="step1-otp-section">
+                                <p style="color: #b0b0b0; font-size: 0.9rem; text-align: center; margin-bottom: 8px;">Enter the 4-digit code sent to your phone</p>
+                                <div class="otp-input-row">
+                                    <input type="text" class="checkout-otp-input" maxlength="1" inputmode="numeric" pattern="[0-9]" />
+                                    <input type="text" class="checkout-otp-input" maxlength="1" inputmode="numeric" pattern="[0-9]" />
+                                    <input type="text" class="checkout-otp-input" maxlength="1" inputmode="numeric" pattern="[0-9]" />
+                                    <input type="text" class="checkout-otp-input" maxlength="1" inputmode="numeric" pattern="[0-9]" />
+                                </div>
+                                <div class="otp-timer-checkout">
+                                    <span class="otp-timer-text">Resend code in <strong class="otp-countdown">30</strong>s</span>
+                                    <button class="btn btn-small otp-resend-btn" style="display: none;">Resend Code</button>
+                                </div>
+                                <p class="otp-success-msg" id="step1-otp-success">✅ Phone verified! Your order updates will be sent here.</p>
+                                <p class="otp-error-msg" id="step1-otp-error" style="color: #dc3545; font-size: 0.85rem; text-align: center; display: none;">❌ That code doesn't match. Please check and try again.</p>
+                            </div>
+
+                            <p class="field-microcopy">🔒 Your number is only used for order updates. We never spam or share your data.</p>
+
+                            <div class="step-actions">
+                                <button type="button" class="btn btn-secondary step-back-btn" data-target="0" style="display: none;">← Back</button>
+                                <button type="button" class="btn btn-primary step-next-btn" data-target="2" disabled>Continue →</button>
+                            </div>
+                        </div>
+
+                        <!-- ========== STEP 2: EMAIL CONFIRMATION ========== -->
+                        <div class="checkout-step" data-step="2">
+                            <div class="step-header">
+                                <span class="step-number">2</span>
+                                <h3>📧 Where should we send your receipt?</h3>
+                            </div>
+                            <p class="step-description">
+                                Enter your email to receive a detailed digital receipt, a full breakdown of your order,
+                                and a tracking link so you can follow your meal from our kitchen to your doorstep.
+                            </p>
+                            <div class="form-group">
+                                <label for="checkout-email">Email Address</label>
+                                <input type="email" id="checkout-email" placeholder="your@email.com" required />
+                            </div>
+                            <p class="field-microcopy">No spam, no newsletters — just your order info. We respect your inbox.</p>
+
+                            <div class="step-actions">
+                                <button type="button" class="btn btn-secondary step-back-btn" data-target="1">← Back</button>
+                                <button type="button" class="btn btn-primary step-next-btn" data-target="3" disabled>📄 Send Receipt & Tracking</button>
+                            </div>
+                        </div>
+
+                        <!-- ========== STEP 3: PAYMENT DETAILS ========== -->
+                        <div class="checkout-step" data-step="3">
+                            <div class="step-header">
+                                <span class="step-number">3</span>
+                                <h3>💳 Secure Payment</h3>
+                            </div>
+                            <p class="step-description">
+                                We accept all major cards — Visa, Mastercard, American Express, and Discover.
+                            </p>
+                            <p class="trust-microcopy">
+                                🔒 Your payment is encrypted and processed securely. We use industry-standard SSL
+                                encryption to protect every transaction. Your card details are never stored on our servers.
+                            </p>
+                            <div class="card-icons">
+                                <span class="card-icon">💳 Visa</span>
+                                <span class="card-icon">💳 Mastercard</span>
+                                <span class="card-icon">💳 Amex</span>
+                                <span class="card-icon">💳 Discover</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="checkout-name">Full Name</label>
+                                <input type="text" id="checkout-name" placeholder="Enter your full name" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="checkout-address">Delivery Address</label>
+                                <textarea id="checkout-address" rows="2" placeholder="House #, Street, City" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="checkout-card-name">Cardholder Name</label>
+                                <input type="text" id="checkout-card-name" placeholder="Name as it appears on your card" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="checkout-card-number">Card Number</label>
+                                <input type="text" id="checkout-card-number" placeholder="1234 5678 9012 3456" maxlength="19" required />
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group" style="flex: 1;">
+                                    <label for="checkout-expiry">Expiry Date</label>
+                                    <input type="text" id="checkout-expiry" placeholder="MM/YY" maxlength="5" required />
+                                </div>
+                                <div class="form-group" style="flex: 1;">
+                                    <label for="checkout-cvv">CVV</label>
+                                    <input type="text" id="checkout-cvv" placeholder="123" maxlength="4" required />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="checkout-payment-method">Payment Method</label>
+                                <select id="checkout-payment-method">
+                                    <option value="card">💳 Credit / Debit Card</option>
+                                    <option value="cod">💵 Cash on Delivery</option>
+                                    <option value="jazzcash">📱 JazzCash</option>
+                                    <option value="easypaisa">📱 EasyPaisa</option>
+                                </select>
+                            </div>
+                            <p class="field-microcopy">🔐 SSL Encrypted • PCI Compliant • 100% Secure</p>
+
+                            <!-- Order Billing Summary -->
+                            <div class="checkout-billing-summary" id="checkout-billing-summary">
+                                <h4>🧾 Order Summary</h4>
+                                <div id="checkout-summary-items"></div>
+                                <div class="checkout-totals" id="checkout-totals"></div>
+                            </div>
+
+                            <div class="step-actions">
+                                <button type="button" class="btn btn-secondary step-back-btn" data-target="2">← Back</button>
+                                <button type="button" class="btn btn-primary step-next-btn" data-target="4">🔒 Continue to Review</button>
+                            </div>
+                        </div>
+
+                        <!-- ========== STEP 4: PREP TIME NOTICE & CONFIRM ========== -->
+                        <div class="checkout-step" data-step="4">
+                            <div class="step-header">
+                                <span class="step-number">4</span>
+                                <h3>⏳ A quick note before you order…</h3>
+                            </div>
+                            <div class="prep-notice">
+                                <p>At Jaffeiz, every meal is made <strong>fresh to order</strong> — just like you'd expect from an authentic Pakistani kitchen.</p>
+                                <p>Because we prepare each dish from scratch using traditional recipes and hand-picked spices, please allow:</p>
+                                <ul class="prep-times">
+                                    <li>🕐 <strong>Quick Bites / Appetizers:</strong> 10–15 minutes</li>
+                                    <li>🕐 <strong>Standard Mains / Platters:</strong> 20–30 minutes</li>
+                                    <li>🕐 <strong>Large / Group Orders:</strong> 35–45 minutes</li>
+                                </ul>
+                                <p class="prep-closing">Trust us — good things take time. Your patience means you get the freshest, most flavorful Jaffeiz experience possible. 🔥</p>
+                            </div>
+
+                            <!-- Summary of what's been entered -->
+                            <div class="checkout-confirm-summary">
+                                <h4>📋 Order Summary</h4>
+                                <p><strong>📍 Delivery Address:</strong> <span id="confirm-address">—</span></p>
+                                <p><strong>📱 Phone:</strong> <span id="confirm-phone">—</span></p>
+                                <p><strong>📧 Email:</strong> <span id="confirm-email">—</span></p>
+                                <p><strong>💳 Payment:</strong> <span id="confirm-payment">—</span></p>
+                                <p><strong>💰 Total:</strong> <span id="confirm-total" style="color: #c19a2b; font-weight: 700;">—</span></p>
+                            </div>
+
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="prep-acknowledge" />
+                                I understand that my order will be freshly prepared and may take 20–30 minutes.
+                            </label>
+                            <div class="step-actions">
+                                <button type="button" class="btn btn-secondary step-back-btn" data-target="3">← Review My Order</button>
+                                <button type="button" class="btn btn-primary" id="place-order-btn" disabled>✅ Yes, I'm Ready — Place My Order</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 8. TABLE BOOKING & BILLING SECTION                            -->
+    <!-- ============================================================ -->
+    <section id="booking" class="section">
+        <div class="container">
+            <h2 class="section-title slide-up">Reserve Your Table</h2>
+            <p class="section-subtitle slide-up">Choose your dining experience</p>
+
+            <div class="booking-wrapper fade-in">
+                <!-- Booking Type Selection -->
+                <div class="booking-types">
+                    <div class="booking-type-card" data-type="family">
+                        <div class="booking-icon">👨‍👩‍👧‍👦</div>
+                        <h3>Family Feast</h3>
+                        <p>Perfect for family gatherings. Special family menu & seating.</p>
+                        <p class="booking-price">From Rs. 4,999</p>
+                    </div>
+                    <div class="booking-type-card" data-type="romantic">
+                        <div class="booking-icon">💑</div>
+                        <h3>Romantic Couple</h3>
+                        <p>An intimate evening for two. Candle-lit ambiance & special menu.</p>
+                        <p class="booking-price">From Rs. 3,999</p>
+                    </div>
+                </div>
+
+                <!-- Booking Form -->
+                <div class="booking-form-wrapper" id="booking-form-wrapper" style="display: none;">
+                    <h3 id="booking-form-title">Book Your Experience</h3>
+                    <form id="booking-form">
+                        <input type="hidden" id="booking-type" name="booking-type" />
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="book-name">Full Name</label>
+                                <input type="text" id="book-name" name="name" placeholder="Enter your full name" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="book-email">Email Address</label>
+                                <input type="email" id="book-email" name="email" placeholder="your@email.com" required />
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="book-date">Date</label>
+                                <input type="date" id="book-date" name="date" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="book-time">Time</label>
+                                <input type="time" id="book-time" name="time" required />
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="book-guests">Number of Guests</label>
+                                <input type="number" id="book-guests" name="guests" min="1" max="20" value="2" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="book-phone">Phone Number</label>
+                                <input type="tel" id="book-phone" name="phone" placeholder="+1 (555) 000-0000" required />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="book-special">Special Requests (optional)</label>
+                            <textarea id="book-special" name="special" rows="3" placeholder="Any dietary requirements or special occasions?"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Proceed to Billing</button>
+                    </form>
+                </div>
+
+                <!-- Billing / Checkout Form -->
+                <div class="billing-form-wrapper" id="billing-form-wrapper" style="display: none;">
+                    <h3>Complete Your Payment</h3>
+                    <form id="billing-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="billing-name">Cardholder Name</label>
+                                <input type="text" id="billing-name" name="card-name" placeholder="Name on card" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="billing-card">Card Number</label>
+                                <input type="text" id="billing-card" name="card-number" placeholder="1234 5678 9012 3456" maxlength="19" required />
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="billing-expiry">Expiry Date</label>
+                                <input type="text" id="billing-expiry" name="expiry" placeholder="MM/YY" maxlength="5" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="billing-cvv">CVV</label>
+                                <input type="text" id="billing-cvv" name="cvv" placeholder="123" maxlength="4" required />
+                            </div>
+                        </div>
+                        <div class="billing-summary">
+                            <p><strong>Booking:</strong> <span id="billing-summary-type"></span></p>
+                            <p><strong>Date:</strong> <span id="billing-summary-date"></span></p>
+                            <p><strong>Guests:</strong> <span id="billing-summary-guests"></span></p>
+                            <p><strong>Total:</strong> <span id="billing-summary-total"></span></p>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Pay Now — $<span id="billing-amount">49.99</span></button>
+                        <button type="button" id="billing-back" class="btn btn-secondary">← Back</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 9. FAKE REVIEWS SECTION (Carousel)                            -->
+    <!-- ============================================================ -->
+    <section id="reviews" class="section bg-dark">
+        <div class="container">
+            <h2 class="section-title slide-up">What Our Guests Say</h2>
+            <p class="section-subtitle slide-up">Real experiences from our valued customers</p>
+
+            <div class="reviews-carousel fade-in">
+                <div class="reviews-track" id="reviews-track">
+                    <!-- Reviews will be injected by JavaScript -->
+                </div>
+                <button class="review-nav review-prev" id="review-prev">❮</button>
+                <button class="review-nav review-next" id="review-next">❯</button>
+            </div>
+            <div class="review-dots" id="review-dots"></div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 10. ABOUT US SECTION                                          -->
+    <!-- ============================================================ -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title slide-up">About Jaffeiz</h2>
+
+            <div class="about-wrapper">
+                <!-- History -->
+                <div class="about-text fade-in">
+                    <h3>Our Journey Since 2010</h3>
+                    <p>
+                        Founded in the heart of the city in <strong>2010</strong> by visionary chef <strong>Haider Jaffri</strong>, 
+                        Jaffeiz started as a modest family kitchen with a dream to share the rich, aromatic flavors of authentic 
+                        Pakistani cuisine with the world. Over the years, what began with just five tables has blossomed into 
+                        an internationally celebrated dining destination.
+                    </p>
+                    <p>
+                        From our signature <strong>Biryani</strong> — slow-cooked to perfection with fragrant basmati rice and 
+                        tender meat — to our velvety <strong>Korma</strong>, sizzling <strong>Karahi</strong>, and the most 
+                        comforting cup of <strong>Chai</strong> this side of the Indus, every dish tells a story of tradition, 
+                        passion, and relentless pursuit of excellence.
+                    </p>
+                    <p>
+                        Today, Jaffeiz boasts a team of <strong>50+ dedicated chefs and staff</strong>, serves over 
+                        <strong>100 affordable meals</strong>, and delivers worldwide. We've been featured in <em>Food & Travel 
+                        Magazine</em>, <em>Michelin Guide</em>, and have been awarded "Best Pakistani Restaurant" five years 
+                        running. Our secret? Love. Love for food, love for our guests, and love for the culture we represent.
+                    </p>
+                    <p class="about-quote">"Food is our common ground, a universal experience." — <strong>Haider Jaffri</strong></p>
+                </div>
+
+                <!-- Visuals: Kitchen & Staff -->
+                <div class="about-visuals fade-in">
+                    <div class="about-image-card">
+                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&q=80" alt="Jaffeiz Restaurant bustling kitchen with chefs preparing authentic Pakistani cuisine" loading="lazy" />
+                        <p class="image-caption">The heart of Jaffeiz — our bustling kitchen</p>
+                    </div>
+                    <div class="about-image-card">
+                        <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=600&q=80" alt="Executive Chef Haider Jaffri preparing signature Pakistani dishes at Jaffeiz Restaurant" loading="lazy" />
+                        <p class="image-caption">Executive Chef & Founder — Haider Jaffri</p>
+                    </div>
+                    <div class="about-image-card">
+                        <img src="https://images.unsplash.com/photo-1581299894007-aaa50297cf16?w=600&q=80" alt="Jaffeiz Restaurant dedicated kitchen staff team preparing authentic Pakistani food" loading="lazy" />
+                        <p class="image-caption">Our dedicated kitchen staff team</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="contact-info fade-in">
+                <h3>Get in Touch</h3>
+                <div class="contact-details">
+                    <p><span class="contact-icon">📧</span> <a href="mailto:exnesssjaffri@gmail.com">exnesssjaffri@gmail.com</a></p>
+                    <p><span class="contact-icon">📸</span> <a href="https://instagram.com/stfu_hazzy" target="_blank" rel="noopener">@stfu_hazzy</a></p>
+                    <p><span class="contact-icon">📍</span> 42 Flavor Street, Food District, Karachi, Pakistan</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- 11. FOOTER                                                    -->
+    <!-- ============================================================ -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Jaffeiz</h3>
+                    <p>A World of Flavor Awaits Since 2010.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#booking">Booking</a></li>
+                        <li><a href="#delivery">Delivery</a></li>
+                        <li><a href="#reviews">Reviews</a></li>
+                        <li><a href="#about">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-hours">
+                    <h4>Opening Hours</h4>
+                    <p>Mon–Fri: 11:00 AM – 11:00 PM</p>
+                    <p>Sat–Sun: 10:00 AM – 12:00 AM</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Jaffeiz Restaurant. All Rights Reserved. | Crafted with ❤️ by the Jaffeiz Team</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================================ -->
+    <!-- 12. SUCCESS MODAL                                             -->
+    <!-- ============================================================ -->
+    <div id="success-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-icon">✅</div>
+            <h2>Payment Successful!</h2>
+            <p>A confirmation email has been sent to your email address regarding your table booking.</p>
+            <button id="modal-close" class="btn btn-primary">Great, Thanks!</button>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- 13. ORDER CONFIRMATION MODAL (after checkout)                 -->
+    <!-- ============================================================ -->
+    <div id="order-confirm-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-icon">🎉</div>
+            <h2>Order Confirmed!</h2>
+            <div id="order-confirm-body"></div>
+            <button id="order-confirm-close" class="btn btn-primary">Awesome, Thanks! 🎉</button>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- 14. AUTH MODAL (Login / Sign-Up)                              -->
+    <!-- ============================================================ -->
+    <div id="auth-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-content auth-modal-content">
+            <button class="modal-close-btn" id="auth-modal-close">&times;</button>
+            <div class="auth-header">
+                <div class="auth-logo">Jaffeiz</div>
+                <p class="auth-tagline">A World of Flavor Awaits</p>
+            </div>
+
+            <!-- Tab Switcher -->
+            <div class="auth-tabs">
+                <button class="auth-tab active" data-tab="login">Sign In</button>
+                <button class="auth-tab" data-tab="signup">Create Account</button>
+            </div>
+
+            <!-- Login Form -->
+            <div id="auth-login" class="auth-form active">
+                <div class="auth-social">
+                    <button class="btn btn-google" id="google-login-btn">
+                        <svg class="google-icon" viewBox="0 0 48 48" width="20" height="20"><path fill="#FFC107" d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 12.955 4 4 12.955 4 24s8.955 20 20 20 20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z"/><path fill="#FF3D00" d="m6.306 14.691 6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 16.318 4 9.656 8.337 6.306 14.691z"/><path fill="#4CAF50" d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238A11.91 11.91 0 0 1 24 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44z"/><path fill="#1976D2" d="M43.611 20.083H42V20H24v8h11.303a12.04 12.04 0 0 1-4.087 5.571l.003-.002 6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917z"/></svg>
+                        Continue with Google
+                    </button>
+                </div>
+
+                <div class="auth-divider"><span>or sign in with email</span></div>
+
+                <form id="login-form" autocomplete="off">
+                    <div class="form-group">
+                        <label for="login-email">Email Address</label>
+                        <input type="email" id="login-email" placeholder="your@email.com" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" placeholder="Enter your password" required />
+                    </div>
+                    <div class="form-options">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="login-remember" /> Remember me
+                        </label>
+                        <a href="#" class="forgot-link">Forgot password?</a>
+                    </div>
+                    <button type="submit" class="btn btn-primary auth-submit-btn">Sign In</button>
+                </form>
+
+                <div class="auth-phone-option">
+                    <div class="auth-divider"><span>or use phone</span></div>
+                    <button class="btn btn-secondary auth-phone-btn" id="login-with-phone">
+                        📱 Sign in with Phone (SMS OTP)
+                    </button>
+                </div>
+            </div>
+
+            <!-- Sign-Up Form -->
+            <div id="auth-signup" class="auth-form">
+                <div class="auth-social">
+                    <button class="btn btn-google" id="google-signup-btn">
+                        <svg class="google-icon" viewBox="0 0 48 48" width="20" height="20"><path fill="#FFC107" d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 12.955 4 4 12.955 4 24s8.955 20 20 20 20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z"/><path fill="#FF3D00" d="m6.306 14.691 6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 16.318 4 9.656 8.337 6.306 14.691z"/><path fill="#4CAF50" d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238A11.91 11.91 0 0 1 24 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44z"/><path fill="#1976D2" d="M43.611 20.083H42V20H24v8h11.303a12.04 12.04 0 0 1-4.087 5.571l.003-.002 6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917z"/></svg>
+                        Sign up with Google
+                    </button>
+                </div>
+
+                <div class="auth-divider"><span>or create account with email</span></div>
+
+                <form id="signup-form" autocomplete="off">
+                    <div class="form-group">
+                        <label for="signup-name">Full Name</label>
+                        <input type="text" id="signup-name" placeholder="Haider Jaffri" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-email">Email Address</label>
+                        <input type="email" id="signup-email" placeholder="your@email.com" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-phone">Phone Number (optional)</label>
+                        <input type="tel" id="signup-phone" placeholder="+92 3XX-XXXXXXX" />
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-password">Password</label>
+                        <input type="password" id="signup-password" placeholder="Create a strong password" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-confirm">Confirm Password</label>
+                        <input type="password" id="signup-confirm" placeholder="Confirm your password" required />
+                    </div>
+                    <div class="form-options">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="signup-terms" required /> I agree to the <a href="#" class="terms-link">Terms & Privacy Policy</a>
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary auth-submit-btn">Create Account</button>
+                </form>
+
+                <div class="auth-phone-option">
+                    <div class="auth-divider"><span>or sign up with phone</span></div>
+                    <button class="btn btn-secondary auth-phone-btn" id="signup-with-phone">
+                        📱 Sign up with Phone (SMS OTP)
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- 15. OTP VERIFICATION MODAL                                    -->
+    <!-- ============================================================ -->
+    <div id="otp-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-content otp-modal-content">
+            <button class="modal-close-btn" id="otp-modal-close">&times;</button>
+            <div class="otp-header">
+                <div class="otp-icon">📱</div>
+                <h3>Verify Your Identity</h3>
+                <p class="otp-subtext">We've sent a 6-digit code to <span id="otp-destination">your email/phone</span></p>
+            </div>
+
+            <div class="otp-input-wrapper">
+                <input type="text" class="otp-input" maxlength="1" inputmode="numeric" pattern="[0-9]" autofocus />
+                <input type="text" class="otp-input" maxlength="1" inputmode="numeric" pattern="[0-9]" />
+                <input type="text" class="otp-input" maxlength="1" inputmode="numeric" pattern="[0-9]" />
+                <input type="text" class="otp-input" maxlength="1" inputmode="numeric" pattern="[0-9]" />
+                <input type="text" class="otp-input" maxlength="1" inputmode="numeric" pattern="[0-9]" />
+                <input type="text" class="otp-input" maxlength="1" inputmode="numeric" pattern="[0-9]" />
+            </div>
+
+            <div class="otp-timer">
+                <span id="otp-timer-text">Resend code in <strong id="otp-countdown">30</strong>s</span>
+                <button id="otp-resend" class="btn btn-small" style="display: none;">Resend Code</button>
+            </div>
+
+            <button id="otp-verify-btn" class="btn btn-primary auth-submit-btn" disabled>Verify & Continue</button>
+            <button id="otp-back-btn" class="btn btn-secondary" style="margin-top: 8px;">← Back to Login</button>
+        </div>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- 16. WELCOME SCREEN (Post-Login Dashboard Overlay)             -->
+    <!-- ============================================================ -->
+    <div id="welcome-screen" class="modal-overlay" style="display: none;">
+        <div class="modal-content welcome-content">
+            <button class="modal-close-btn" id="welcome-close">&times;</button>
+            <div class="welcome-header">
+                <div class="welcome-avatar" id="welcome-avatar">👤</div>
+                <h2 class="welcome-greeting" id="welcome-greeting">Welcome back, <span id="welcome-name">Guest</span>! 👋</h2>
+                <p class="welcome-subtitle" id="welcome-subtitle">Ready to explore the flavors of Jaffeiz?</p>
+            </div>
+
+            <!-- 3 Welcome Copy Variations -->
+            <div class="welcome-variations">
+                <div class="welcome-variation-card">
+                    <span class="variation-icon">🍽️</span>
+                    <p class="variation-text">"Welcome to the Jaffeiz family — where every bite tells a story of tradition, passion, and pure flavor."</p>
+                </div>
+                <div class="welcome-variation-card">
+                    <span class="variation-icon">🌶️</span>
+                    <p class="variation-text">"You're in! From sizzling Karahi to fragrant Biryani — your next unforgettable meal is just a click away."</p>
+                </div>
+                <div class="welcome-variation-card">
+                    <span class="variation-icon">✨</span>
+                    <p class="variation-text">"Welcome to Jaffeiz — a world of flavor awaits. Order now, dine in, or explore our story. The feast begins!"</p>
+                </div>
+            </div>
+
+            <div class="welcome-actions">
+                <a href="#menu" class="btn btn-primary welcome-action-btn" id="welcome-order-btn">🍕 Start Ordering</a>
+                <a href="#booking" class="btn btn-secondary welcome-action-btn" id="welcome-book-btn">📅 Book a Table</a>
+            </div>
+            <p class="welcome-footer-text">Hungry? We've got you covered. Fast delivery & easy checkout.</p>
+        </div>
+    </div>
+
+    <!-- Link to external JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WB Portfolio - My Portfolio personal website case study. A clean, modern portfolio built to showcase skills and projects.">
+    <meta name="keywords" content="personal portfolio website, developer portfolio, web developer portfolio, html css portfolio">
+    <meta name="author" content="WB - Website Bazar">
+    <meta name="google-site-verification" content="NnE2BF1zmjHB6yLh153zSIIIaGemMj55FFlqEUNQR9k" />
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="My Portfolio - WB Portfolio Case Study">
+    <meta property="og:description" content="Explore our case study for a personal portfolio website with a clean, minimal design and smooth animations.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="My Portfolio - WB Portfolio Case Study">
+    <meta name="twitter:description" content="Explore our case study for a personal portfolio website.">
+    <title>My Portfolio - WB Portfolio Case Study</title>
+    <link rel="canonical" href="https://wda.com/portfolio/my-portfolio">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/portfolio-detail.css">
+    <link rel="icon" type="image/png" href="../images/logo.png">
+</head>
+<body>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen" role="status" aria-label="Loading">
+        <div class="loader">
+            <div class="loader-spinner"></div>
+            <div class="loader-text" aria-label="WB Loading">WB</div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" aria-label="Back to top of page">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="container nav-container">
+                    <a href="../index.html" class="nav-logo" aria-label="WB Home"><img src="../images/logo.png" alt="WB Logo" class="nav-logo-img">WB</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu" role="menubar">
+                <li role="none"><a href="../index.html" class="nav-link" role="menuitem">Home</a></li>
+                <li role="none"><a href="../about.html" class="nav-link" role="menuitem">About Us</a></li>
+                <li role="none"><a href="../services.html" class="nav-link" role="menuitem">Services</a></li>
+                <li role="none"><a href="../portfolio.html" class="nav-link active" role="menuitem">Portfolio</a></li>
+                <li role="none"><a href="../blog.html" class="nav-link" role="menuitem">Blog</a></li>
+                <li role="none"><a href="../contact.html" class="nav-link" role="menuitem">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <nav class="portfolio-breadcrumb" aria-label="Breadcrumb">
+        <div class="container">
+            <a href="../index.html">Home</a>
+            <i class="fas fa-chevron-right" aria-hidden="true"></i>
+            <a href="../portfolio.html">Portfolio</a>
+            <i class="fas fa-chevron-right" aria-hidden="true"></i>
+            <span>My Portfolio</span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="portfolio-hero" aria-label="Project hero">
+        <div class="portfolio-hero-bg" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+            <div class="portfolio-hero-bg" style="background: linear-gradient(135deg, rgba(250,112,154,0.9), rgba(254,225,64,0.9));"></div>
+        </div>
+        <div class="portfolio-hero-content" data-aos="fade-up">
+            <span class="portfolio-category">Personal Portfolio</span>
+            <h1>My Portfolio</h1>
+            <p>A modern personal portfolio website designed to showcase professional skills, completed projects, and personal brand identity with a clean, minimal aesthetic and smooth interactive animations.</p>
+            <div class="portfolio-hero-tech">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Overview -->
+    <section class="portfolio-detail-section" data-aos="fade-up">
+        <div class="container">
+            <div class="overview-grid">
+                <div class="overview-content">
+                    <span class="section-label">Project Overview</span>
+                    <h2 class="section-heading">A Personal Brand Hub</h2>
+                    <p class="section-text">We built a personal portfolio website for a professional who wanted to establish a strong online presence. The goal was to create a clean, visually appealing platform where they could showcase their work, skills, and experience in a way that felt authentically them.</p>
+                    <p class="section-text">The client needed a site that was easy to update themselves, performed well on all devices, and made a strong first impression on potential employers and clients visiting the site.</p>
+                    <div class="overview-stats">
+                        <div class="overview-stat">
+                            <span class="stat-value" data-target="8">8+</span>
+                            <span class="stat-label">Projects Shown</span>
+                        </div>
+                        <div class="overview-stat">
+                            <span class="stat-value" data-target="5">5</span>
+                            <span class="stat-label">Skill Categories</span>
+                        </div>
+                        <div class="overview-stat">
+                            <span class="stat-value" data-target="100">100%</span>
+                            <span class="stat-label">Responsive</span>
+                        </div>
+                        <div class="overview-stat">
+                            <span class="stat-value" data-target="96">96</span>
+                            <span class="stat-label">PageSpeed Score</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="overview-image glass">
+                    <div class="gallery-placeholder" style="background: linear-gradient(135deg, #fa709a, #fee140);min-height:400px;">
+                        <i class="fas fa-user-tie" style="font-size:5rem;color:rgba(255,255,255,0.7);"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Requirements -->
+    <section class="portfolio-detail-section" data-aos="fade-up">
+        <div class="container">
+            <span class="section-label">Client Requirements</span>
+            <h2 class="section-heading">What the Client Needed</h2>
+            <p class="section-text">The client came to us with a clear vision. They wanted a portfolio that would help them stand out in a competitive job market and attract freelance opportunities.</p>
+            <div class="requirements-list">
+                <div class="requirement-item glass">
+                    <i class="fas fa-paint-brush"></i>
+                    <div>
+                        <h4>Minimal & Clean Design</h4>
+                        <p>A visually uncluttered layout that puts the focus on the work itself, with plenty of white space and subtle design elements.</p>
+                    </div>
+                </div>
+                <div class="requirement-item glass">
+                    <i class="fas fa-mobile-alt"></i>
+                    <div>
+                        <h4>Mobile-First Approach</h4>
+                        <p>Full responsiveness across all devices with special attention to mobile navigation and touch interactions for on-the-go browsing.</p>
+                    </div>
+                </div>
+                <div class="requirement-item glass">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <div>
+                        <h4>Fast Loading Speed</h4>
+                        <p>Optimized assets and minimal dependencies to ensure the site loads quickly, even on slower connections.</p>
+                    </div>
+                </div>
+                <div class="requirement-item glass">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>Contact Functionality</h4>
+                        <p>A working contact form and visible social links so potential clients and employers can easily reach out.</p>
+                    </div>
+                </div>
+                <div class="requirement-item glass">
+                    <i class="fas fa-project-diagram"></i>
+                    <div>
+                        <h4>Project Showcase</h4>
+                        <p>An organized way to display past projects with descriptions, technologies used, and links to live demos or repositories.</p>
+                    </div>
+                </div>
+                <div class="requirement-item glass">
+                    <i class="fas fa-cog"></i>
+                    <div>
+                        <h4>Easy to Maintain</h4>
+                        <p>Clean, well-commented code so the client could make basic updates themselves without needing a developer every time.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution -->
+    <section class="portfolio-detail-section" data-aos="fade-up">
+        <div class="container">
+            <span class="section-label">Our Solution</span>
+            <h2 class="section-heading">How We Solved It</h2>
+            <p class="section-text">We designed and developed a single-page portfolio website using vanilla HTML, CSS, and JavaScript. This approach kept the site lightweight and fast while still delivering a modern, app-like experience with smooth scroll animations and interactive elements.</p>
+            <p class="section-text">The layout features a hero section with a professional introduction, an about section with skill bars, a project gallery with filtering capability, and a contact section. We used CSS Grid and Flexbox for the responsive layout and implemented smooth scrolling for seamless navigation.</p>
+        </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="portfolio-detail-section" data-aos="fade-up">
+        <div class="container">
+            <span class="section-label">Key Features</span>
+            <h2 class="section-heading">Features That Make a Difference</h2>
+            <div class="features-grid-detail">
+                <div class="feature-detail-card glass">
+                    <i class="fas fa-sync-alt"></i>
+                    <h4>Smooth Animations</h4>
+                    <p>CSS transitions and scroll-triggered animations that add a polished feel without slowing down the experience.</p>
+                </div>
+                <div class="feature-detail-card glass">
+                    <i class="fas fa-filter"></i>
+                    <h4>Project Filtering</h4>
+                    <p>Categorize and filter projects by type or technology with instant, smooth filtering — no page reload needed.</p>
+                </div>
+                <div class="feature-detail-card glass">
+                    <i class="fas fa-chart-bar"></i>
+                    <h4>Skill Visualization</h4>
+                    <p>Animated progress bars and badges that visually communicate proficiency levels across different skills and technologies.</p>
+                </div>
+                <div class="feature-detail-card glass">
+                    <i class="fas fa-share-alt"></i>
+                    <h4>Social Integration</h4>
+                    <p>LinkedIn, GitHub, and other social profile links prominently displayed, making networking effortless for visitors.</p>
+                </div>
+                <div class="feature-detail-card glass">
+                    <i class="fas fa-file-alt"></i>
+                    <h4>Resume Download</h4>
+                    <p>A downloadable resume button so potential employers can instantly access a detailed professional background.</p>
+                </div>
+                <div class="feature-detail-card glass">
+                    <i class="fas fa-search"></i>
+                    <h4>SEO Optimized</h4>
+                    <p>Proper meta tags, semantic HTML structure, and optimized content to help the portfolio rank in search results.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Gallery -->
+    <section class="portfolio-detail-section" data-aos="fade-up">
+        <div class="container">
+            <span class="section-label">Screenshots Gallery</span>
+            <h2 class="section-heading">Visual Tour of the Website</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item glass">
+                    <div class="gallery-placeholder" style="background: linear-gradient(135deg, #fa709a, #fee140);">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <div class="gallery-overlay">Hero Section</div>
+                </div>
+                <div class="gallery-item glass">
+                    <div class="gallery-placeholder" style="background: linear-gradient(135deg, #f093fb, #f5576c);">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="gallery-overlay">About Section</div>
+                </div>
+                <div class="gallery-item glass">
+                    <div class="gallery-placeholder" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="gallery-overlay">Skills Display</div>
+                </div>
+                <div class="gallery-item glass">
+                    <div class="gallery-placeholder" style="background: linear-gradient(135deg, #a18cd1, #fbc2eb);">
+                        <i class="fas fa-th-large"></i>
+                    </div>
+                    <div class="gallery-overlay">Project Gallery</div>
+                </div>
+                <div class="gallery-item glass">
+                    <div class="gallery-placeholder" style="background: linear-gradient(135deg, #ffecd2, #fcb69f);">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="gallery-overlay">Contact Section</div>
+                </div>
+                <div class="gallery-item glass">
+                    <div class="gallery-placeholder" style="background: linear-gradient(135deg, #a1c4fd, #c2e9fb);">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="gallery-overlay">Mobile View</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Website Pages Preview -->
+    <section class="portfolio-detail-section" data-aos="fade-up">
+        <div class="container">
+            <span class="section-label">Website Sections</span>
+            <h2 class="section-heading">Sections We Built</h2>
+            <div class="pages-preview">
+                <div class="page-preview-card glass">
+                    <div class="page-preview-image">
+                        <div class="gallery-placeholder" style="background: linear-gradient(135deg, #fa709a, #fee140);font-size:2rem;">
+                            <i class="fas fa-home"></i>
+                        </div>
+                    </div>
+                    <h4>Hero</h4>
+                </div>
+                <div class="page-preview-card glass">
+                    <div class="page-preview-image">
+                        <div class="gallery-placeholder" style="background: linear-gradient(135deg, #f093fb, #f5576c);font-size:2rem;">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                    <h4>About Me</h4>
+                </div>
+                <div class="page-preview-card glass">
+                    <div class="page-preview-image">
+                        <div class="gallery-placeholder" style="background: linear-gradient(135deg, #4facfe, #00f2fe);font-size:2rem;">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                    </div>
+                    <h4>Skills</h4>
+                </div>
+                <div class="page-preview-card glass">
+                    <div class="page-preview-image">
+                        <div class="gallery-placeholder" style="background: linear-gradient(135deg, #a18cd1, #fbc2eb);font-size:2rem;">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                    </div>
+                    <h4>Portfolio</h4>
+                </div>
+                <div class="page-preview-card glass">
+                    <div class="page-preview-image">
+                        <div class="gallery-placeholder" style="background: linear-gradient(135deg, #ffecd2, #fcb69f);font-size:2rem;">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                    </div>
+                    <h4>Contact</h4>
+                </div>
+                <div class="page-preview-card glass">
+                    <div class="page-preview-image">
+                        <div class="gallery-placeholder" style="background: linear-gradient(135deg, #a1c4fd, #c2e9fb);font-size:2rem;">
+                            <i class="fas fa-download"></i>
+                        </div>
+                    </div>
+                    <h4>Resume</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Development Process -->
+    <section class="portfolio-detail-section" data-aos="fade-up">
+        <div class="container">
+            <span class="section-label">Development Process</span>
+            <h2 class="section-heading">How We Built It</h2>
+            <div class="process-timeline">
+                <div class="process-step" data-aos="fade-up">
+                    <h4>01. Discovery & Planning</h4>
+                    <p>We started by understanding the client's professional background, target audience, and career goals. This helped us define the structure, content sections, and visual direction for the portfolio.</p>
+                </div>
+                <div class="process-step" data-aos="fade-up" data-aos-delay="100">
+                    <h4>02. UI/UX Design</h4>
+                    <p>Our designer created a minimal, clean interface with a warm color palette. We focused on typography and spacing to create a professional yet approachable feel. Wireframes were reviewed and approved before development began.</p>
+                </div>
+                <div class="process-step" data-aos="fade-up" data-aos-delay="200">
+                    <h4>03. Frontend Development</h4>
+                    <p>Using semantic HTML5, modern CSS3 with Flexbox and Grid, and vanilla JavaScript, we built the entire site as a single-page application with smooth anchor navigation and scroll-based animations.</p>
+                </div>
+                <div class="process-step" data-aos="fade-up" data-aos-delay="300">
+                    <h4>04. Content Integration</h4>
+                    <p>We worked with the client to curate project descriptions, select appropriate imagery, and write compelling copy that accurately represents their professional story and achievements.</p>
+                </div>
+                <div class="process-step" data-aos="fade-up" data-aos-delay="400">
+                    <h4>05. Testing & QA</h4>
+                    <p>Cross-browser and cross-device testing to ensure consistent rendering. We also tested loading speeds, accessibility, and form functionality to guarantee a smooth user experience.</p>
+                </div>
+                <div class="process-step" data-aos="fade-up" data-aos-delay="500">
+                    <h4>06. Deployment & Launch</h4>
+                    <p>We deployed the site on a fast hosting platform, set up a custom domain, configured SSL, and provided the client with documentation on how to update their portfolio content.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Used -->
+    <section class="portfolio-detail-section" data-aos="fade-up">
+        <div class="container">
+            <span class="section-label">Technologies Used</span>
+            <h2 class="section-heading">Tech Stack</h2>
+            <div class="tech-detail-grid">
+                <div class="tech-detail-card glass">
+                    <i class="fab fa-html5"></i>
+                    <h4>HTML5</h4>
+                </div>
+                <div class="tech-detail-card glass">
+                    <i class="fab fa-css3-alt"></i>
+                    <h4>CSS3</h4>
+                </div>
+                <div class="tech-detail-card glass">
+                    <i class="fab fa-js"></i>
+                    <h4>JavaScript</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Responsive Design -->
+    <section class="portfolio-detail-section" data-aos="fade-up">
+        <div class="container">
+            <span class="section-label">Responsive Design</span>
+            <h2 class="section-heading">Optimized for Every Device</h2>
+            <p class="section-text">The portfolio delivers a consistent, professional experience whether viewed on a desktop monitor, tablet, or smartphone.</p>
+            <div class="responsive-showcase">
+                <div class="mockup-device desktop" data-aos="fade-up">
+                    <div class="device-frame">
+                        <div class="device-screen">
+                            <i class="fas fa-desktop" style="font-size:2rem;"></i>
+                            <span style="margin-left:10px;">Desktop View</span>
+                        </div>
+                    </div>
+                    <span class="device-label">Desktop</span>
+                </div>
+                <div class="mockup-device tablet" data-aos="fade-up" data-aos-delay="100">
+                    <div class="device-frame">
+                        <div class="device-screen">
+                            <i class="fas fa-tablet-alt" style="font-size:2rem;"></i>
+                            <span style="margin-left:10px;">Tablet View</span>
+                        </div>
+                    </div>
+                    <span class="device-label">Tablet</span>
+                </div>
+                <div class="mockup-device mobile" data-aos="fade-up" data-aos-delay="200">
+                    <div class="device-frame">
+                        <div class="device-screen">
+                            <i class="fas fa-mobile-alt" style="font-size:2rem;"></i>
+                            <span style="margin-left:10px;">Mobile View</span>
+                        </div>
+                    </div>
+                    <span class="device-label">Mobile</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Color Palette & Typography -->
+    <section class="portfolio-detail-section" data-aos="fade-up">
+        <div class="container">
+            <span class="section-label">Design System</span>
+            <h2 class="section-heading">Color Palette & Typography</h2>
+            <div class="overview-grid">
+                <div>
+                    <h3 style="font-size:1.3rem;font-weight:700;margin-bottom:15px;">Color Palette</h3>
+                    <div class="color-palette">
+                        <div class="color-swatch">
+                            <div class="color-circle" style="background:#fa709a;"></div>
+                            <span class="color-label">Pink Accent</span>
+                        </div>
+                        <div class="color-swatch">
+                            <div class="color-circle" style="background:#fee140;"></div>
+                            <span class="color-label">Yellow Accent</span>
+                        </div>
+                        <div class="color-swatch">
+                            <div class="color-circle" style="background:#ffffff;border-color:#ddd;"></div>
+                            <span class="color-label">White</span>
+                        </div>
+                        <div class="color-swatch">
+                            <div class="color-circle" style="background:#2d3436;"></div>
+                            <span class="color-label">Dark Text</span>
+                        </div>
+                        <div class="color-swatch">
+                            <div class="color-circle" style="background:#f8f9fa;border-color:#ddd;"></div>
+                            <span class="color-label">Light BG</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 style="font-size:1.3rem;font-weight:700;margin-bottom:15px;">Typography</h3>
+                    <div class="typography-sample">
+                        <div class="heading-sample">Poppins</div>
+                        <p style="font-size:0.9rem;opacity:0.7;margin-bottom:15px;">Used for headings - Modern & Clean</p>
+                        <div class="body-sample" style="font-family:'Inter',sans-serif;">Inter Regular - Used for body text. This sample paragraph shows how text appears throughout the portfolio. Clean, readable, and professional.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Challenges -->
+    <section class="portfolio-detail-section" data-aos="fade-up">
+        <div class="container">
+            <span class="section-label">Challenges Faced</span>
+            <h2 class="section-heading">Overcoming Obstacles</h2>
+            <div class="challenges-grid">
+                <div class="challenge-card glass">
+                    <h4><i class="fas fa-exclamation-triangle"></i> Challenge</h4>
+                    <p>Creating a portfolio that feels both professional and personal — avoiding the generic template look while keeping development time reasonable.</p>
+                </div>
+                <div class="challenge-card solved glass">
+                    <h4><i class="fas fa-check-circle"></i> Solution</h4>
+                    <p>We designed a custom layout with unique accent colors and subtle micro-interactions. The typography and spacing were carefully chosen to reflect the client's personality while maintaining a polished look.</p>
+                </div>
+                <div class="challenge-card glass">
+                    <h4><i class="fas fa-exclamation-triangle"></i> Challenge</h4>
+                    <p>Ensuring the project gallery looked great with diverse project types — from design work to code projects with different visual styles.</p>
+                </div>
+                <div class="challenge-card solved glass">
+                    <h4><i class="fas fa-check-circle"></i> Solution</h4>
+                    <p>We built a flexible card-based layout that adapts to different content types, with consistent thumbnail styling and hover effects that unify the gallery visually.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Performance -->
+    <section class="portfolio-detail-section" data-aos="fade-up">
+        <div class="container">
+            <span class="section-label">Performance & Optimization</span>
+            <h2 class="section-heading">Built for Speed</h2>
+            <div class="performance-metrics">
+                <div class="metric-card glass">
+                    <i class="fas fa-rocket metric-icon"></i>
+                    <span class="metric-value">96</span>
+                    <span class="metric-label">PageSpeed Score</span>
+                </div>
+                <div class="metric-card glass">
+                    <i class="fas fa-clock metric-icon"></i>
+                    <span class="metric-value">0.9s</span>
+                    <span class="metric-label">Avg. Load Time</span>
+                </div>
+                <div class="metric-card glass">
+                    <i class="fas fa-search metric-icon"></i>
+                    <span class="metric-value">100</span>
+                    <span class="metric-label">SEO Score</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial -->
+    <section class="portfolio-detail-section" data-aos="fade-up">
+        <div class="container">
+            <span class="section-label">Client Testimonial</span>
+            <h2 class="section-heading">What Our Client Says</h2>
+            <div class="testimonial-detail glass">
+                <div class="testimonial-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">"I needed a portfolio that would help me stand out when applying for jobs and freelance work. The team really listened to what I wanted and delivered something that feels uniquely mine. The site loads fast, looks great on my phone, and I've already had a recruiter mention they found my portfolio through Google. Couldn't be happier with how it turned out."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">AH</div>
+                    <div class="author-info">
+                        <h4>Ahmed Hussain</h4>
+                        <p>Freelance Web Developer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final Result / CTA -->
+    <section class="portfolio-detail-section" data-aos="fade-up">
+        <div class="container" style="text-align:center;">
+            <span class="section-label">Final Result</span>
+            <h2 class="section-heading">A Portfolio That Opens Doors</h2>
+            <p class="section-text" style="max-width:700px;margin:0 auto 30px;">The personal portfolio is now live and helping the client build their professional brand online. The clean design and smooth performance have received positive feedback from peers and potential employers alike.</p>
+            <div class="portfolio-cta">
+                <a href="my-portfolio/index.html" class="btn btn-primary btn-large ripple-btn" aria-label="Visit Live Demo">Visit Live Demo <i class="fas fa-external-link-alt" style="margin-left:8px;"></i></a>
+                <a href="../portfolio.html" class="btn btn-secondary btn-large ripple-btn" aria-label="Back to Portfolio">Back to Portfolio</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta-section" aria-label="Start your project">
+        <div class="container">
+            <div class="cta-content glass" data-aos="fade-up">
+                <h2 class="cta-title">Want a Project Like This?</h2>
+                <p class="cta-text">Let's build something amazing for your business. Get in touch with us today.</p>
+                <a href="../contact.html" class="btn btn-primary btn-large ripple-btn" aria-label="Start Your Project">Start Your Project</a>
+                <a href="../contact.html" class="btn btn-secondary btn-large ripple-btn" style="margin-left:15px;" aria-label="Request a Quote">Request a Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Page Transition Overlay -->
+    <div id="page-transition" class="page-transition" aria-hidden="true"></div>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-brand">
+                    <a href="../index.html" class="footer-logo" aria-label="WB Home"><img src="../images/logo.png" alt="WB Logo" class="footer-logo-img">WB</a>
+                    <p class="footer-desc">Website Bazar (WB) delivers premium digital solutions including web development, UI/UX design, mobile apps, AI chatbots, and automation services.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link" aria-label="Follow us on Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                        <a href="#" class="social-link" aria-label="Follow us on Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        <a href="https://www.instagram.com/stfu_hazzy" target="_blank" class="social-link" aria-label="Follow us on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                        <a href="#" class="social-link" aria-label="Follow us on LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+                        <a href="#" class="social-link" aria-label="Follow us on YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../about.html">About Us</a></li>
+                        <li><a href="../services.html">Services</a></li>
+                        <li><a href="../portfolio.html">Portfolio</a></li>
+                        <li><a href="../blog.html">Blog</a></li>
+                        <li><a href="../contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Our Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="../services.html">UI/UX Designing</a></li>
+                        <li><a href="../services.html">Website Development</a></li>
+                        <li><a href="../services.html">App Development</a></li>
+                        <li><a href="../services.html">AI Chatbot Integration</a></li>
+                        <li><a href="../services.html">WhatsApp Bot Automation</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:03360180168" aria-label="Call us at 03360180168">03360180168</a></li>
+                        <li><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:exnesssjaffri@gmail.com" aria-label="Email us at exnesssjaffri@gmail.com">exnesssjaffri@gmail.com</a></li>
+                        <li><i class="fab fa-instagram" aria-hidden="true"></i> <a href="https://www.instagram.com/stfu_hazzy" target="_blank" aria-label="Follow us on Instagram @stfu_hazzy">@stfu_hazzy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Website Bazar (WB). All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../js/portfolio-detail.js"></script>
+</body>
+</html>
